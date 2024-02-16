@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgeoopep2lefq"
-path.s3tc="res://.godot/imported/Ice-Machine_Icemachine_Metallic-Icemachine_Roughness.png-87145ae1c2e503da9d0d21f1e062eaaf.s3tc.ctex"
+uid="uid://bho5v22k2xior"
+path.s3tc="res://.godot/imported/Ice-Machine_Icemachine_BaseColor.png-7f3ce6f19bdcd21d62c9bc66a0dbf80d.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Models/Ice-Machine_Icemachine_Metallic-Icemachine_Roughness.png"
-dest_files=["res://.godot/imported/Ice-Machine_Icemachine_Metallic-Icemachine_Roughness.png-87145ae1c2e503da9d0d21f1e062eaaf.s3tc.ctex"]
+source_file="res://Models/Ice-Machine/Ice-Machine_Icemachine_BaseColor.png"
+dest_files=["res://.godot/imported/Ice-Machine_Icemachine_BaseColor.png-7f3ce6f19bdcd21d62c9bc66a0dbf80d.s3tc.ctex"]
 
 [params]
 

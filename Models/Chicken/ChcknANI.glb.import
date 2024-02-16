@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b1ixpmuu213vd"
-path="res://.godot/imported/Ice-Machine.glb-fbf7e9049acb413ed10db7d4acfaf59e.scn"
+uid="uid://d1j1cvuacxcey"
+path="res://.godot/imported/ChcknANI.glb-35755f99324344a0c3bc2062aa0b8d8a.scn"
 
 [deps]
 
-source_file="res://Models/Ice-Machine.glb"
-dest_files=["res://.godot/imported/Ice-Machine.glb-fbf7e9049acb413ed10db7d4acfaf59e.scn"]
+source_file="res://Models/Chicken/ChcknANI.glb"
+dest_files=["res://.godot/imported/ChcknANI.glb-35755f99324344a0c3bc2062aa0b8d8a.scn"]
 
 [params]
 

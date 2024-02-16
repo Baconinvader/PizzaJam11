@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo7vmkaitnj4f"
+path="res://.godot/imported/IceMachine.obj-c9d3c4e2b891bfddb91722c5b45e3f4d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/IceMachine.obj-c9d3c4e2b891bfddb91722c5b45e3f4d.mesh"]
+
+source_file="res://Models/Ice-Machine/IceMachine.obj"
+dest_files=["res://.godot/imported/IceMachine.obj-c9d3c4e2b891bfddb91722c5b45e3f4d.mesh", "res://.godot/imported/IceMachine.obj-c9d3c4e2b891bfddb91722c5b45e3f4d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
