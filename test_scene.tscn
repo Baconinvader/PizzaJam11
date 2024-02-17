@@ -9,7 +9,11 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.239465)
 
 [node name="Ice-Machine" parent="." instance=ExtResource("1_0qntu")]
+<<<<<<< HEAD
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.649302, 0, -28.3041)
 
 [node name="ChcknANI" parent="." instance=ExtResource("2_uwbob")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198985, 0, -2.37852)
+=======
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.649302, 0, -27.0434)
+>>>>>>> da5cb43b3e0ce198a153866506004a9ff7f73d49
