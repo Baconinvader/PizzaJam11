@@ -7,6 +7,9 @@ var mouse_sensitivity:float = 1.0
 @export var vel_keep:float = 0.98
 @export var vel_max:float = 5.0
 
+@export var gravity:float = 0.98
+@export var jump_power:float = 5.0
+
 func _process(delta):
 	var move_vec:Vector3 = Vector3.ZERO
 	if Input.is_action_pressed("move_forward"):
@@ -23,13 +26,27 @@ func _process(delta):
 	rotate_basis.origin = Vector3.ZERO
 	move_vec = rotate_basis * move_vec
 	
-	velocity += move_vec
+	var vert:float = velocity.y
+	velocity.y = 0.0
+	
+	#clamp horizontal
+	velocity += move_vec * delta
 	velocity *= vel_keep
 	velocity = velocity.limit_length(vel_max)
 	
+	if is_on_floor():
+		pass
+	else:
+		vert -= gravity*delta
+	velocity.y = vert
 	move_and_slide()
 	
 	g.debug_text = str(velocity)
+	
+func jump():
+	velocity.y = jump_power
 		
-func _input(ev):
-	pass
+func _input(ev:InputEvent):
+	if (ev.is_action_pressed("jump")):
+		jump()
+	

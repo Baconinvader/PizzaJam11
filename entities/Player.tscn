@@ -12,6 +12,8 @@ script = ExtResource("2_lmx8a")
 acceleration = 0.1
 vel_keep = 0.98
 vel_max = 5.0
+gravity = 0.98
+jump_power = 5.0
 
 [node name="head" type="Marker3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
