@@ -3,20 +3,13 @@
 [ext_resource type="PackedScene" uid="uid://b1ixpmuu213vd" path="res://Models/Ice-Machine/Ice-Machine.glb" id="1_0qntu"]
 [ext_resource type="PackedScene" uid="uid://d1j1cvuacxcey" path="res://Models/Chicken/ChcknANI.glb" id="2_uwbob"]
 
-
 [node name="Test" type="Node3D"]
-
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.239465)
 
-
 [node name="Ice-Machine" parent="." instance=ExtResource("1_0qntu")]
-
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.649302, 0, -28.3041)
 
 [node name="ChcknANI" parent="." instance=ExtResource("2_uwbob")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.649302, 0, -27.0434)
-
-
-

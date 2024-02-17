@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj4qjsxojxga7"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_jirne"]
+[ext_resource type="PackedScene" uid="uid://b1ixpmuu213vd" path="res://Models/Ice-Machine/Ice-Machine.glb" id="1_srpmy"]
+
+[node name="Main" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2587, 0, 0)
+script = ExtResource("1_jirne")
+
+[node name="Ice-Machine" parent="." instance=ExtResource("1_srpmy")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.649302, 0, -23.7049)
+
+[node name="debug" type="Label" parent="."]
+offset_right = 284.0
+offset_bottom = 136.0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ve38gni1176u"]
+
+[ext_resource type="PackedScene" uid="uid://cj0akw7wi5q3v" path="res://entities/Entity.tscn" id="1_jknp5"]
+[ext_resource type="Script" path="res://entities/Player.gd" id="2_lmx8a"]
+[ext_resource type="PackedScene" uid="uid://bcb6wj5xbk55w" path="res://UserCamera.tscn" id="3_6t0sy"]
+
+[node name="Player" instance=ExtResource("1_jknp5")]
+script = ExtResource("2_lmx8a")
+
+[node name="UserCamera" parent="." index="0" instance=ExtResource("3_6t0sy")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.02926, -6.23158)
+current = true
+
+[node name="head" type="Marker3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
+
+[node name="camera" type="Camera3D" parent="head" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj0akw7wi5q3v"]
+
+[ext_resource type="Script" path="res://entities/Entity.gd" id="1_wu55q"]
+[ext_resource type="PackedScene" uid="uid://d1j1cvuacxcey" path="res://Models/Chicken/ChcknANI.glb" id="2_rxejw"]
+
+[node name="Entity" type="Node3D"]
+script = ExtResource("1_wu55q")
+
+[node name="model" parent="." instance=ExtResource("2_rxejw")]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bva7813alns5m"]
+
+[ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3hku0"]
+size = Vector2(10, 10)
+
+[node name="Level" type="Node3D"]
+script = ExtResource("1_bjp3p")
+
+[node name="plane" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_3hku0")
+
+[node name="player_spawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475783, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-3.90364e-08, -0.449958, 0.89305, -1.96683e-08, 0.89305, 0.449958, -1, 0, -4.37114e-08, 6.02726, 1.44077, 0)
