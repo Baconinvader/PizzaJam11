@@ -1,18 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://ve38gni1176u"]
+[gd_scene load_steps=5 format=3 uid="uid://ve38gni1176u"]
 
 [ext_resource type="PackedScene" uid="uid://cj0akw7wi5q3v" path="res://entities/Entity.tscn" id="1_jknp5"]
 [ext_resource type="Script" path="res://entities/Player.gd" id="2_lmx8a"]
 [ext_resource type="PackedScene" uid="uid://bcb6wj5xbk55w" path="res://UserCamera.tscn" id="3_6t0sy"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_v8csd"]
+radius = 1.833
+
 [node name="Player" instance=ExtResource("1_jknp5")]
 script = ExtResource("2_lmx8a")
+acceleration = 0.1
+vel_keep = 0.98
+vel_max = 5.0
 
-[node name="UserCamera" parent="." index="0" instance=ExtResource("3_6t0sy")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 3.02926, -6.23158)
-current = true
-
-[node name="head" type="Marker3D" parent="." index="2"]
+[node name="head" type="Marker3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
 
-[node name="camera" type="Camera3D" parent="head" index="0"]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+[node name="UserCamera" parent="head" index="0" instance=ExtResource("3_6t0sy")]
+transform = Transform3D(-1, -1.77636e-15, -8.74228e-08, -2.78453e-08, 0.947919, 0.318513, 8.28697e-08, 0.318513, -0.947919, 0, 0, 0)
+current = true
+
+[node name="shape" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82619, 0)
+shape = SubResource("SphereShape3D_v8csd")

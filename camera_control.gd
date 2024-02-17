@@ -67,6 +67,7 @@ func _input(event):
 	if mouselook:
 		if event is InputEventMouseMotion:
 			_mouse_position = event.relative
+			
 
 	if movement:
 		if event.is_action_pressed(forward_action):
@@ -150,16 +151,17 @@ func _update_mouselook():
 		var offset = get_position().distance_to(target)
 
 		set_position(target)
-		rotate_y(deg_to_rad(-_yaw))
+		#rotate_y(deg_to_rad(-_yaw))
 		rotate_object_local(Vector3(1,0,0), deg_to_rad(-_pitch))
 		translate(Vector3(0.0, 0.0, offset))
 
 		if rotate_privot:
 			privot.rotate_y(deg_to_rad(-_yaw))
 	else:
-		rotate_y(deg_to_rad(-_yaw))
+		#rotate_y(deg_to_rad(-_yaw))
 		rotate_object_local(Vector3(1,0,0), deg_to_rad(-_pitch))
 		
+	g.player.rotate_y(deg_to_rad(-_yaw))
 
 func _update_distance():
 	var t = privot.get_translation()
@@ -197,7 +199,7 @@ func set_collisions(value):
 func set_enabled(value):
 	enabled = value
 	if enabled:
-		#Input.set_mouse_mode(mouse_mode)
+		#Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
 		set_process_input(true)
 		_update_process_func()
 	else:
