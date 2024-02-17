@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://cj0akw7wi5q3v"]
 
 [ext_resource type="Script" path="res://entities/Entity.gd" id="1_wu55q"]
-[ext_resource type="PackedScene" uid="uid://d1j1cvuacxcey" path="res://Models/Chicken/ChcknANI.glb" id="2_rxejw"]
+[ext_resource type="PackedScene" uid="uid://bcef0o5otm2rc" path="res://Models/Egg/Egg.glb" id="2_uaduq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_8q671"]
 
 [node name="Entity" type="CharacterBody3D"]
 script = ExtResource("1_wu55q")
 
-[node name="model" parent="." instance=ExtResource("2_rxejw")]
+[node name="model" parent="." instance=ExtResource("2_uaduq")]
 
 [node name="shape" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_8q671")

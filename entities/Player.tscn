@@ -9,11 +9,15 @@ radius = 1.833
 
 [node name="Player" instance=ExtResource("1_jknp5")]
 script = ExtResource("2_lmx8a")
-acceleration = 0.1
-vel_keep = 0.98
-vel_max = 5.0
-gravity = 0.98
-jump_power = 5.0
+acceleration = 6.2
+speed = 20.0
+deceleration = 1.0
+vel_max = 20.0
+gravity = 19.6
+jump_power = 15.0
+
+[node name="model" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="head" type="Marker3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
