@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjydcx4k17t14"]
+
+[ext_resource type="PackedScene" uid="uid://q5cym0by05v8" path="res://entities/Interactable.tscn" id="1_mlevq"]
+[ext_resource type="Script" path="res://UI/VinylShop.gd" id="2_mdrh7"]
+
+[node name="VinylShop" instance=ExtResource("1_mlevq")]
+script = ExtResource("2_mdrh7")
+prompt_text = "Press \"E\" to open shop"

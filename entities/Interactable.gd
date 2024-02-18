@@ -1,15 +1,27 @@
 extends Entity
 
+class_name Interactable
+
 signal can_interact_changed(val:bool)
 
 var player_in_range:bool = false
 var can_interact:bool = false: set=_set_can_interact
+
+@export var prompt_text:String =  ""
 
 func _set_can_interact(val:bool):
 	var old_val:bool = can_interact
 	can_interact = val
 	if (can_interact != old_val):
 		emit_signal("can_interact_changed",can_interact)
+	
+func _ready():
+	connect("can_interact_changed", _on_can_interact_changed)
+
+		
+func _on_can_interact_changed(val:bool):
+	pass
+
 	
 func interact():
 	pass

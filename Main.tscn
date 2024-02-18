@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cj4qjsxojxga7"]
+[gd_scene load_steps=7 format=3 uid="uid://cj4qjsxojxga7"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_jirne"]
 [ext_resource type="PackedScene" uid="uid://boi77g4hvyur5" path="res://UI/FoodBar.tscn" id="2_os1qi"]
 [ext_resource type="PackedScene" uid="uid://c55rwwifn0myv" path="res://UI/EggCounter.tscn" id="3_5xdar"]
-[ext_resource type="PackedScene" uid="uid://bmdtqecwxo2ei" path="res://UI/SellPrompt.tscn" id="4_kan38"]
+[ext_resource type="PackedScene" uid="uid://bmdtqecwxo2ei" path="res://UI/InteractPrompt.tscn" id="4_kan38"]
 [ext_resource type="PackedScene" uid="uid://b2tcppruif43s" path="res://UI/MoneyView.tscn" id="5_c2q40"]
+[ext_resource type="PackedScene" uid="uid://ceroiwbp4gx5y" path="res://UI/VinylShopInterface.tscn" id="6_aafpo"]
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2587, 0, 0)
@@ -20,7 +21,7 @@ offset_bottom = 136.0
 offset_left = 448.0
 offset_right = 440.192
 
-[node name="sell_prompt" parent="." instance=ExtResource("4_kan38")]
+[node name="prompt" parent="." instance=ExtResource("4_kan38")]
 visible = false
 offset_left = 456.0
 offset_top = 288.0
@@ -30,3 +31,9 @@ offset_bottom = 199.92
 [node name="MoneyView" parent="." instance=ExtResource("5_c2q40")]
 offset_top = 584.0
 offset_bottom = 583.848
+
+[node name="shop" parent="." instance=ExtResource("6_aafpo")]
+offset_left = 416.0
+offset_top = 136.0
+offset_right = 407.808
+offset_bottom = 135.888

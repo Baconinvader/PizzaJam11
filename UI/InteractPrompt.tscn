@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bmdtqecwxo2ei"]
 
-[ext_resource type="Script" path="res://UI/SellPrompt.gd" id="1_thr77"]
+[ext_resource type="Script" path="res://UI/InteractPrompt.gd" id="1_thr77"]
 
-[node name="SellPrompt" type="Control"]
+[node name="InteractPrompt" type="Control"]
 layout_mode = 3
 anchor_right = 0.222
 anchor_bottom = 0.21

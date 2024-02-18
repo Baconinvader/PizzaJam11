@@ -14,6 +14,7 @@ func _ready():
 	
 	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	$shop.hide_shop()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,8 +28,3 @@ func _input(ev:InputEvent):
 			#TODO fix for web
 			get_viewport().warp_mouse(Vector2(0.5, 0.5))
 	
-	if ev.is_action_pressed("quit"):
-		if (Input.mouse_mode == Input.MOUSE_MODE_VISIBLE):
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

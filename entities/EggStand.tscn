@@ -5,3 +5,4 @@
 
 [node name="EggStand" instance=ExtResource("1_5hn8x")]
 script = ExtResource("2_xco0f")
+prompt_text = "Press \"E\" to sell"

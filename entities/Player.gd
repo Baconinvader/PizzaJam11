@@ -9,7 +9,7 @@ var mouse_sensitivity:float = 1.0
 @export var vel_max:float = 20.0
 
 @export var gravity:float = 9.8*2
-@export var jump_power:float = 15.0
+@export var jump_power:float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var max_food:int = 10
 @onready var food = 0: set=_set_food
@@ -18,6 +18,8 @@ var mouse_sensitivity:float = 1.0
 @onready var eggs = 0: set=_set_eggs
 
 var money:float = 0
+
+var can_control:bool = true
 
 func _set_food(val:int):
 	food = val
@@ -41,16 +43,21 @@ func _physics_process(_delta):
 		reset_pos()
 	
 func _process(delta):
-	var move_vec:Vector3 = Vector3.ZERO
-	if Input.is_action_pressed("move_forward"):
-		move_vec.z = 1.0
-	elif Input.is_action_pressed("move_backward"):
-		move_vec.z = -1.0
+	if can_control != g.enable_controls:
+		can_control = g.enable_controls
+		$head/camera.enabled = can_control
 		
-	if Input.is_action_pressed("move_left"):
-		move_vec.x = 1.0
-	elif Input.is_action_pressed("move_right"):
-		move_vec.x = -1.0
+	var move_vec:Vector3 = Vector3.ZERO
+	if can_control:
+		if Input.is_action_pressed("move_forward"):
+			move_vec.z = 1.0
+		elif Input.is_action_pressed("move_backward"):
+			move_vec.z = -1.0
+			
+		if Input.is_action_pressed("move_left"):
+			move_vec.x = 1.0
+		elif Input.is_action_pressed("move_right"):
+			move_vec.x = -1.0
 		
 	var rotate_basis:Transform3D = transform
 	rotate_basis.origin = Vector3.ZERO
@@ -84,13 +91,12 @@ func _process(delta):
 	velocity.y = vert
 	move_and_slide()
 	
-	g.debug_text = str(velocity)
 	
 func jump():
 	velocity.y = jump_power
 		
 func _input(ev:InputEvent):
-	if (ev.is_action_pressed("jump") and is_on_floor() ):
+	if (ev.is_action_pressed("jump") and is_on_floor() and can_control ):
 		jump()
 		
 func lay_egg():
