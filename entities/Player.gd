@@ -30,6 +30,16 @@ func _set_eggs(val:int):
 	if eggs > max_eggs:
 		eggs = eggs
 
+func reset():
+	reset_pos()
+	
+func reset_pos():
+	position = g.level.get_node("player_spawn").position
+
+func _physics_process(_delta):
+	if transform.origin.y < -10:
+		reset_pos()
+	
 func _process(delta):
 	var move_vec:Vector3 = Vector3.ZERO
 	if Input.is_action_pressed("move_forward"):

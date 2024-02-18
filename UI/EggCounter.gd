@@ -14,7 +14,7 @@ func _physics_process(delta):
 		icon_count += 1
 
 	while (egg_count < icon_count):
-		$eggs.get_child(-1).queue_free()
+		$eggs.get_child(icon_count-1).queue_free()
 		icon_count -= 1
 
 		

@@ -15,9 +15,12 @@ deceleration = 1.0
 vel_max = 20.0
 gravity = 19.6
 jump_power = 15.0
+max_food = 10
+max_eggs = 5
 
-[node name="model" parent="." index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="shape" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82619, 0)
+shape = SubResource("SphereShape3D_v8csd")
 
 [node name="head" type="Marker3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
@@ -26,6 +29,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.66038, -4.33192)
 transform = Transform3D(-1, -1.77636e-15, -8.74228e-08, -2.78453e-08, 0.947919, 0.318513, 8.28697e-08, 0.318513, -0.947919, 0, 0, 0)
 current = true
 
-[node name="shape" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.82619, 0)
-shape = SubResource("SphereShape3D_v8csd")
+[node name="model" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

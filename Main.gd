@@ -10,7 +10,7 @@ func _ready():
 	g.level = preload("res://level/Level.tscn").instantiate()
 	add_child(g.level)
 	
-	g.player.position = g.level.get_node("player_spawn").position
+	g.player.reset()
 	
 	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
