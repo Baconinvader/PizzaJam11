@@ -1,5 +1,6 @@
 extends Node3D
 
+class_name Main
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,6 +12,7 @@ func _ready():
 	
 	g.player.position = g.level.get_node("player_spawn").position
 	
+	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
 
 

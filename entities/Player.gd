@@ -11,6 +11,25 @@ var mouse_sensitivity:float = 1.0
 @export var gravity:float = 9.8*2
 @export var jump_power:float = 15.0
 
+@export var max_food:int = 10
+@onready var food = 0: set=_set_food
+
+@export var max_eggs:int = 5
+@onready var eggs = 0: set=_set_eggs
+
+var money:float = 0
+
+func _set_food(val:int):
+	food = val
+	if food > max_food:
+		food = 0
+		lay_egg()
+
+func _set_eggs(val:int):
+	eggs = val
+	if eggs > max_eggs:
+		eggs = eggs
+
 func _process(delta):
 	var move_vec:Vector3 = Vector3.ZERO
 	if Input.is_action_pressed("move_forward"):
@@ -40,8 +59,7 @@ func _process(delta):
 	if ( Vector2(move_vec.x, move_vec.z).length() == 0):
 		var mag:float = min(hor_vel.length(), deceleration)
 		velocity += -(velocity.normalized()) * mag
-		print("- %s (%s, %s) %s" % [(-(velocity.normalized()) * mag), mag, deceleration, hor_vel])
-		
+
 	if do_accel:
 		velocity += move_vec * delta
 		velocity = velocity.limit_length(vel_max)
@@ -64,4 +82,7 @@ func jump():
 func _input(ev:InputEvent):
 	if (ev.is_action_pressed("jump") and is_on_floor() ):
 		jump()
+		
+func lay_egg():
+	eggs += 1
 	

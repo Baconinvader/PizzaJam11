@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cesj4svb8hyvi"]
+
+[ext_resource type="PackedScene" uid="uid://tvtfse4y3m4t" path="res://items/Item.tscn" id="1_evin6"]
+[ext_resource type="Script" path="res://items/Food.gd" id="2_5kh5l"]
+
+[node name="Food" instance=ExtResource("1_evin6")]
+script = ExtResource("2_5kh5l")
+food_increase = 4
