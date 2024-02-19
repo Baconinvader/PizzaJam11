@@ -29,6 +29,11 @@ func _input(ev:InputEvent):
 			get_viewport().warp_mouse(Vector2(0.5, 0.5))
 	
 	if ev.is_action_pressed("back"):
-		pass
-		#if get_node("PauseScreen")
+		var pause_screen:PauseScreen = g.main.get_node("PauseScreen")
+		if not pause_screen and g.enable_controls:
+			pause_screen = preload("res://UI/PauseScreen.tscn").instantiate()
+			g.main.add_child(pause_screen)
+		else:
+			if pause_screen:
+				pause_screen.exit_screen()
 	

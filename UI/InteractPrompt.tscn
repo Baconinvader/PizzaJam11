@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI/InteractPrompt.gd" id="1_thr77"]
 
-[node name="InteractPrompt" type="Control"]
+[node name="InteractPrompt" type="Control" groups=["screens"]]
 layout_mode = 3
 anchor_right = 0.222
 anchor_bottom = 0.21
