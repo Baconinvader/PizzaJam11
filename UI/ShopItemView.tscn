@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://bti7nq6mfl8g8"]
+
+[ext_resource type="Script" path="res://UI/ShopItemView.gd" id="1_guf8x"]
+[ext_resource type="Texture2D" uid="uid://da4wvmn5ey23q" path="res://Models/Vinyls/Record_Blue_Record_Blue.png" id="2_evfus"]
+
+[node name="ShopItemView" type="Control"]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 3
+anchor_right = 0.222
+anchor_bottom = 0.198
+offset_right = 0.255981
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_guf8x")
+
+[node name="background_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 128.0
+
+[node name="desc" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 32.0
+offset_right = 248.0
+offset_bottom = 96.0
+text = "[NODESCRIPTION]"
+autowrap_mode = 2
+
+[node name="name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 8.0
+offset_right = 248.0
+offset_bottom = 31.0
+text = "[NONAME]"
+horizontal_alignment = 1
+
+[node name="icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 32.0
+offset_right = 80.0
+offset_bottom = 96.0
+texture = ExtResource("2_evfus")
+
+[node name="cost" type="Label" parent="."]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 173.0
+offset_bottom = 119.0
+text = "[NOCOST]"
+
+[node name="buy_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 88.0
+offset_right = 248.0
+offset_bottom = 119.0
+text = "Buy"
+
+[connection signal="pressed" from="buy_button" to="." method="_on_buy_button_pressed"]

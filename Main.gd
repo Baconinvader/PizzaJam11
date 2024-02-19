@@ -1,5 +1,6 @@
 extends Node3D
 
+class_name Main
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -9,9 +10,11 @@ func _ready():
 	g.level = preload("res://level/Level.tscn").instantiate()
 	add_child(g.level)
 	
-	g.player.position = g.level.get_node("player_spawn").position
+	g.player.reset()
 	
+	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
+	$shop.hide_shop()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -25,8 +28,3 @@ func _input(ev:InputEvent):
 			#TODO fix for web
 			get_viewport().warp_mouse(Vector2(0.5, 0.5))
 	
-	if ev.is_action_pressed("quit"):
-		if (Input.mouse_mode == Input.MOUSE_MODE_VISIBLE):
-			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-		else:
-			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

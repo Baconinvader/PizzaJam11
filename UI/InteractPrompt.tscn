@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmdtqecwxo2ei"]
+
+[ext_resource type="Script" path="res://UI/InteractPrompt.gd" id="1_thr77"]
+
+[node name="InteractPrompt" type="Control"]
+layout_mode = 3
+anchor_right = 0.222
+anchor_bottom = 0.21
+offset_right = 0.255981
+offset_bottom = -8.08
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_thr77")
+
+[node name="text" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.937
+offset_bottom = 8.064
+text = "\"E\" to sell"
+horizontal_alignment = 1
+vertical_alignment = 1
