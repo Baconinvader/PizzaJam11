@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://df0fwimvlvyyl"
-path="res://.godot/imported/Egg_Shop.glb-4a842b6bda837c05ad3a3b7912e9238c.scn"
+uid="uid://c480750gfa4yw"
+path="res://.godot/imported/PJChicken.glb-d26bc5e91716f93a2732f2fe340b0125.scn"
 
 [deps]
 
-source_file="res://Models/Egg Shop/Egg_Shop.glb"
-dest_files=["res://.godot/imported/Egg_Shop.glb-4a842b6bda837c05ad3a3b7912e9238c.scn"]
+source_file="res://Models/Chicken/PJChicken.glb"
+dest_files=["res://.godot/imported/PJChicken.glb-d26bc5e91716f93a2732f2fe340b0125.scn"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcubbcfkeba2i"
-path.s3tc="res://.godot/imported/Egg_Shop_Egg-Shop.png-6f2ecc07a035ca5e7d7d892c4d67585a.s3tc.ctex"
+uid="uid://cje2fxpxf7tto"
+path.s3tc="res://.godot/imported/PJChicken_Chckn2.png-282bb32f9d8e4f1230d94f9b756aa07b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Models/Egg Shop/Egg_Shop_Egg-Shop.png"
-dest_files=["res://.godot/imported/Egg_Shop_Egg-Shop.png-6f2ecc07a035ca5e7d7d892c4d67585a.s3tc.ctex"]
+source_file="res://Models/Chicken/PJChicken_Chckn2.png"
+dest_files=["res://.godot/imported/PJChicken_Chckn2.png-282bb32f9d8e4f1230d94f9b756aa07b.s3tc.ctex"]
 
 [params]
 
