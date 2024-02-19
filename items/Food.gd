@@ -5,4 +5,5 @@ extends "res://Item.gd"
 func pickup():
 	if g.player.food < g.player.max_food:
 		super.pickup()
+		g.player.play_peck_anim()
 		g.player.food += food_increase

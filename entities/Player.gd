@@ -18,8 +18,12 @@ var mouse_sensitivity:float = 1.0
 @onready var eggs = 0: set=_set_eggs
 
 var money:float = 0
-
 var can_control:bool = true
+
+@onready var walk_anim:Animation = $anims.get_animation("Chicken_Walk")
+@onready var idle_anim:Animation = $anims.get_animation("Chicken_Idle")
+
+var walk_blend_amount:float = 0.0
 
 func _set_food(val:int):
 	food = val
@@ -31,6 +35,11 @@ func _set_eggs(val:int):
 	eggs = val
 	if eggs > max_eggs:
 		eggs = eggs
+
+func _ready():
+	walk_anim.loop_mode = Animation.LOOP_LINEAR
+	#$anims.set_blend_time("Chicken_Walk", "Chicken_Idle", 0.5)
+	pass
 
 func reset():
 	reset_pos()
@@ -66,7 +75,24 @@ func _process(delta):
 	if do_accel:
 		move_vec = rotate_basis * acceleration * move_vec
 	else:
-		move_vec  = rotate_basis * speed * move_vec 
+		move_vec  = rotate_basis * speed * move_vec
+		
+	var move_frac:float = move_vec.length() / vel_max
+	
+	#change blend
+	var change_amount:float = 2.0
+	if walk_blend_amount < move_frac:
+		walk_blend_amount += change_amount*delta
+		if walk_blend_amount > move_frac:
+			walk_blend_amount = move_frac
+			
+	elif walk_blend_amount > move_frac:
+		walk_blend_amount -= change_amount*delta
+		if walk_blend_amount < move_frac:
+			walk_blend_amount = move_frac
+	
+	$anim_tree["parameters/Walk_Blend/blend_amount"] = walk_blend_amount
+
 	
 	var vert:float = velocity.y
 	velocity.y = 0.0
@@ -93,12 +119,22 @@ func _process(delta):
 	
 	
 func jump():
+	play_jump_anim()
 	velocity.y = jump_power
 		
-func _input(ev:InputEvent):
-	if (ev.is_action_pressed("jump") and is_on_floor() and can_control ):
-		jump()
+func play_peck_anim():
+	$anim_tree["parameters/Peck_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		
+func play_jump_anim():
+	$anim_tree["parameters/Jump_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
+		
 		
 func lay_egg():
 	eggs += 1
 	
+func _input(ev:InputEvent):
+	if (ev.is_action_pressed("jump") and is_on_floor() and can_control ):
+		jump()
+		
+	if ev.is_action_pressed("kill"):
+		pass
