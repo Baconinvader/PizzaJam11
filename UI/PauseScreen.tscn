@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://btpg37t03sc4d"]
+[gd_scene load_steps=2 format=3 uid="uid://btpg37t03sc4d"]
+
+[ext_resource type="Script" path="res://UI/PauseScreen.gd" id="1_t7wej"]
 
 [node name="PauseScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +9,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t7wej")
+
+[node name="background_panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 488.0
+offset_top = 192.0
+offset_right = 674.0
+offset_bottom = 259.0
+theme_override_font_sizes/font_size = 48
+text = "PAUSED"
+
+[node name="back_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 384.0
+offset_right = 635.0
+offset_bottom = 416.0
+text = "Back to Game"
+
+[connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]

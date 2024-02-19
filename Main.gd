@@ -28,3 +28,7 @@ func _input(ev:InputEvent):
 			#TODO fix for web
 			get_viewport().warp_mouse(Vector2(0.5, 0.5))
 	
+	if ev.is_action_pressed("back"):
+		pass
+		#if get_node("PauseScreen")
+	

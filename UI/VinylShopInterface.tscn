@@ -35,20 +35,17 @@ offset_bottom = 320.0
 [node name="vbox" type="VBoxContainer" parent="background_panel/scrollbar/scroll"]
 layout_mode = 2
 
-[node name="item1" parent="background_panel/scrollbar/scroll/vbox" instance=ExtResource("1_lnevv")]
+[node name="item1" parent="background_panel/scrollbar/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://items/ShopItem.gd"),"item_name":"Vinyl 1","item_description":"IDK LOL","icon":ExtResource("3_wre1h"),"cost":5)
+item = NodePath("../../../../../items/vinyl1")
 
-
-[node name="item2" parent="background_panel/scrollbar/scroll/vbox" instance=ExtResource("1_lnevv")]
+[node name="item2" parent="background_panel/scrollbar/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://items/ShopItem.gd"),"item_name":"Vinyl 2","item_description":"IDK LOL","icon":ExtResource("4_qxaxk"),"cost":5)
+item = NodePath("../../../../../items/vinyl2")
 
-
-[node name="item3" parent="background_panel/scrollbar/scroll/vbox" instance=ExtResource("1_lnevv")]
+[node name="item3" parent="background_panel/scrollbar/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = Object(Node,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","script":Resource("res://items/ShopItem.gd"),"item_name":"Vinyl 3","item_description":"IDK LOL","icon":ExtResource("5_u5b2s"),"cost":5)
-
+item = NodePath("../../../../../items/vinyl3")
 
 [node name="close" type="Button" parent="."]
 layout_mode = 0
