@@ -5,6 +5,7 @@ class_name Player
 var mouse_sensitivity:float = 1.0
 @export var acceleration:float = 6.2
 @export var speed:float = 20.0
+@export var rotate_speed:float = PI
 @export var deceleration:float = 1
 @export var vel_max:float = 20.0
 
@@ -89,12 +90,34 @@ func _process(delta):
 			move_vec.z = -1.0
 			
 		if Input.is_action_pressed("move_left"):
+			#rotate_y(rotate_speed*delta)
 			move_vec.x = 1.0
 		elif Input.is_action_pressed("move_right"):
+			#rotate_y(-rotate_speed*delta)
 			move_vec.x = -1.0
 		
 	var rotate_basis:Transform3D = transform
+	
+	#rotate to camera
+	rotate_basis = $head.transform.basis
 	rotate_basis.origin = Vector3.ZERO
+	
+	var pitch:float = $head.rotation.x
+	print($head.rotation)
+		
+	
+	if move_vec.length() > 0:
+		var forward:Vector3 = rotate_basis.basis.y
+		
+	
+		var forward_vec2:Vector2 = Vector2(forward.x, forward.z)
+		var angle = -forward_vec2.angle() - (PI/2)
+		
+		if pitch > 0:
+			angle += PI
+		
+		$Armature.rotation.y = angle
+	
 	
 	var do_accel:bool = false
 	if do_accel:
@@ -154,12 +177,13 @@ func play_jump_anim():
 	$anim_tree["parameters/Jump_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 		
 func kill():
-	#$shape.disabled = true
-	bones_solid = true
-	alive = false
-	$Armature/Skeleton3D.physical_bones_start_simulation()
-	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
-	g.main.add_child(death_screen)
+	$shape.disabled = true
+	if alive:
+		bones_solid = true
+		alive = false
+		$Armature/Skeleton3D.physical_bones_start_simulation()
+		var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
+		g.main.add_child(death_screen)
 		
 func lay_egg():
 	eggs += 1

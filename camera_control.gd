@@ -151,6 +151,10 @@ func _update_mouselook():
 		var offset = get_position().distance_to(target)
 
 		set_position(target)
+		
+		
+	
+		#comment this if controlling dir with mouse
 		#rotate_y(deg_to_rad(-_yaw))
 		rotate_object_local(Vector3(1,0,0), deg_to_rad(-_pitch))
 		translate(Vector3(0.0, 0.0, offset))
@@ -158,10 +162,16 @@ func _update_mouselook():
 		if rotate_privot:
 			privot.rotate_y(deg_to_rad(-_yaw))
 	else:
+		#comment this if controlling dir with mouse
 		#rotate_y(deg_to_rad(-_yaw))
 		rotate_object_local(Vector3(1,0,0), deg_to_rad(-_pitch))
 		
-	g.player.rotate_y(deg_to_rad(-_yaw))
+	#get_parent_node_3d().rotation = rotation
+	var parent:Marker3D = get_parent_node_3d()
+	parent.rotation.x = _total_pitch
+	parent.rotation.y = -_total_yaw
+		
+	#g.player.rotate_y(deg_to_rad(-_yaw))
 
 func _update_distance():
 	var t = privot.get_translation()
