@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://8vmtqkgdrcud"]
+
+[ext_resource type="PackedScene" uid="uid://cj0akw7wi5q3v" path="res://entities/Entity.tscn" id="1_4yeuw"]
+[ext_resource type="Script" path="res://entities/Obstacle.gd" id="2_nid7k"]
+
+[node name="Obstacle" instance=ExtResource("1_4yeuw")]
+script = ExtResource("2_nid7k")

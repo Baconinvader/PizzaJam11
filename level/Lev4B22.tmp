@@ -71,4 +71,4 @@ curve = SubResource("Curve3D_8rfpf")
 [node name="vehicles" type="Node3D" parent="."]
 
 [node name="Vehicle" parent="vehicles" instance=ExtResource("5_p8onx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.402, 2.51753, -51.4695)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.48117, 2.51753, -7.74127)
