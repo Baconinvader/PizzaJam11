@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcueoy45fo41e"]
+[gd_scene load_steps=3 format=3 uid="uid://cryho3n7cnux2"]
 
 [ext_resource type="PackedScene" uid="uid://btpg37t03sc4d" path="res://UI/PauseScreen.tscn" id="1_1nxra"]
 [ext_resource type="Script" path="res://UI/DeathScreen.gd" id="2_y2de8"]
