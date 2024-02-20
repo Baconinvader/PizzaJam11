@@ -1,11 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceroiwbp4gx5y"]
+[gd_scene load_steps=3 format=3 uid="uid://ceroiwbp4gx5y"]
 
 [ext_resource type="Script" path="res://UI/VinylShopInterface.gd" id="1_beeys"]
 [ext_resource type="PackedScene" uid="uid://bti7nq6mfl8g8" path="res://UI/ShopItemView.tscn" id="1_lnevv"]
-[ext_resource type="PackedScene" uid="uid://cw4jni7st2wpb" path="res://items/ShopItem.tscn" id="2_gga1g"]
-[ext_resource type="Texture2D" uid="uid://da4wvmn5ey23q" path="res://Models/Vinyls/Record_Blue_Record_Blue.png" id="3_wre1h"]
-[ext_resource type="Texture2D" uid="uid://bnpj64lmptfk1" path="res://Models/Vinyls/Record_Green_Record_Green.png" id="4_qxaxk"]
-[ext_resource type="Texture2D" uid="uid://bd6m4vy804jv7" path="res://Models/Vinyls/Record_Orange_Record_Orange.png" id="5_u5b2s"]
 
 [node name="VinylShopInterface" type="Control"]
 layout_mode = 3
@@ -30,17 +26,14 @@ offset_bottom = 320.0
 [node name="vbox" type="VBoxContainer" parent="background_panel/scroll"]
 layout_mode = 2
 
-[node name="item1" parent="background_panel/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
+[node name="item1" parent="background_panel/scroll/vbox" instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = NodePath("../../../../items/vinyl1")
 
-[node name="item2" parent="background_panel/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
+[node name="item2" parent="background_panel/scroll/vbox" instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = NodePath("../../../../items/vinyl2")
 
-[node name="item3" parent="background_panel/scroll/vbox" node_paths=PackedStringArray("item") instance=ExtResource("1_lnevv")]
+[node name="item3" parent="background_panel/scroll/vbox" instance=ExtResource("1_lnevv")]
 layout_mode = 2
-item = NodePath("../../../../items/vinyl3")
 
 [node name="close" type="Button" parent="."]
 layout_mode = 0
@@ -48,25 +41,5 @@ offset_left = 408.0
 offset_right = 440.0
 offset_bottom = 31.0
 text = "X"
-
-[node name="items" type="Node" parent="."]
-
-[node name="vinyl1" parent="items" instance=ExtResource("2_gga1g")]
-item_name = "Vinyl 1"
-item_description = "IDK LOL"
-icon = ExtResource("3_wre1h")
-cost = 5
-
-[node name="vinyl2" parent="items" instance=ExtResource("2_gga1g")]
-item_name = "Vinyl 2"
-item_description = "IDK LOL"
-icon = ExtResource("4_qxaxk")
-cost = 5
-
-[node name="vinyl3" parent="items" instance=ExtResource("2_gga1g")]
-item_name = "Vinyl 3"
-item_description = "IDK LOL"
-icon = ExtResource("5_u5b2s")
-cost = 5
 
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]

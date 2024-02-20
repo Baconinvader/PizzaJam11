@@ -9,6 +9,8 @@ var main:Main
 
 var enable_controls:bool:set=_set_enable_controls
 
+var screens:Array = []
+
 func _set_enable_controls(val:bool):
 	enable_controls = val
 	if enable_controls:

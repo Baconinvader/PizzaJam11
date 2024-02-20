@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcueoy45fo41e"]
+
+[ext_resource type="PackedScene" uid="uid://btpg37t03sc4d" path="res://UI/PauseScreen.tscn" id="1_1nxra"]
+[ext_resource type="Script" path="res://UI/DeathScreen.gd" id="2_y2de8"]
+
+[node name="DeathScreen" instance=ExtResource("1_1nxra")]
+script = ExtResource("2_y2de8")
+
+[node name="text" parent="." index="1"]
+offset_left = 456.0
+offset_right = 695.0
+text = "YOU DIED!"
+
+[node name="back_button" parent="." index="2"]
+text = "Respawn"

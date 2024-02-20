@@ -1,6 +1,9 @@
 extends Control
 
+class_name ShopItemView
+
 @export var item:ShopItem :set=_set_item
+
 
 func _set_item(val:ShopItem):
 	if item:

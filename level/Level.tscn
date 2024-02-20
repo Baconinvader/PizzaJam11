@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
 [ext_resource type="PackedScene" uid="uid://chdnsi0w38sv8" path="res://entities/EggStand.tscn" id="2_v6kao"]
-[ext_resource type="PackedScene" uid="uid://bjydcx4k17t14" path="res://entities/VinylShop.tscn" id="3_mnl4h"]
+[ext_resource type="PackedScene" uid="uid://bjydcx4k17t14" path="res://UI/VinylShop.tscn" id="3_w1pqu"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_3hku0"]
 size = Vector2(20, 20)
@@ -31,7 +31,7 @@ transform = Transform3D(-3.90364e-08, -0.449958, 0.89305, -1.96683e-08, 0.89305,
 [node name="EggStand" parent="." instance=ExtResource("2_v6kao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6839)
 
-[node name="VinylShop" parent="." instance=ExtResource("3_mnl4h")]
+[node name="VinylShop" parent="." instance=ExtResource("3_w1pqu")]
 transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, -10.5331, 0, 10.1011)
 
 [node name="food" type="Node3D" parent="."]

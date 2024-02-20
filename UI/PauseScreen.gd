@@ -3,13 +3,11 @@ extends Control
 class_name PauseScreen
 
 func _ready():
-	g.enable_controls = false
+	g.screens.append(self)
 
 func _on_back_button_pressed():
-	exit_screen()
-	
-	
-func exit_screen():
-	g.enable_controls = true
 	queue_free()
+	
+func _exit_tree():
+	g.screens.erase(self)
 	

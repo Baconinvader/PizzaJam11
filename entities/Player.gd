@@ -78,6 +78,7 @@ func _process(delta):
 	
 	if can_control != g.enable_controls:
 		can_control = g.enable_controls
+		$head/camera.enabled = can_control
 		
 		
 	var move_vec:Vector3 = Vector3.ZERO
@@ -157,6 +158,8 @@ func kill():
 	bones_solid = true
 	alive = false
 	$Armature/Skeleton3D.physical_bones_start_simulation()
+	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
+	g.main.add_child(death_screen)
 		
 func lay_egg():
 	eggs += 1
