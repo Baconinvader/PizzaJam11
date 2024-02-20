@@ -23,7 +23,20 @@ var can_control:bool = true
 @onready var walk_anim:Animation = $anims.get_animation("Chicken_Walk")
 @onready var idle_anim:Animation = $anims.get_animation("Chicken_Idle")
 
+@onready var camera_base:PhysicalBone3D = $Armature/Skeleton3D.get_node("Physical Bone Chicken_Belly")
+
 var walk_blend_amount:float = 0.0
+var bones_solid:bool = false:set=_set_bones_solid
+
+var alive:bool = true
+
+func _set_bones_solid(val:bool):
+	if bones_solid == val:
+		return
+	bones_solid = val
+	for child in $Armature/Skeleton3D.get_children():
+		if child.name.contains("Physical Bone"):
+			child.get_child(0).disabled = not bones_solid
 
 func _set_food(val:int):
 	food = val
@@ -37,12 +50,20 @@ func _set_eggs(val:int):
 		eggs = eggs
 
 func _ready():
+	bones_solid = true
+	bones_solid = false
 	walk_anim.loop_mode = Animation.LOOP_LINEAR
 	#$anims.set_blend_time("Chicken_Walk", "Chicken_Idle", 0.5)
 	pass
 
 func reset():
+	$shape.disabled = false
+	bones_solid = false
 	reset_pos()
+	velocity = Vector3.ZERO
+	alive = true
+	$Armature/Skeleton3D.physical_bones_stop_simulation()
+	
 	
 func reset_pos():
 	position = g.level.get_node("player_spawn").position
@@ -52,12 +73,15 @@ func _physics_process(_delta):
 		reset_pos()
 	
 func _process(delta):
+	#orient camera
+	#$head.transform.origin = camera_base.transform.origin 
+	
 	if can_control != g.enable_controls:
 		can_control = g.enable_controls
-		$head/camera.enabled = can_control
+		
 		
 	var move_vec:Vector3 = Vector3.ZERO
-	if can_control:
+	if can_control and alive:
 		if Input.is_action_pressed("move_forward"):
 			move_vec.z = 1.0
 		elif Input.is_action_pressed("move_backward"):
@@ -128,13 +152,23 @@ func play_peck_anim():
 func play_jump_anim():
 	$anim_tree["parameters/Jump_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 		
+func kill():
+	#$shape.disabled = true
+	bones_solid = true
+	alive = false
+	$Armature/Skeleton3D.physical_bones_start_simulation()
 		
 func lay_egg():
 	eggs += 1
 	
 func _input(ev:InputEvent):
-	if (ev.is_action_pressed("jump") and is_on_floor() and can_control ):
-		jump()
+	if alive:
+		if (ev.is_action_pressed("jump") and is_on_floor() ):
+			jump()
+			
+	else:
+		if ev.is_action_pressed("jump") or ev.is_action_pressed("back"):
+			reset()
 		
 	if ev.is_action_pressed("kill"):
-		pass
+		kill()
