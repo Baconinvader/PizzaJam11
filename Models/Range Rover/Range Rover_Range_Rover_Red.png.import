@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc1gt3f44bi5i"
-path.s3tc="res://.godot/imported/Range Rover_Range_Rover_White.png-7715a01a04c7013c17817ee91b0877dc.s3tc.ctex"
+uid="uid://dh4bpfixvshlt"
+path.s3tc="res://.godot/imported/Range Rover_Range_Rover_Red.png-3e3cfd948d93f120e8cc8beb91d85eb6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ generator_parameters={}
 
 [deps]
 
-source_file="res://Models/Range Rover/Range Rover_Range_Rover_White.png"
-dest_files=["res://.godot/imported/Range Rover_Range_Rover_White.png-7715a01a04c7013c17817ee91b0877dc.s3tc.ctex"]
+source_file="res://Models/Range Rover/Range Rover_Range_Rover_Red.png"
+dest_files=["res://.godot/imported/Range Rover_Range_Rover_Red.png-3e3cfd948d93f120e8cc8beb91d85eb6.s3tc.ctex"]
 
 [params]
 
