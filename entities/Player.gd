@@ -101,21 +101,6 @@ func _process(delta):
 	rotate_basis = $head.transform.basis
 	rotate_basis.origin = Vector3.ZERO
 	
-	var pitch:float = $head.rotation.x
-
-	if move_vec.length() > 0:
-		var forward:Vector3 = rotate_basis.basis.y
-		
-	
-		var forward_vec2:Vector2 = Vector2(forward.x, forward.z)
-		var angle = -forward_vec2.angle() - (PI/2)
-		
-		if pitch > 0:
-			angle += PI
-		
-		$Armature.rotation.y = rotate_toward($Armature.rotation.y, angle, rotate_speed*delta)
-	
-	
 	var do_accel:bool = false
 	if do_accel:
 		move_vec = rotate_basis * acceleration * move_vec
@@ -124,6 +109,32 @@ func _process(delta):
 		
 	var move_frac:float = move_vec.length() / vel_max
 	
+	
+	
+	var pitch:float = $head.rotation.x
+	if move_vec.length() > 0:
+		var angle:float
+		var forward:Vector3
+		var forward_vec2:Vector2 
+		
+		#forward:Vector3 = rotate_basis.basis.y
+		#forward_vec2:Vector2 = Vector2(forward.x, forward.z)
+		#angle = -forward_vec2.angle() - (PI/2)
+		#if pitch > 0:
+		#	angle += PI
+		
+		forward = move_vec.normalized()
+		forward_vec2 = Vector2(forward.x, forward.z)
+		angle = -forward_vec2.angle() + (PI/2)
+		print(angle)
+		
+		if pitch > 0:
+			angle += PI
+		
+		$Armature.rotation.y = rotate_toward($Armature.rotation.y, angle, rotate_speed*delta*move_frac)
+	
+	
+
 	#change blend
 	var change_amount:float = 2.0
 	if walk_blend_amount < move_frac:
@@ -172,8 +183,10 @@ func play_jump_anim():
 	$anim_tree["parameters/Jump_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 		
 func kill():
-	$shape.disabled = true
+	
 	if alive:
+		$shape.disabled = true
+		velocity = Vector3.ZERO
 		bones_solid = true
 		alive = false
 		$Armature/Skeleton3D.physical_bones_start_simulation()
