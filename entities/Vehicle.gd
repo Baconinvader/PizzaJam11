@@ -22,12 +22,13 @@ func _process(delta):
 	if g.main and not curve:
 		path = g.level.get_node("paths/" + path_name)
 		curve = path.curve
-		curve_progress = fmod(curve_progress,curve.point_count)
-		target = curve.samplef( fmod(curve_progress + sample_head,curve.point_count) )
+		#curve_progress = fmod(curve_progress,curve.point_count)
+		#target = curve.samplef( fmod(curve_progress + sample_head,curve.point_count) )
 		
 	var front_length:float = 1.0
 	var front_point:Vector3 = position + (velocity.normalized()*front_length)
 	target = curve.get_closest_point(front_point)
+	target.y = position.y
 	
 	curve_offset = curve.get_closest_offset(position)
 	if curve_offset == curve.get_baked_length():
