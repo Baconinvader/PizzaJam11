@@ -1,17 +1,21 @@
 extends "res://entities/Obstacle.gd"
 
+class_name Vehicle
+
 @export var path_name:String = "path1"
 var path:Path3D
 var curve:Curve3D
 
-var speed:float = 10.0
+var speed:float = 20.0
 var curve_progress:float
 var sample_head:float = 0.0
 
 var target:Vector3 = Vector3.ZERO
 
+@onready var mesh:MeshInstance3D = $Range_Rover_Rig/Skeleton3D/Range_Rover
+
 func _ready():
-	pass
+	print(position)
 	
 func _process(delta):
 	if g.main and not curve:
@@ -25,9 +29,11 @@ func _process(delta):
 	var max_dist:float = 1.0
 	if dist < max_dist:
 		curve_progress += 0.002
-		curve_progress = fmod(curve_progress,curve.point_count)
-		target = curve.samplef( fmod(curve_progress + sample_head,curve.point_count) )
-
+		curve_progress = minf(curve_progress,curve.point_count)
+		target = curve.samplef( curve_progress )
+		print(curve_progress + sample_head, ">", curve.point_count)
+		if curve_progress + sample_head >= curve.point_count:
+			queue_free()
 
 	dist = (position-target).length()
 	var vel:float = speed#minf(speed, dist)
@@ -43,5 +49,7 @@ func _process(delta):
 	
 	#print(angle)
 	#rotation.y = angle
+	
+	apply_gravity(delta)
 	
 	move_and_slide()

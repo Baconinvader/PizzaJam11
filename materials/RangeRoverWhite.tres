@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://el13l1tcmuha"]
+
+[ext_resource type="Texture2D" uid="uid://dwr0f33trgmmh" path="res://Models/Range Rover/Range_Rover_White.png" id="1_by1g7"]
+
+[resource]
+resource_name = "Range_Rover"
+cull_mode = 2
+albedo_texture = ExtResource("1_by1g7")
+roughness = 0.5
+texture_filter = 2

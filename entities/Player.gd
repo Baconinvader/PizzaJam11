@@ -9,7 +9,7 @@ var mouse_sensitivity:float = 1.0
 @export var deceleration:float = 1
 @export var vel_max:float = 20.0
 
-@export var gravity:float = 9.8*2
+
 @export var jump_power:float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var max_food:int = 10
@@ -29,7 +29,6 @@ var can_control:bool = true
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
 
-var alive:bool = true
 
 func _set_bones_solid(val:bool):
 	if bones_solid == val:
@@ -103,9 +102,7 @@ func _process(delta):
 	rotate_basis.origin = Vector3.ZERO
 	
 	var pitch:float = $head.rotation.x
-	print($head.rotation)
-		
-	
+
 	if move_vec.length() > 0:
 		var forward:Vector3 = rotate_basis.basis.y
 		
@@ -116,7 +113,7 @@ func _process(delta):
 		if pitch > 0:
 			angle += PI
 		
-		$Armature.rotation.y = angle
+		$Armature.rotation.y = rotate_toward($Armature.rotation.y, angle, rotate_speed*delta)
 	
 	
 	var do_accel:bool = false
@@ -158,11 +155,9 @@ func _process(delta):
 		if move_vec.length():
 			velocity = move_vec
 		
-	if is_on_floor():
-		pass
-	else:
-		vert -= gravity*delta
 	velocity.y = vert
+	apply_gravity(delta)
+	
 	move_and_slide()
 	
 	

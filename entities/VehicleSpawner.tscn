@@ -1,0 +1,27 @@
+[gd_scene load_steps=10 format=3 uid="uid://dm0m30lct70wl"]
+
+[ext_resource type="Script" path="res://entities/VehicleSpawner.gd" id="1_lp8o8"]
+[ext_resource type="PackedScene" uid="uid://ck2r3tlohffni" path="res://entities/Vehicle.tscn" id="2_2oqq0"]
+[ext_resource type="Texture2D" uid="uid://d8cimj2wektr" path="res://Models/Range Rover/Range_Rover_Blue.png" id="2_hukb7"]
+[ext_resource type="Material" uid="uid://c1hwgdolayjt4" path="res://materials/RangeRoverBlack.tres" id="3_bmxc5"]
+[ext_resource type="Material" uid="uid://dswn41n2ybos1" path="res://materials/RangeRoverBlue.tres" id="4_jkj8h"]
+[ext_resource type="Material" uid="uid://cyv83ydm06wah" path="res://materials/RangeRoverBrown.tres" id="5_d8v6t"]
+[ext_resource type="Material" uid="uid://sxgy3vy4i2rt" path="res://materials/RangeRoverGreen.tres" id="6_h0osm"]
+[ext_resource type="Material" uid="uid://dmsv4wtbfymv6" path="res://materials/RangeRoverRed.tres" id="7_mt8ta"]
+[ext_resource type="Material" uid="uid://el13l1tcmuha" path="res://materials/RangeRoverWhite.tres" id="8_ocr73"]
+
+[node name="VehicleSpawner" type="Node3D"]
+script = ExtResource("1_lp8o8")
+vehicle_scene = ExtResource("2_2oqq0")
+spawn_time = 5.0
+materials = Array[StandardMaterial3D]([ExtResource("3_bmxc5"), ExtResource("4_jkj8h"), ExtResource("5_d8v6t"), ExtResource("6_h0osm"), ExtResource("7_mt8ta"), ExtResource("8_ocr73")])
+
+[node name="sprite" type="Sprite3D" parent="."]
+billboard = 1
+texture = ExtResource("2_hukb7")
+
+[node name="spawn" type="Timer" parent="."]
+autostart = true
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
+[connection signal="timeout" from="spawn" to="." method="_on_spawn_timeout"]
