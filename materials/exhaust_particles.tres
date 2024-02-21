@@ -1,0 +1,21 @@
+[gd_resource type="ParticleProcessMaterial" load_steps=3 format=3 uid="uid://d4kw04qniw0y6"]
+
+[sub_resource type="Curve" id="Curve_fso8r"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.485714, 0.252747), -4.81781, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xpnk3"]
+curve = SubResource("Curve_fso8r")
+
+[resource]
+particle_flag_damping_as_friction = true
+emission_shape = 1
+emission_sphere_radius = 0.8
+direction = Vector3(0, 0, -1)
+initial_velocity_min = 3.0
+initial_velocity_max = 3.0
+gravity = Vector3(0, 4.9, 0)
+damping_min = 5.0
+damping_max = 5.0
+color = Color(0.270222, 0.270222, 0.270222, 1)
+alpha_curve = SubResource("CurveTexture_xpnk3")

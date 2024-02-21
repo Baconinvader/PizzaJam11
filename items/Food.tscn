@@ -6,3 +6,4 @@
 [node name="Food" instance=ExtResource("1_evin6")]
 script = ExtResource("2_5kh5l")
 food_increase = 4
+food_icon = null

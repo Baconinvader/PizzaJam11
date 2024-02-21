@@ -56,21 +56,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.4259, 1, -56.2049)
 
 [node name="Food" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 3.65091)
+food_icon = null
 
 [node name="Food2" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 3.65091)
+food_icon = null
 
 [node name="Food3" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 3.65091)
+food_icon = null
 
 [node name="Food4" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 8.56807)
+food_icon = null
 
 [node name="Food5" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 8.56807)
+food_icon = null
 
 [node name="Food6" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 8.56807)
+food_icon = null
 
 [node name="paths" type="Node3D" parent="."]
 

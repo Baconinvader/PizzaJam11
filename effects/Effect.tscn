@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkj1ocemryqvw"]
+
+[ext_resource type="Script" path="res://effects/Effect.gd" id="1_403xr"]
+[ext_resource type="Texture2D" uid="uid://dw72g3w6kk411" path="res://Models/Egg/Egg_egg.png" id="2_t2o5i"]
+[ext_resource type="Material" uid="uid://d00ml063pfwla" path="res://materials/effect_particles.tres" id="3_hwn64"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jxlmq"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.0666667)
+
+[sub_resource type="BoxMesh" id="BoxMesh_bakb7"]
+material = SubResource("StandardMaterial3D_jxlmq")
+size = Vector3(0.05, 0.05, 0.05)
+
+[node name="Effect" type="Node3D"]
+script = ExtResource("1_403xr")
+
+[node name="sprite" type="Sprite3D" parent="."]
+billboard = 2
+texture = ExtResource("2_t2o5i")
+
+[node name="particles" type="GPUParticles3D" parent="."]
+amount = 32
+sub_emitter = NodePath(".")
+process_material = ExtResource("3_hwn64")
+draw_pass_1 = SubResource("BoxMesh_bakb7")
+
+[node name="timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]
