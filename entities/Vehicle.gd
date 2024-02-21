@@ -32,16 +32,6 @@ func _process(delta):
 	curve_offset = curve.get_closest_offset(position)
 	if curve_offset == curve.get_baked_length():
 		queue_free()
-		
-	#var dist:float = (position-target).length()
-	#var max_dist:float = 1.0
-	#if dist < max_dist:
-	#	curve_progress += 0.002
-	#	curve_progress = minf(curve_progress,curve.point_count)
-	#	target = curve.samplef( curve_progress )
-	#	print(curve_progress + sample_head, ">", curve.point_count)
-	#	if curve_progress + sample_head >= curve.point_count:
-	#		queue_free()
 
 	var dist = (position-target).length()
 	var vel:float = speed#minf(speed, dist)
