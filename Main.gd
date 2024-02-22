@@ -7,10 +7,7 @@ func _ready():
 	g.player = preload("res://entities/Player.tscn").instantiate()
 	add_child(g.player)
 	
-	g.level = preload("res://level/Level.tscn").instantiate()
-	add_child(g.level)
 	
-	g.player.reset()
 	
 	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN

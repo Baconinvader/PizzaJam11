@@ -208,7 +208,7 @@ tree_root = SubResource("AnimationNodeBlendTree_kksty")
 anim_player = NodePath("../anims")
 parameters/TimeScale/scale = 1.0
 
-[node name="particles" type="GPUParticles3D" parent="." index="13"]
+[node name="particles" type="GPUParticles3D" parent="." index="12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 3, -9)
 amount = 32
 sub_emitter = NodePath(".")

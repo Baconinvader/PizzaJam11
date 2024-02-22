@@ -69,10 +69,16 @@ func reset_pos():
 	position = g.level.get_node("player_spawn").position
 
 func _physics_process(_delta):
+	if not g.in_game:
+		return
+		
 	if transform.origin.y < -10:
 		reset_pos()
 	
 func _process(delta):
+	if not g.in_game:
+		return
+		
 	#orient camera
 	#$head.transform.origin = camera_base.transform.origin 
 	
