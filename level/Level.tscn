@@ -1,56 +1,30 @@
-[gd_scene load_steps=10 format=3 uid="uid://bva7813alns5m"]
+[gd_scene load_steps=8 format=3 uid="uid://bva7813alns5m"]
 
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
 [ext_resource type="PackedScene" uid="uid://chdnsi0w38sv8" path="res://entities/EggStand.tscn" id="2_v6kao"]
 [ext_resource type="PackedScene" uid="uid://bjydcx4k17t14" path="res://UI/VinylShop.tscn" id="3_w1pqu"]
-[ext_resource type="PackedScene" uid="uid://dm0m30lct70wl" path="res://entities/VehicleSpawner.tscn" id="4_jov3x"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_3hku0"]
-size = Vector2(200, 200)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_6b58e"]
-
-[sub_resource type="Curve3D" id="Curve3D_8rfpf"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -69.572, 1, -53.262, -56.876, 1, -26.329, 56.876, 1, 26.329, 28.5918, 1.00001, -81.3926, -3.196, 1, -12.109, 3.196, 1, 12.109, 83.6883, 1.00001, -17.9481, 13.082, 1, -19.399, -13.082, 1, 19.399, 68.662, 1, 43.827, 18.775, 1, 2.395, -18.775, 1, -2.395, -11.4784, 1.00001, 93.4972, 0, 0, 0, 0, 0, 0, -66.158, 1, 70.54, 0, 0, 0, 0, 0, 0, -87.445, 1, -9.183),
-"tilts": PackedFloat32Array(0, 0.327282, 0, 0, 0, 0, 0)
-}
-point_count = 7
-
-[sub_resource type="Environment" id="Environment_wku6c"]
-background_color = Color(1, 1, 1, 1)
-ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_sky_contribution = 0.0
+[ext_resource type="PackedScene" uid="uid://c4bxkdlsb286l" path="res://Map/MapFloor.glb" id="5_4q0gs"]
+[ext_resource type="PackedScene" uid="uid://dl1hpaetjrvvg" path="res://Map/SkyBox.glb" id="6_y24wu"]
+[ext_resource type="PackedScene" path="res://Map/Water.glb" id="7_5fesq"]
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_bjp3p")
 
-[node name="plane" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_3hku0")
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, -0.523426, 0)
-shape = SubResource("BoxShape3D_6b58e")
 
 [node name="player_spawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475783, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-3.90364e-08, -0.449958, 0.89305, -1.96683e-08, 0.89305, 0.449958, -1, 0, -4.37114e-08, 6.02726, 1.44077, 0)
-visible = false
+sky_mode = 1
 
 [node name="EggStand" parent="." instance=ExtResource("2_v6kao")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.6839)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.368544, -10.6839)
 
 [node name="VinylShop" parent="." instance=ExtResource("3_w1pqu")]
-transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, -10.5331, 0, 10.1011)
-
-[node name="VehicleSpawner" parent="." instance=ExtResource("4_jov3x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.4259, 1, -56.2049)
+transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, -10.5144, -0.31381, 10.1011)
 
 [node name="food" type="Node3D" parent="."]
 
@@ -78,13 +52,13 @@ food_icon = null
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 8.56807)
 food_icon = null
 
-[node name="paths" type="Node3D" parent="."]
+[node name="Map Stuff" type="Node3D" parent="."]
 
-[node name="path1" type="Path3D" parent="paths"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.992059, 0)
-curve = SubResource("Curve3D_8rfpf")
+[node name="MapFloor" parent="." instance=ExtResource("5_4q0gs")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
 
-[node name="vehicles" type="Node3D" parent="."]
+[node name="SkyBox" parent="." instance=ExtResource("6_y24wu")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 163.022)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_wku6c")
+[node name="Water" parent="." instance=ExtResource("7_5fesq")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
