@@ -661,14 +661,15 @@ height = 0.385631
 
 [node name="Player" instance=ExtResource("1_jknp5")]
 script = ExtResource("2_lmx8a")
-acceleration = 6.2
-speed = 20.0
+acceleration = null
+speed = null
 rotate_speed = 3.14159
-deceleration = 1.0
-vel_max = 20.0
+deceleration = null
+vel_max = null
 jump_power = null
-max_food = 10
-max_eggs = 5
+max_food = null
+max_eggs = null
+gravity = null
 
 [node name="shape" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.20062, 0)

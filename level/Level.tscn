@@ -1,17 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://bva7813alns5m"]
+[gd_scene load_steps=11 format=3 uid="uid://bva7813alns5m"]
 
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
 [ext_resource type="PackedScene" uid="uid://chdnsi0w38sv8" path="res://entities/EggStand.tscn" id="2_v6kao"]
 [ext_resource type="PackedScene" uid="uid://bjydcx4k17t14" path="res://UI/VinylShop.tscn" id="3_w1pqu"]
+[ext_resource type="PackedScene" uid="uid://dm0m30lct70wl" path="res://entities/VehicleSpawner.tscn" id="4_jov3x"]
 [ext_resource type="PackedScene" uid="uid://c4bxkdlsb286l" path="res://Map/MapFloor.glb" id="5_4q0gs"]
-[ext_resource type="PackedScene" uid="uid://dl1hpaetjrvvg" path="res://Map/SkyBox.glb" id="6_y24wu"]
-[ext_resource type="PackedScene" path="res://Map/Water.glb" id="7_5fesq"]
+[ext_resource type="PackedScene" uid="uid://dl1hpaetjrvvg" path="res://Map/Water.glb" id="7_5fesq"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2wb7j"]
+points = PackedVector3Array(-0.515308, -0.886032, -58.7426, -3.9004, -0.903958, -58.7225, -1.22054, 0.445732, -57.78, 43.82, -0.904914, -45.3467, -3.25394, 0.418962, -57.7599, 8.21775, -0.904914, -55.1429, -5.54593, -0.904914, -58.4819, -5.54593, 0.39291, -57.5594, -11.987, 1.39484, -48.0038, -0.00989532, 1.53681, -48.0038, 11.9672, 1.39484, -48.0038, 42.7386, 0.391476, -44.0031, 49.3207, -0.904914, -41.346, -46.2845, -0.904914, -34.7985, -39.9257, 0.391476, -37.1949, -47.9066, 0.391476, -32.001, -51.9028, 0.391476, -28.0104, -55.8991, 0.391476, -24.0097, -15.9715, 1.39484, -44.0031, -15.9715, 1.39484, 39.9915, 51.883, 1.39484, 39.9915, 51.883, 1.39484, -32.001, 35.9214, 1.39484, -40.0024, -39.9257, 1.39484, -12.0076, -39.9257, 1.39484, -0.00546646, 47.8985, 0.391476, -40.0024, 53.27, 0.391476, -32.001, 54.9978, -0.904914, -32.001, -50.7627, -0.904914, -32.001, -54.759, -0.904914, -28.0104, -58.7435, -0.904914, -24.0097, -61.635, -0.904914, -20.009, -58.7788, 0.391476, -20.009, -14.8197, -0.904914, 42.8893, -7.99072, -0.904914, 43.2803, -7.99072, 0.391476, 41.5356, -3.99443, 0.391476, 41.5958, -1.62016, 0.391476, 41.6159, 17.703, 0.391476, 41.7462, 49.8496, 0.391476, 41.9467, -43.922, 1.08245, 27.9894, -52.8079, 0.391476, 31.9901, -47.025, 0.415616, 34.577, -47.025, -0.904914, 36.3117, 49.8496, -0.904914, 43.6814, 53.6108, -0.904914, 39.9915, 55.7265, -0.904914, -28.0104, 55.7735, -0.904914, -29.8653, 54.034, 0.391476, -29.8653, -51.9028, 1.13289, -4.00616, -62.7398, -0.904914, -16.0083, -59.8837, 0.391476, -16.0083, -3.99443, -0.904914, 43.3304, -1.62016, -0.904914, 43.3505, 7.98267, -0.904914, 43.4207, 19.948, -0.904914, 43.5009, -61.4587, 0.391476, 15.4659, -55.6523, -0.904914, 33.7348, -64.3031, -0.904914, 14.9646, -64.0092, -0.904914, 16.238)
+
+[sub_resource type="Curve3D" id="Curve3D_8rfpf"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -69.572, 1, -53.262, -56.876, 1, -26.329, 56.876, 1, 26.329, 28.5918, 1.00001, -81.3926, -3.196, 1, -12.109, 3.196, 1, 12.109, 83.6883, 1.00001, -17.9481, 13.082, 1, -19.399, -13.082, 1, 19.399, 68.662, 1, 43.827, 18.775, 1, 2.395, -18.775, 1, -2.395, -11.4784, 1.00001, 93.4972, 0, 0, 0, 0, 0, 0, -66.158, 1, 70.54, 0, 0, 0, 0, 0, 0, -87.445, 1, -9.183),
+"tilts": PackedFloat32Array(0, 0.327282, 0, 0, 0, 0, 0)
+}
+point_count = 7
+
+[sub_resource type="Environment" id="Environment_wku6c"]
+background_color = Color(1, 1, 1, 1)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
 
 [node name="Level" type="Node3D"]
 script = ExtResource("1_bjp3p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -15.6751, 0)
+shape = SubResource("ConvexPolygonShape3D_2wb7j")
 
 [node name="player_spawn" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.475783, 0)
@@ -30,35 +50,43 @@ transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, 
 
 [node name="Food" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 3.65091)
-food_icon = null
 
 [node name="Food2" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 3.65091)
-food_icon = null
 
 [node name="Food3" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 3.65091)
-food_icon = null
 
 [node name="Food4" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 8.56807)
-food_icon = null
 
 [node name="Food5" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 8.56807)
-food_icon = null
 
 [node name="Food6" parent="food" instance=ExtResource("2_pygua")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 8.56807)
-food_icon = null
 
 [node name="Map Stuff" type="Node3D" parent="."]
 
 [node name="MapFloor" parent="." instance=ExtResource("5_4q0gs")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
 
-[node name="SkyBox" parent="." instance=ExtResource("6_y24wu")]
+[node name="SkyBox" parent="." instance=ExtResource("7_5fesq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 163.022)
 
 [node name="Water" parent="." instance=ExtResource("7_5fesq")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
+
+[node name="paths" type="Node3D" parent="."]
+
+[node name="path1" type="Path3D" parent="paths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.992059, 0)
+curve = SubResource("Curve3D_8rfpf")
+
+[node name="vehicles" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_wku6c")
+
+[node name="VehicleSpawner" parent="." instance=ExtResource("4_jov3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.4259, 1, -56.2049)

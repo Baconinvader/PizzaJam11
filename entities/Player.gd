@@ -72,7 +72,7 @@ func _physics_process(_delta):
 	if not g.in_game:
 		return
 		
-	if transform.origin.y < -10:
+	if transform.origin.y < g.level.killplane_y:
 		reset_pos()
 	
 func _process(delta):
