@@ -132,10 +132,10 @@ func _process(delta):
 		forward = move_vec.normalized()
 		forward_vec2 = Vector2(forward.x, forward.z)
 		angle = -forward_vec2.angle() + (PI/2)
-		print(angle)
+
 		
-		if pitch > 0:
-			angle += PI
+		#if pitch > 0:
+		#	angle += PI
 		
 		$Armature.rotation.y = rotate_toward($Armature.rotation.y, angle, rotate_speed*delta*move_frac)
 	
