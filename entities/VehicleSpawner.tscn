@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dm0m30lct70wl"]
+[gd_scene load_steps=11 format=3 uid="uid://dm0m30lct70wl"]
 
 [ext_resource type="Script" path="res://entities/VehicleSpawner.gd" id="1_lp8o8"]
 [ext_resource type="PackedScene" uid="uid://ck2r3tlohffni" path="res://entities/Vehicle.tscn" id="2_2oqq0"]
@@ -9,6 +9,9 @@
 [ext_resource type="Material" uid="uid://sxgy3vy4i2rt" path="res://materials/RangeRoverGreen.tres" id="6_h0osm"]
 [ext_resource type="Material" uid="uid://dmsv4wtbfymv6" path="res://materials/RangeRoverRed.tres" id="7_mt8ta"]
 [ext_resource type="Material" uid="uid://el13l1tcmuha" path="res://materials/RangeRoverWhite.tres" id="8_ocr73"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6433s"]
+size = Vector3(15, 10, 15)
 
 [node name="VehicleSpawner" type="Node3D"]
 script = ExtResource("1_lp8o8")
@@ -22,6 +25,11 @@ texture = ExtResource("2_hukb7")
 
 [node name="spawn" type="Timer" parent="."]
 autostart = true
+
+[node name="spawn_check_area" type="Area3D" parent="."]
+
+[node name="shape" type="CollisionShape3D" parent="spawn_check_area"]
+shape = SubResource("BoxShape3D_6433s")
 
 [connection signal="tree_exited" from="." to="." method="_on_tree_exited"]
 [connection signal="timeout" from="spawn" to="." method="_on_spawn_timeout"]

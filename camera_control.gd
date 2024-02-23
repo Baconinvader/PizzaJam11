@@ -143,9 +143,9 @@ func _update_mouselook():
 	_pitch = _pitch * smoothness + _mouse_position.y * (1.0 - smoothness)
 	_mouse_position = Vector2(0, 0)
 
-	if yaw_limit < 360:
+	if yaw_limit < 2*PI:
 		_yaw = clamp(_yaw, -yaw_limit - _total_yaw, yaw_limit - _total_yaw)
-	if pitch_limit < 360:
+	if pitch_limit < 2*PI:
 		#pitch_limit
 		_pitch = clamp(_pitch, -0 - _total_pitch, pitch_limit - _total_pitch)
 

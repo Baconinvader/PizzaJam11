@@ -4,13 +4,19 @@ extends Node3D
 @export var vehicle_scene:PackedScene
 @export var max_vehicles:int = 1
 @export var spawn_time:float = 1.0
+@export var spawn_variance = 3.0
 
 @export var vehicle_path:String = "path1"
 
 @export var materials:Array[StandardMaterial3D]
 
-func _ready():
+func set_wait_time():
+	var variance:float = randf_range(-spawn_variance, spawn_variance)
+	var time:float = max(spawn_time+spawn_variance, 2.0)
 	$spawn.wait_time = spawn_time
+
+func _ready():
+	set_wait_time()
 
 func spawn():
 	var new_vehicle:Vehicle = vehicle_scene.instantiate()
@@ -28,7 +34,15 @@ func spawn():
 	new_vehicle.mesh.set_surface_override_material(0,mat)
 
 func _on_spawn_timeout():
-	if vehicles.size() < max_vehicles:
+	set_wait_time()
+	var can_spawn:bool = true
+	if vehicles.size() >= max_vehicles:
+		can_spawn = false
+	else:
+		for check_body in $spawn_check_area.get_overlapping_bodies():
+			if check_body is Vehicle or check_body is Player:
+				can_spawn = false
+	if can_spawn:
 		spawn()
 		
 func _on_vehicle_tree_exited():
@@ -36,4 +50,6 @@ func _on_vehicle_tree_exited():
 		if is_instance_valid(vehicle):
 			vehicles.erase(vehicle)
 			break
+
+
 
