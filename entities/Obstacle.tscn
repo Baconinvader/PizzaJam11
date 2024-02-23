@@ -5,3 +5,4 @@
 
 [node name="Obstacle" instance=ExtResource("1_4yeuw")]
 script = ExtResource("2_nid7k")
+kill_force_multiplier = 3.0

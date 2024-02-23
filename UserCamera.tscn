@@ -4,5 +4,5 @@
 
 [node name="UserCamera" type="Camera3D"]
 script = ExtResource("1_we4et")
-pitch_limit = 90
+pitch_limit = 2
 movement = false

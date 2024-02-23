@@ -24,7 +24,9 @@ var can_control:bool = true
 @onready var walk_anim:Animation = $anims.get_animation("Chicken_Walk")
 @onready var idle_anim:Animation = $anims.get_animation("Chicken_Idle")
 
-@onready var camera_base:PhysicalBone3D = $Armature/Skeleton3D.get_node("Physical Bone Chicken_Belly")
+@onready var camera_base:Marker3D = $head
+@onready var camera:UserCamera = $head/camera
+@onready var master_bone:PhysicalBone3D = $"Armature/Skeleton3D/Physical Bone Chicken_Master"
 
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
@@ -79,12 +81,10 @@ func _process(delta):
 	if not g.in_game:
 		return
 		
-	#orient camera
-	#$head.transform.origin = camera_base.transform.origin 
-	
+
 	if can_control != g.enable_controls:
 		can_control = g.enable_controls
-		$head/camera.enabled = can_control
+		camera.enabled = can_control
 		
 		
 	var move_vec:Vector3 = Vector3.ZERO
@@ -104,20 +104,37 @@ func _process(delta):
 	var rotate_basis:Transform3D = transform
 	
 	#rotate to camera
-	rotate_basis = $head.transform.basis
+	rotate_basis = camera_base.transform.basis
+	
+
 	rotate_basis.origin = Vector3.ZERO
 	
-	var do_accel:bool = false
-	if do_accel:
-		move_vec = rotate_basis * acceleration * move_vec
+	#position camera
+	if alive:
+		camera_base.position =  Vector3.ZERO
 	else:
-		move_vec  = rotate_basis * speed * move_vec
-		
+		#go to skeleton bone
+		var camera_base_transform:Transform3D = $Armature/Skeleton3D.get_bone_global_pose_override(0)
+		var armature_rotation:Transform3D = $Armature.transform
+		armature_rotation.origin = Vector3.ZERO
+		camera_base.position =  armature_rotation * camera_base_transform.origin
+
+	
+	var do_accel:bool = false
+	
+	move_vec = (rotate_basis * move_vec)
+	move_vec.y = 0
+	move_vec = move_vec.normalized()
+	if do_accel:
+		move_vec =  move_vec * acceleration
+	else:
+		move_vec  = move_vec * speed
+	
 	var move_frac:float = move_vec.length() / vel_max
 	
 	
 	
-	var pitch:float = $head.rotation.x
+	var pitch:float = camera_base.rotation.x
 	if move_vec.length() > 0:
 		var angle:float
 		var forward:Vector3
@@ -159,6 +176,8 @@ func _process(delta):
 	var vert:float = velocity.y
 	velocity.y = 0.0
 	
+	g.debug_text = "%s" % move_vec
+	
 	#clamp horizontal
 	var hor_vel:Vector2 = Vector2(velocity.x, velocity.z)
 	if ( Vector2(move_vec.x, move_vec.z).length() == 0):
@@ -189,16 +208,18 @@ func play_jump_anim():
 	$anim_tree["parameters/Jump_OneShot/request"] = AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE
 		
 func kill():
-	
-	if alive:
-		$shape.disabled = true
-		velocity = Vector3.ZERO
-		bones_solid = true
-		alive = false
-		$Armature/Skeleton3D.physical_bones_start_simulation()
-		var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
-		g.main.add_child(death_screen)
+	if not alive:
+		return
 		
+	$shape.disabled = true
+	velocity = Vector3.ZERO
+	bones_solid = true
+	alive = false
+	$Armature/Skeleton3D.physical_bones_start_simulation()
+	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
+	g.main.add_child(death_screen)
+	
+
 func lay_egg():
 	eggs += 1
 	
