@@ -2,7 +2,7 @@ extends Node3D
 
 class_name Level
 
-@export var killplane_y:float = -10
+@export var killplane_y:float = -40
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -19,7 +19,8 @@ class_name UserCamera
 @export var rotate_privot = false
 @export var collisions = true: set=set_collisions
 @export_range(0, 360) var yaw_limit = 360 #todo set to int
-@export_range(0, 360) var pitch_limit = 360
+@export_range(0, 360) var pitch_min = 0
+@export_range(0, 360) var pitch_max = 360
 
 # Movement settings
 @export var movement = true
@@ -52,7 +53,8 @@ var _gui
 func _ready():
 	_check_actions([forward_action, backward_action, left_action, right_action, gui_action, up_action, down_action])
 
-	pitch_limit = deg_to_rad(pitch_limit)
+	pitch_min = deg_to_rad(pitch_min)
+	pitch_max = deg_to_rad(pitch_max)
 	yaw_limit = deg_to_rad(yaw_limit)
 
 	if privot_path:
@@ -145,9 +147,9 @@ func _update_mouselook():
 
 	if yaw_limit < 2*PI:
 		_yaw = clamp(_yaw, -yaw_limit - _total_yaw, yaw_limit - _total_yaw)
-	if pitch_limit < 2*PI:
+	if pitch_max < 2*PI:
 		#pitch_limit
-		_pitch = clamp(_pitch, -0 - _total_pitch, pitch_limit - _total_pitch)
+		_pitch = clamp(_pitch, pitch_min - _total_pitch, pitch_max - _total_pitch)
 
 	_total_yaw += _yaw
 	_total_pitch += _pitch
