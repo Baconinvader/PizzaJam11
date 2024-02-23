@@ -91,3 +91,9 @@ func _on_avoidance_check_timer_timeout():
 			do_move = false
 			break
 			
+
+
+func _on_despawn_preventor_screen_entered():
+	$despawn_check_timer.stop()
+func _on_despawn_preventor_screen_exited():
+	$despawn_check_timer.start()
