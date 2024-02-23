@@ -8,6 +8,7 @@ var bought:bool = false
 @export var item_description:String
 @export var icon:Texture2D
 @export_range(0,1000) var cost:int
+@export var stream:AudioStream
 
 signal bought_item
 

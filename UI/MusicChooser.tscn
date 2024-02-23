@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://m3pqpb6nk15"]
+
+[ext_resource type="Script" path="res://UI/MusicChooser.gd" id="1_f2mou"]
+
+[node name="MusicChooser" type="Control"]
+layout_mode = 3
+anchor_right = 0.326
+anchor_bottom = 0.395
+offset_right = 8.448
+offset_bottom = 0.0399933
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f2mou")
+
+[node name="current" type="Marker2D" parent="."]
+position = Vector2(128, 0)
+
+[node name="last" type="Marker2D" parent="."]
+position = Vector2(256, 128)
+
+[node name="next" type="Marker2D" parent="."]
+position = Vector2(8, 128)
+
+[node name="items" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

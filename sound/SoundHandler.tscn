@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbx5e8r5oq4ps"]
+
+[ext_resource type="Script" path="res://sound/SoundHandler.gd" id="1_gircd"]
+
+[node name="SoundHandler" type="Node"]
+script = ExtResource("1_gircd")
+
+[node name="music" type="AudioStreamPlayer" parent="."]
