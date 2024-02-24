@@ -59,7 +59,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.368544, -10.6839)
 
 [node name="VinylShop" parent="." instance=ExtResource("3_w1pqu")]
 transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, -10.5144, -0.31381, 10.1011)
-gravity = null
 
 [node name="food" type="Node3D" parent="."]
 
@@ -88,9 +87,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
 
 [node name="SkyBox" parent="." instance=ExtResource("6_6wlmv")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+visible = false
 
 [node name="Water" parent="." instance=ExtResource("7_mc7lk")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.884, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -15.139, 0)
 
 [node name="paths" type="Node3D" parent="."]
 
