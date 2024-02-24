@@ -4,24 +4,38 @@ class_name Effect
 
 @export var lifetime:int = 3
 @export var velocity:Vector3 = Vector3(0.0,1.5,0.0)
+@export var enable_physics:bool = false
 @export var texture:Texture2D
 
+@export var add_as_child:bool = true
 @export var parent:Node3D:set=_set_parent
 
 @onready var particle_color = $particles.draw_pass_1.material.albedo_color
 
 func _set_parent(val:Node3D):
 	parent = val
-	parent.add_child(self)
-	position.y = 2.0
+	if add_as_child:
+		parent.add_child(self)
+		position.y = 2.0
+	else:
+		g.level.get_node("effects").add_child(self)
+		position = parent.position + Vector3(0,2,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$timer.wait_time = lifetime
 	$timer.start()
 	if texture:
-		$sprite.texture = texture
-
+		$body/sprite.texture = texture
+		
+	if enable_physics:
+		#$body.freeze = false
+		$body.apply_central_impulse(velocity)
+	else:
+		$body.freeze = true
+		$body/shape.disabled = true
+		$body/shape.queue_free()
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var lifetime_frac:float = $timer.time_left/$timer.wait_time
@@ -36,9 +50,10 @@ func _process(delta):
 	particle_color.r = 1.0-fade_frac
 	particle_color.a = fade_frac
 	
-	$sprite.modulate.a = fade_frac
+	$body/sprite.modulate.a = fade_frac
 	
-	position += velocity*delta
+	if not enable_physics:
+		position += velocity*delta
 
 func _on_timer_timeout():
 	queue_free()

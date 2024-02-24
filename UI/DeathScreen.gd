@@ -1,8 +1,6 @@
 extends PauseScreen
 
-func _ready():
-	print(super())
-	super()._ready()
+func screen_init():
 	Sound.current_music = preload("res://sound/Death_Song.mp3")
 
 func _exit_tree():

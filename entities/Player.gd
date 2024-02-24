@@ -27,6 +27,7 @@ var can_control:bool = true
 @onready var camera_base:Marker3D = $head
 @onready var camera:UserCamera = $head/camera
 @onready var master_bone:PhysicalBone3D = $"Armature/Skeleton3D/Physical Bone Chicken_Master"
+@onready var death_particles:GPUParticles3D = $Armature/Skeleton3D/Chicken/death_particles
 
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
@@ -64,7 +65,10 @@ func reset():
 	reset_pos()
 	velocity = Vector3.ZERO
 	alive = true
+	food = 0
+	eggs = 0
 	$Armature/Skeleton3D.physical_bones_stop_simulation()
+	death_particles.emitting = false
 	
 	
 func reset_pos():
@@ -118,7 +122,7 @@ func _process(delta):
 		var armature_rotation:Transform3D = $Armature.transform
 		armature_rotation.origin = Vector3.ZERO
 		camera_base.position =  armature_rotation * camera_base_transform.origin
-
+		death_particles.position = camera_base_transform.origin
 	
 	var do_accel:bool = false
 	
@@ -208,15 +212,32 @@ func play_jump_anim():
 func kill():
 	if not alive:
 		return
+	
+	#eggs
+	for egg in eggs:
+		var egg_effect:Effect = preload("res://effects/Effect.tscn").instantiate()
+		egg_effect.texture = preload("res://materials/Egg_Icon.png")
+		
+		var impulse:Vector3 = Vector3(randf_range(-1.0,1.0),3,randf_range(-1.0,1.0)).normalized()
+		impulse *= 5
+		egg_effect.velocity = impulse
+		
+		egg_effect.enable_physics = true
+		egg_effect.lifetime = 5
+		egg_effect.add_as_child = false
+		egg_effect.parent = self
 		
 	$shape.disabled = true
 	velocity = Vector3.ZERO
 	bones_solid = true
 	alive = false
+	eggs = 0
+	food = 0
 	$Armature/Skeleton3D.physical_bones_start_simulation()
 	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
 	$sound/death.playing = true
 	g.main.screens.add_child(death_screen)
+	death_particles.emitting = true
 	
 
 func lay_egg():
