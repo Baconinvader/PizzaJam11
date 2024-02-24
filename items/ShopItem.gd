@@ -14,5 +14,6 @@ signal bought_item
 
 func buy():
 	g.player.money -= cost
-	emit_signal("bought_item")
 	bought = true
+	emit_signal("bought_item")
+	

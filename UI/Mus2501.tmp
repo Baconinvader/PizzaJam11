@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://m3pqpb6nk15"]
+[gd_scene load_steps=5 format=3 uid="uid://m3pqpb6nk15"]
 
 [ext_resource type="Script" path="res://UI/MusicChooser.gd" id="1_f2mou"]
 [ext_resource type="Texture2D" uid="uid://icbn6imkhdrr" path="res://materials/Egg_Icon.png" id="2_obd6q"]
 [ext_resource type="Texture2D" uid="uid://xtldsq7drplk" path="res://materials/music_play.png" id="3_kf86w"]
 [ext_resource type="Texture2D" uid="uid://cmgoweulu7u8j" path="res://materials/music_pause.png" id="4_0c4y2"]
-[ext_resource type="Texture2D" uid="uid://dio7qbq15usir" path="res://materials/music_last.png" id="5_jmdrc"]
-[ext_resource type="Texture2D" uid="uid://wu5gqi0tqo4m" path="res://materials/music_next.png" id="6_nj42n"]
 
 [node name="MusicChooser" type="Control"]
 layout_mode = 3
@@ -40,9 +38,9 @@ texture = ExtResource("2_obd6q")
 
 [node name="last" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 64.0
+offset_left = 320.0
 offset_top = 192.0
-offset_right = 64.0
+offset_right = 320.0
 offset_bottom = 192.0
 
 [node name="TextureRect2" type="TextureRect" parent="last"]
@@ -56,9 +54,9 @@ texture = ExtResource("2_obd6q")
 
 [node name="next" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 320.0
+offset_left = 64.0
 offset_top = 192.0
-offset_right = 320.0
+offset_right = 64.0
 offset_bottom = 192.0
 
 [node name="TextureRect3" type="TextureRect" parent="next"]
@@ -99,23 +97,5 @@ offset_right = 240.0
 offset_bottom = 216.0
 icon = ExtResource("4_0c4y2")
 
-[node name="last" type="Button" parent="play_controls"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 80.0
-offset_right = 120.0
-offset_bottom = 120.0
-icon = ExtResource("5_jmdrc")
-
-[node name="next" type="Button" parent="play_controls"]
-layout_mode = 0
-offset_left = 264.0
-offset_top = 80.0
-offset_right = 304.0
-offset_bottom = 120.0
-icon = ExtResource("6_nj42n")
-
 [connection signal="pressed" from="play_controls/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="play_controls/pause" to="." method="_on_pause_pressed"]
-[connection signal="pressed" from="play_controls/last" to="." method="_on_last_pressed"]
-[connection signal="pressed" from="play_controls/next" to="." method="_on_next_pressed"]

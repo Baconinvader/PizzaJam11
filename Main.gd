@@ -2,12 +2,12 @@ extends Node3D
 
 class_name Main
 
+@onready var screens:Control = $screens
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	g.player = preload("res://entities/Player.tscn").instantiate()
 	add_child(g.player)
-	
-	
 	
 	g.main = self
 	#Input.mouse_mode = Input.MOUSE_MODE_CONFINED_HIDDEN
@@ -35,7 +35,7 @@ func _input(ev:InputEvent):
 		var pause_screen:PauseScreen = g.main.get_node("PauseScreen")
 		if not g.screens:
 			pause_screen = preload("res://UI/PauseScreen.tscn").instantiate()
-			g.main.add_child(pause_screen)
+			screens.add_child(pause_screen)
 		else:
 			if g.screens:
 				g.screens[-1].queue_free()

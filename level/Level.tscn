@@ -59,6 +59,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.368544, -10.6839)
 
 [node name="VinylShop" parent="." instance=ExtResource("3_w1pqu")]
 transform = Transform3D(-0.612811, 0, 0.79023, 0, 1, 0, -0.79023, 0, -0.612811, -10.5144, -0.31381, 10.1011)
+gravity = null
 
 [node name="food" type="Node3D" parent="."]
 

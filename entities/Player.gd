@@ -176,8 +176,6 @@ func _process(delta):
 	var vert:float = velocity.y
 	velocity.y = 0.0
 	
-	g.debug_text = "%s" % move_vec
-	
 	#clamp horizontal
 	var hor_vel:Vector2 = Vector2(velocity.x, velocity.z)
 	if ( Vector2(move_vec.x, move_vec.z).length() == 0):
@@ -218,7 +216,7 @@ func kill():
 	$Armature/Skeleton3D.physical_bones_start_simulation()
 	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
 	$sound/death.playing = true
-	g.main.add_child(death_screen)
+	g.main.screens.add_child(death_screen)
 	
 
 func lay_egg():
@@ -227,8 +225,7 @@ func lay_egg():
 func _input(ev:InputEvent):
 	if alive:
 		if (ev.is_action_pressed("jump") and is_on_floor() ):
-			jump()
-			
+			jump()	
 	else:
 		if ev.is_action_pressed("jump") or ev.is_action_pressed("back"):
 			reset()

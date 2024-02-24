@@ -6,7 +6,7 @@ func _ready():
 	g.enable_controls = false
 	g.screens.append(self)
 	Sound.current_music = preload("res://sound/Main_Song.mp3")
-
+	Sound.playing = true
 
 
 func _on_start_button_pressed():

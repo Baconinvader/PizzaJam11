@@ -6,3 +6,4 @@
 [node name="VinylShop" instance=ExtResource("1_mlevq")]
 script = ExtResource("2_mdrh7")
 prompt_text = "Press \"E\" to open shop"
+gravity = null

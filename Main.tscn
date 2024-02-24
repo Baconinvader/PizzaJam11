@@ -38,6 +38,12 @@ offset_bottom = 583.848
 
 [node name="StartScreen" parent="." instance=ExtResource("7_nkai7")]
 
+[node name="screens" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
 [node name="MusicChooser" parent="." node_paths=PackedStringArray("items") instance=ExtResource("8_64vwe")]
 anchor_left = 0.667
 anchor_top = 0.617
