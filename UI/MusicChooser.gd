@@ -14,8 +14,13 @@ func _get_music():
 
 func _ready():
 	items.connect("item_bought", _on_item_bought)
+	Sound.connect("music_changed", _on_music_changed)
 	update_music()
 	update_shown()
+	
+func _on_music_changed():
+	if Sound.current_music != music:
+		update_shown()
 
 func _physics_process(delta):
 	pass
@@ -52,7 +57,7 @@ func update_shown():
 	$play_controls/next.disabled = not showing_next
 	
 	if music:
-		if Sound.playing and Sound.current_music != Sound.main_music:
+		if Sound.playing and Sound.current_music != Sound.main_music and Sound.current_music != null:
 			$play_controls/play.disabled = true
 			$play_controls/pause.disabled = false
 		else:
@@ -99,34 +104,40 @@ func _input(ev:InputEvent):
 		toggle_playing()
 
 func last_track():
-	music_index = int(fposmod((music_index-1), $items.get_child_count()))
-	update_music()
-	Sound.playing = true
-	update_shown()
+	if g.player.alive:
+		music_index = int(fposmod((music_index-1), $items.get_child_count()))
+		update_music()
+		Sound.playing = true
+		update_shown()
 
 func next_track():
-	music_index = int(fposmod((music_index+1), $items.get_child_count()))
-	update_music()
-	Sound.playing = true
-	update_shown()
+	if g.player.alive:
+		music_index = int(fposmod((music_index+1), $items.get_child_count()))
+		update_music()
+		Sound.playing = true
+		update_shown()
 
 func toggle_playing():
-	if music:
-		if not $play_controls/play.disabled:
-			_on_play_pressed()
-		elif not $play_controls/pause.disabled:
-			_on_pause_pressed()
+	
+		if music:
+			if not $play_controls/play.disabled:
+				_on_play_pressed()
+			elif not $play_controls/pause.disabled:
+				_on_pause_pressed()
 		
 func _on_play_pressed():
-	update_music()
-	Sound.playing = true
-	update_shown()
+	if g.player.alive:
+		update_music()
+		Sound.playing = true
+		update_shown()
 	
 	
 func _on_pause_pressed():
-	update_music()
-	Sound.playing = false
-	update_shown()
+	if g.player.alive:
+		update_music()
+		Sound.current_music = null
+		#Sound.playing = false
+		update_shown()
 
 
 func _on_last_pressed():
