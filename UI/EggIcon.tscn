@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bb25vm73n5p63"]
 
-[ext_resource type="Texture2D" uid="uid://dw72g3w6kk411" path="res://Models/Egg/Egg_egg.png" id="1_1w0sd"]
+[ext_resource type="Texture2D" uid="uid://icbn6imkhdrr" path="res://materials/Egg_Icon.png" id="1_l8xkm"]
 
 [node name="EggIcon" type="Control"]
 custom_minimum_size = Vector2(64, 64)
@@ -21,4 +21,4 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_1w0sd")
+texture = ExtResource("1_l8xkm")

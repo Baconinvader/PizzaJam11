@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://c55rwwifn0myv"]
+
+[ext_resource type="Script" path="res://UI/EggCounter.gd" id="1_3okt8"]
+
+[node name="EggCounter" type="Control"]
+layout_mode = 3
+anchor_right = 0.229
+anchor_bottom = 0.198
+offset_right = -7.80801
+offset_bottom = -0.304016
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3okt8")
+
+[node name="label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Eggs"
+
+[node name="eggs" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 192.0
+offset_bottom = 64.0

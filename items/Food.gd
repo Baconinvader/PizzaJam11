@@ -1,5 +1,7 @@
 extends "res://Item.gd"
 
+class_name Food
+
 @export var food_increase:int = 4
 @export var food_icon:Texture
 
