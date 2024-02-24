@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://64vwyvrpu8b0"]
+[gd_scene load_steps=13 format=3 uid="uid://64vwyvrpu8b0"]
 
 [ext_resource type="Script" path="res://items/VinylShopItems.gd" id="1_ftig1"]
 [ext_resource type="PackedScene" uid="uid://cw4jni7st2wpb" path="res://items/ShopItem.tscn" id="1_w12an"]
 [ext_resource type="Texture2D" uid="uid://da4wvmn5ey23q" path="res://Models/Vinyls/Record_Blue_Record_Blue.png" id="2_f4k2i"]
 [ext_resource type="Texture2D" uid="uid://bnpj64lmptfk1" path="res://Models/Vinyls/Record_Green_Record_Green.png" id="3_pl3ks"]
 [ext_resource type="Texture2D" uid="uid://bd6m4vy804jv7" path="res://Models/Vinyls/Record_Orange_Record_Orange.png" id="4_66ssy"]
+[ext_resource type="AudioStream" uid="uid://c7ymmssqfdrx1" path="res://sound/Vinyls/Song 1.mp3" id="4_p8ygp"]
+[ext_resource type="AudioStream" uid="uid://pusxb7ugxlas" path="res://sound/Vinyls/Song 2.mp3" id="6_ppwad"]
+[ext_resource type="AudioStream" uid="uid://rxgoqjl51n2d" path="res://sound/Vinyls/Song 3.mp3" id="8_rtkor"]
+[ext_resource type="AudioStream" uid="uid://qglxtkmincyo" path="res://sound/Vinyls/Song 4.mp3" id="9_hn3l7"]
+[ext_resource type="AudioStream" uid="uid://cnv00ifyt85qh" path="res://sound/Vinyls/Song 5.mp3" id="10_ewa3l"]
+[ext_resource type="AudioStream" uid="uid://tuyohi7w2md5" path="res://sound/Vinyls/Song 6.mp3" id="11_2nxig"]
+[ext_resource type="AudioStream" uid="uid://dyjrx4iy8d0f2" path="res://sound/Vinyls/Song 7.mp3" id="12_vc8a4"]
 
 [node name="VinylShopItems" type="Node"]
 script = ExtResource("1_ftig1")
@@ -14,15 +21,46 @@ item_name = "Vinyl 1"
 item_description = "IDK LOL"
 icon = ExtResource("2_f4k2i")
 cost = 5
+stream = ExtResource("4_p8ygp")
 
 [node name="vinyl2" parent="." instance=ExtResource("1_w12an")]
 item_name = "Vinyl 2"
 item_description = "IDK LOL"
 icon = ExtResource("3_pl3ks")
 cost = 5
+stream = ExtResource("6_ppwad")
 
 [node name="vinyl3" parent="." instance=ExtResource("1_w12an")]
 item_name = "Vinyl 3"
 item_description = "IDK LOL"
 icon = ExtResource("4_66ssy")
 cost = 5
+stream = ExtResource("8_rtkor")
+
+[node name="vinyl4" parent="." instance=ExtResource("1_w12an")]
+item_name = "Vinyl 4"
+item_description = "IDK LOL"
+icon = ExtResource("2_f4k2i")
+cost = 5
+stream = ExtResource("9_hn3l7")
+
+[node name="vinyl5" parent="." instance=ExtResource("1_w12an")]
+item_name = "Vinyl 5"
+item_description = "IDK LOL"
+icon = ExtResource("3_pl3ks")
+cost = 5
+stream = ExtResource("10_ewa3l")
+
+[node name="vinyl6" parent="." instance=ExtResource("1_w12an")]
+item_name = "Vinyl 6"
+item_description = "IDK LOL"
+icon = ExtResource("4_66ssy")
+cost = 5
+stream = ExtResource("11_2nxig")
+
+[node name="vinyl7" parent="." instance=ExtResource("1_w12an")]
+item_name = "Vinyl 7"
+item_description = "IDK LOL"
+icon = ExtResource("4_66ssy")
+cost = 5
+stream = ExtResource("12_vc8a4")

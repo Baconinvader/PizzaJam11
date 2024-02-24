@@ -3,7 +3,11 @@ extends Control
 @export var items:VinylShopItems
 
 var music_index:int = 0
-var music:MusicChoice
+var music:MusicChoice:get=_get_music
+
+func _get_music():
+	var choice:MusicChoice = $items.get_child(music_index)
+	return choice
 
 func _ready():
 	items.connect("item_bought", _on_item_bought)
@@ -15,19 +19,21 @@ func update_shown():
 	var i:int = 0
 	for child:MusicChoice in $items.get_children():
 		child.visible = true
-		if i == music_index-1:
-			child.global_position = $last.position
+		if i == (music_index-1) % $items.get_child_count():
+			child.position = $last.position
 		elif i == music_index:
-			child.global_position = $current.position
-		elif i == music_index+1:
-			child.global_position = $next.position
+			child.position = $current.position
+		elif i == (music_index+1) % $items.get_child_count():
+			child.position = $next.position
 		else:
 			child.visible = false
 			
 		i += 1
 		
 func update_music():
-	Sound.current_music = music.stream
+	if music.item:
+		$music_text.text = music.item.item_name
+		Sound.current_music = music.item.stream
 		
 func _on_item_bought():
 	#find new item
@@ -53,6 +59,9 @@ func _input(ev:InputEvent):
 	if ev.is_action_pressed("mus_last"):
 		music_index = (music_index - 1)%$items.get_child_count()
 		update_shown()
+		update_music()
+		
 	if ev.is_action_pressed("mus_next"):
 		music_index = (music_index + 1)%$items.get_child_count()
 		update_shown()
+		update_music()

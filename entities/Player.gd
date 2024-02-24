@@ -217,6 +217,7 @@ func kill():
 	alive = false
 	$Armature/Skeleton3D.physical_bones_start_simulation()
 	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
+	$sound/death.playing = true
 	g.main.add_child(death_screen)
 	
 

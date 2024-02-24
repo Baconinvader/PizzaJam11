@@ -19,6 +19,7 @@ var do_move:bool = true
 
 func _ready():
 	print(position)
+	$sound/loop.playing = true
 	
 func _process(delta):
 	if g.main and not curve:

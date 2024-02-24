@@ -5,6 +5,7 @@ extends Control
 func _ready():
 	g.enable_controls = false
 	g.screens.append(self)
+	Sound.current_music = preload("res://sound/Main_Song.mp3")
 
 
 

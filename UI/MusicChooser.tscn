@@ -12,16 +12,34 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f2mou")
 
-[node name="current" type="Marker2D" parent="."]
-position = Vector2(128, 0)
-
-[node name="last" type="Marker2D" parent="."]
-position = Vector2(256, 128)
-
-[node name="next" type="Marker2D" parent="."]
-position = Vector2(8, 128)
-
 [node name="items" type="Control" parent="."]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="current" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 128.0
+offset_right = 128.0
+
+[node name="last" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 256.0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 128.0
+
+[node name="next" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 8.0
+offset_bottom = 128.0
+
+[node name="music_text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 184.0
+offset_right = 239.0
+offset_bottom = 207.0
+text = "[NOMUSIC]"
