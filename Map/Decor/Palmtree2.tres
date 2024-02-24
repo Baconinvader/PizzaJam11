@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dt7bh34yx86fe"]
+
+[ext_resource type="Texture2D" uid="uid://cpygvp3dkdvws" path="res://Map/Decor/PalmTree_2_PalmTree-PalmTree_Alpha.png" id="1_tv1ix"]
+
+[resource]
+resource_name = "Palmtree"
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_tv1ix")
+roughness = 0.5
