@@ -18,7 +18,7 @@ var mouse_sensitivity:float = 1.0
 @export var max_eggs:int = 5
 @onready var eggs = 0: set=_set_eggs
 
-var money:float = 0
+var money:float = 0:set=_set_money
 var can_control:bool = true
 
 @onready var walk_anim:Animation = $anims.get_animation("Chicken_Walk")
@@ -32,6 +32,9 @@ var can_control:bool = true
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
 
+func _set_money(val:int):
+	var money_effect:Effect = preload("res://effects/MoneyEffect.tscn").instantiate()
+	money_effect.parent = self
 
 func _set_bones_solid(val:bool):
 	if bones_solid == val:

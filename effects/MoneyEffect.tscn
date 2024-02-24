@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs8d66rpw4hg8"]
+
+[ext_resource type="PackedScene" uid="uid://bkj1ocemryqvw" path="res://effects/Effect.tscn" id="1_5r1ib"]
+[ext_resource type="PackedScene" uid="uid://dbd3d2ov8tl50" path="res://Models/Money/Money.glb" id="2_idrak"]
+[ext_resource type="Script" path="res://effects/MoneyEffect.gd" id="2_jytor"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1tkjy"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 0.333333)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1owvu"]
+material = SubResource("StandardMaterial3D_1tkjy")
+size = Vector3(0.05, 0.05, 0.05)
+
+[node name="MoneyEffect" instance=ExtResource("1_5r1ib")]
+script = ExtResource("2_jytor")
+
+[node name="particles" parent="." index="0"]
+draw_pass_1 = SubResource("BoxMesh_1owvu")
+
+[node name="sprite" parent="body" index="1"]
+visible = false
+
+[node name="money_mesh" parent="body" index="2" instance=ExtResource("2_idrak")]

@@ -12,8 +12,13 @@ class_name Effect
 
 @onready var particle_color = $particles.draw_pass_1.material.albedo_color
 
+var fade_frac:float
+
 func _set_parent(val:Node3D):
 	parent = val
+	if not parent:
+		return
+		
 	if add_as_child:
 		parent.add_child(self)
 		position.y = 2.0
@@ -41,15 +46,15 @@ func _process(delta):
 	var lifetime_frac:float = $timer.time_left/$timer.wait_time
 	
 	var fade_start = 0.2
-	var fade_frac: float
 	if lifetime_frac <= fade_start:
 		fade_frac = lifetime_frac/(1.0-fade_start)
 	else:
 		fade_frac = 1.0
 	
-	particle_color.r = 1.0-fade_frac
+	#particle_color.r = 1.0-fade_frac
 	particle_color.a = fade_frac
 	
+
 	$body/sprite.modulate.a = fade_frac
 	
 	if not enable_physics:
