@@ -13,9 +13,10 @@ visible = false
 [node name="image" type="TextureRect" parent="." index="1"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 256.0
-offset_right = 904.0
-offset_bottom = 648.0
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 512.0
+offset_bottom = 448.0
 texture = ExtResource("3_jm5b7")
 
 [node name="text" parent="." index="2"]
@@ -25,6 +26,8 @@ offset_right = 695.0
 text = "YOU DIED!"
 
 [node name="back_button" parent="." index="3"]
-offset_top = 560.0
-offset_bottom = 592.0
+offset_left = 264.0
+offset_top = 368.0
+offset_right = 379.0
+offset_bottom = 400.0
 text = "Respawn"
