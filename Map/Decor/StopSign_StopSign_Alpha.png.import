@@ -2,13 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuakschx5emel"
+uid="uid://phtp6375pk70"
 path.s3tc="res://.godot/imported/StopSign_StopSign_Alpha.png-d2f995814777fa9b49eb099caafa98d2.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={}
 
 [deps]
 
@@ -26,14 +25,9 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://UI/StopSign_StopSign_Alpha.png"
-<<<<<<< HEAD
-process/fix_alpha_border=false
-process/premult_alpha=true
-=======
+roughness/src_normal="res://Map/Decor/StopSign_StopSign_Alpha.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
->>>>>>> 75073bcb6cc5f9979949d3c2b76c3d7309055d86
 process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false

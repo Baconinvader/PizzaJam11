@@ -11,9 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://b17rykmc02tul" path="res://Map/Decor/PalmTree_1.glb" id="6_ifcnv"]
 [ext_resource type="PackedScene" uid="uid://7xgjj5aiu6mv" path="res://Map/Decor/PalmTree_2.glb" id="7_h7ac8"]
 [ext_resource type="PackedScene" uid="uid://dq2l2f3kubjv0" path="res://Map/WaterAnimated.tscn" id="7_mc7lk"]
-[ext_resource type="PackedScene" uid="uid://cxf10yduww34o" path="res://Map/Decor/Mile0.glb" id="12_7oruf"]
+[ext_resource type="PackedScene" uid="uid://cmvsci3pm8rlr" path="res://Map/Decor/Mile0.glb" id="12_7oruf"]
 [ext_resource type="PackedScene" uid="uid://lwl1lqh3nrbg" path="res://Map/Decor/SouthernMostPoint.glb" id="13_n16k5"]
-[ext_resource type="PackedScene" uid="uid://dc061levsgbx3" path="res://Map/Decor/StopSign.glb" id="14_btv0e"]
+[ext_resource type="PackedScene" uid="uid://dc4bwpr0d8r3a" path="res://Map/Decor/StopSign.glb" id="14_btv0e"]
 [ext_resource type="PackedScene" uid="uid://daet1vqy6abho" path="res://Map/SkyBox.glb" id="15_f6us1"]
 [ext_resource type="PackedScene" uid="uid://ba2eh3ubaq2eu" path="res://Map/Decor/StreetLight.glb" id="16_kiu2x"]
 

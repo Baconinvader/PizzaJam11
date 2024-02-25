@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cxf10yduww34o"
+uid="uid://cmvsci3pm8rlr"
 path="res://.godot/imported/Mile0.glb-b163ff0beba9869a918692f4d4e9d9bb.scn"
 
 [deps]
@@ -29,17 +29,6 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-<<<<<<< HEAD
-_subresources={
-"materials": {
-"Mile0": {
-"use_external/enabled": true,
-"use_external/path": "res://Map/Decor/Mile0.tres"
-}
-}
-}
-=======
 _subresources={}
->>>>>>> 75073bcb6cc5f9979949d3c2b76c3d7309055d86
-gltf/naming_version=1
+gltf/naming_version=0
 gltf/embedded_image_handling=1
