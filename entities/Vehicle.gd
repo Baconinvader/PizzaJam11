@@ -6,7 +6,7 @@ class_name Vehicle
 var path:Path3D
 var curve:Curve3D
 
-var speed:float = 20.0
+var speed:float = 40.0
 var curve_progress:float
 var sample_head:float = 0.0
 
@@ -29,8 +29,8 @@ func _process(delta):
 		#target = curve.samplef( fmod(curve_progress + sample_head,curve.point_count) )
 		
 	if do_move:
-		var front_length:float = 1.0
-		var front_point:Vector3 = position + (velocity.normalized()*front_length)
+		var front_length:float = 1.5
+		var front_point:Vector3 = -path.transform.origin + position + (velocity.normalized()*front_length)
 
 		var old_curve_offset:float = curve_offset
 		curve_offset = curve.get_closest_offset(front_point)#position
@@ -46,10 +46,13 @@ func _process(delta):
 
 		if curve_offset >= curve.get_baked_length():
 			curve_offset = 0
+			if $despawn_check_timer.is_stopped():
+				$despawn_check_timer.start()
 			#queue_free()
 
-		target = curve.sample_baked(curve_offset, true) #curve.get_closest_point(front_point)
+		target = path.transform.origin + curve.sample_baked(curve_offset, false) #curve.get_closest_point(front_point)
 		target.y = position.y
+		$target.position = target-position
 		
 		var dist = (position-target).length()
 		var vel:float = speed#minf(speed, dist)
@@ -57,6 +60,8 @@ func _process(delta):
 		velocity = diff.normalized()*vel
 	else:
 		velocity = Vector3.ZERO
+		if $despawn_check_timer.is_stopped():
+			$despawn_check_timer.start()
 	
 	
 	var angle = -Vector2(velocity.x, velocity.z).angle() + (PI*0.5)

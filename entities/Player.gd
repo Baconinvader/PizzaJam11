@@ -30,6 +30,9 @@ var can_control:bool = true
 @onready var death_particles:GPUParticles3D = $Armature/Skeleton3D/master_attachment/death_particles
 @onready var water_particles:GPUParticles3D = $Armature/Skeleton3D/master_attachment/water_particles
 @onready var water_area:Area3D = $Armature/Skeleton3D/master_attachment/bone_area
+@onready var map_marker:Sprite3D = $map_marker
+
+var target_food:Food = null
 
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
@@ -59,9 +62,14 @@ func _set_bones_solid(val:bool):
 
 func _set_food(val:int):
 	food = val
-	if food > max_food:
-		food = 0
-		lay_egg()
+	if eggs < max_eggs:
+		if food >= max_food:
+			food = 0
+			lay_egg()
+	else:
+		if food >= max_food:
+			food = max_food
+			Sound.play_sound("egg")
 
 func _set_eggs(val:int):
 	eggs = val
@@ -184,7 +192,8 @@ func _process(delta):
 		
 		$Armature.rotation.y = rotate_toward($Armature.rotation.y, angle, rotate_speed*delta*move_frac)
 	
-	
+		if not $sound/footsteps.playing:
+			$sound/footsteps.playing = true
 
 	#change blend
 	var change_amount:float = 2.0
@@ -277,3 +286,19 @@ func _input(ev:InputEvent):
 		
 	if ev.is_action_pressed("kill"):
 		kill()
+
+
+func _on_marker_update_timeout():
+	if target_food:
+		if not is_instance_valid(target_food):
+			target_food = null
+	
+	if not target_food:
+		var min_dist:float = 9999.0
+		target_food = null
+		for food_obj in get_tree().get_nodes_in_group("food"):
+			var dist:float = position.distance_to(food_obj.position)
+			if dist < min_dist:
+				min_dist = dist
+				target_food = food_obj
+	$markers/food.obj = target_food

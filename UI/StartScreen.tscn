@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c1ess2j0sdcyr"]
+[gd_scene load_steps=3 format=3 uid="uid://c1ess2j0sdcyr"]
 
 [ext_resource type="Script" path="res://UI/StartScreen.gd" id="1_lxxof"]
+[ext_resource type="Texture2D" uid="uid://blenmmksv1tjk" path="res://materials/bg1.png" id="2_i14vh"]
 
 [node name="StartScreen" type="Control"]
 layout_mode = 3
@@ -16,11 +17,17 @@ layout_mode = 0
 offset_right = 640.0
 offset_bottom = 480.0
 
-[node name="background" type="ColorRect" parent="."]
+[node name="background_colour" type="ColorRect" parent="."]
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 480.0
 color = Color(0.196078, 0.196078, 0.196078, 1)
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+texture = ExtResource("2_i14vh")
 
 [node name="title" type="Label" parent="."]
 layout_mode = 0

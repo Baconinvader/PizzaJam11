@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bva7813alns5m"]
+[gd_scene load_steps=25 format=3 uid="uid://bva7813alns5m"]
 
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
@@ -30,17 +30,31 @@ point_count = 13
 
 [sub_resource type="Curve3D" id="Curve3D_15qa1"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -100, -0.992059, 340, 0, 0, 0, 0, 0, 0, 430, -0.992059, 340, -5, 0, 5, 5, 0, -5, 455, -0.992059, 335, 0, 0, 0, 0, 0, 0, 460, -0.992059, 310, 0, 0, 0, 0, 0, 0, 460, -0.992059, -230, 5, 0, 5, -5, 0, -5, 455.17, -0.992059, -253.299, 0, 0, 0, 0, 0, 0, 430, -0.992059, -260, 0, 0, 0, 0, 0, 0, 370, -0.992059, -260, 3.5, -0.5, 3, -3.5, 0.5, -3, 343.813, -0.992059, -264.897, 0, 0, 0, 0, 0, 0, 340, -0.992059, -285, 0, 0, 0, 0, 0, 0, 340, -0.992059, -310, 5, 0, 5, -5, 0, -5, 333.397, -0.992059, -332.406, 0, 0, 0, 0, 0, 0, 311.99, -0.992059, -338.723, 0, 0, 0, 0, 0, 0, 58.6702, -0.992059, -338.464, 0, 0, 0, 0, 0, 0, 60, -0.992059, -430, 5, 0, 5, -5, 0, -5, 55.6397, -0.992059, -451.35, 0, 0, 0, 0, 0, 0, 30, -0.992059, -460, 0, 0, 0, 0, 0, 0, -70, -0.992059, -460, 5, 0, -10, -5, 0, 10, -95.8862, -0.992059, -452.108, 0, 0, 0, 0, 0, 0, -100, -0.992059, -430),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -100, -0.992059, 340, 0, 0, 0, 0, 0, 0, 430, -0.992059, 340, -5, 0, 5, 5, 0, -5, 455, -0.992059, 335, 0, 0, 0, 0, 0, 0, 460, -0.992059, 310, 0, 0, 0, 0, 0, 0, 460, -0.992059, -230, 5, 0, 5, -5, 0, -5, 455.17, -0.992059, -253.299, 0, 0, 0, 0, 0, 0, 430, -0.992059, -260, 0, 0, 0, 0, 0, 0, 370, -0.992059, -260, 3.5, -0.5, 3, -3.5, 0.5, -3, 343.813, -0.992059, -264.897, 0, 0, 0, 0, 0, 0, 340, -0.992059, -285, 0, 0, 0, 0, 0, 0, 340, -0.992059, -310, 5, 0, 5, -5, 0, -5, 333.397, -0.992059, -332.406, 0, 0, 0, 0, 0, 0, 311.99, -0.992059, -338.723, 0, 0, 0, 0, 0, 0, 58.6702, -0.992059, -338.464, 0, 0, 0, 0, 0, 0, 60, -0.992059, -430, 5, 0, 5, -5, 0, -5, 55.6397, -0.992059, -451.35, 0, 0, 0, 0, 0, 0, 40, 3.00794, -464, 0, 0, 0, 0, 0, 0, -72, 3.00794, -460, 5, 0, -10, -5, 0, 10, -95.8862, -0.992059, -452.108, 0, 0, 0, 0, 0, 0, -100, -0.992059, -430),
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 20
 
 [sub_resource type="Curve3D" id="Curve3D_weix4"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -102.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 32.5, -0.992059, -225, -5, 0, -5, 5, 0, 5, 52.5, -0.992059, -220, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -200, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, 20, -5, 0, -5, 5, 0, 5, 62.5, -0.992059, 50, 0, 0, 0, 0, 0, 0, 97.5, -0.992059, 55, 0, 0, 0, 0, 0, 0, 427.5, -0.992059, 55, -10, 0, 10, 10, 0, -10, 452.5, -0.992059, 45, 0, 0, 0, 0, 0, 0, 457.5, -0.992059, 15, 0, 0, 0, 0, 0, 0, 457.5, -0.992059, -200, 5, 0, 5, 0, 0, 0, 452.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 422.5, -0.992059, -230, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 60, -0.992059, -430, 5, 0, 5, -5, 0, -5, 55.6397, -0.992059, -451.35, 0, 0, 0, 0, 0, 0, 30, -0.992059, -460, 0, 0, 0, 0, 0, 0, -70, -0.992059, -460, 5, 0, -10, -5, 0, 10, -95.8862, -0.992059, -452.108, 0, 0, 0, 0, 0, 0, -100, -0.992059, -430),
-"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -102.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 32.5, -0.992059, -225, -5, 0, -5, 5, 0, 5, 52.5, -0.992059, -220, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -200, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, 20, -5, 0, -5, 5, 0, 5, 62.5, -0.992059, 50, 0, 0, 0, 0, 0, 0, 97.5, -0.992059, 55, 0, 0, 0, 0, 0, 0, 427.5, -0.992059, 55, -10, 0, 10, 10, 0, -10, 452.5, -0.992059, 45, 0, 0, 0, 0, 0, 0, 457.5, -0.992059, 15, 0, 0, 0, 0, 0, 0, 457.5, -0.992059, -200, 5, 0, 5, 0, 0, 0, 452.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 422.5, -0.992059, -230, 0, 0, 0, 0, 0, 0, 73.5, -0.992059, -225, 2.4, 0, 2.4, -2.4, 0, -2.4, 61.5, -0.992059, -229, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -245, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -429, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -441, 4, 0, 8, -4, 0, -8, 53.5, -0.992059, -457, 0, 0, 0, 0, 0, 0, 37.5, -0.992059, -465, 0, 0, 0, 0, 0, 0, -66.5, -0.992059, -465, 4, 0, -4, -4, 0, 4, -98.5, -0.992059, -461, 0, 0, 0, 0, 0, 0, -102.5, -0.992059, -433),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.18166, 0, 0, 0, 0, 0, 0, 0, 0)
 }
-point_count = 20
+point_count = 23
+
+[sub_resource type="Curve3D" id="Curve3D_k4xnj"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 125.5, -0.992059, -465, 0, 0, 0, 0, 0, 0, 409.5, -0.992059, -465, -5, 0, -5, 5, 0, 5, 453.5, -0.992059, -461, 0, 0, 0, 0, 0, 0, 453.5, -0.992059, -425, 0, 0, 0, 0, 0, 0, 453.5, -0.992059, -261, 0, 0, -4, 0, 0, 4, 457.5, -0.992059, -225, 0, 0, 0, 0, 0, 0, 409.5, -0.992059, -221, 0, 0, 0, 0, 0, 0, -86.5, -0.992059, -225, 4, 0, -4, -4, 0, 4, -98.5, -0.992059, -221, 0, 0, 0, 0, 0, 0, -102.5, -0.992059, -201, 0, 0, 0, 0, 0, 0, -102.5, -0.992059, 31, -4, 0, -4, 4, 0, 4, -98.5, -0.992059, 51, 0, 0, 0, 0, 0, 0, -78.5, -0.992059, 55, 0, 0, 0, 0, 0, 0, 41.5, -0.992059, 55, -8, 0, 8, 8, 0, -8, 53.5, -0.992059, 51, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, 27, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -437, -12, 0, 8, 12, 0, -8, 65.5, -0.992059, -461, 0, 0, 0, 0, 0, 0, 105.5, -0.992059, -465),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 19
+
+[sub_resource type="Curve3D" id="Curve3D_u3c7e"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 57.5, -0.992059, 19, 8, 0, -8, -8, 0, 8, 53.5, -0.992, 48, 0, 0, 0, 0, 0, 0, 37.5, -0.992059, 55, 0, 0, 0, 0, 0, 0, -78.5, -0.992059, 55, 4, 0, 4, -4, 0, -4, -98.5, -0.992059, 51, 0, 0, 0, 0, 0, 0, -102.5, -0.992059, 27, 0, 0, 0, 0, 0, 0, -102.5, -0.992059, -713, -8, 0, 8, 8, 0, -8, -98.5, -0.992059, -737, 0, 0, 0, 0, 0, 0, -78.5, -0.992059, -745, 0, 0, 0, 0, 0, 0, 33.5, -0.992059, -741, -4, 0, -8, 4, 0, 8, 53.5, -0.992059, -733, 0, 0, 0, 0, 0, 0, 57.5, -0.992059, -713, 0, 0, 0, 0, 0, 0, 57.5, -0.992, -32),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 13
 
 [sub_resource type="Environment" id="Environment_wku6c"]
 background_color = Color(1, 1, 1, 1)
@@ -68,31 +82,43 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.3276, 0.475783, 59.963)
 [node name="food" type="Node3D" parent="."]
 
 [node name="Food" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 3.65091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 76, 0, 40)
 
 [node name="Food2" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 3.65091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 0, 60)
 
 [node name="Food3" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 3.65091)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -68)
 
 [node name="Food4" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 8.56807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216, 0, 60)
 
 [node name="Food5" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 8.56807)
-
-[node name="Food6" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 8.56807)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 12, 320)
 
 [node name="FoodSpawner" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8601, 0, 44)
 
 [node name="FoodSpawner2" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 62.7044)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.1399, 0, 44)
 
 [node name="FoodSpawner3" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 130.232)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.1399, 0, 340)
+
+[node name="FoodSpawner4" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 450.86, 0, 340)
+
+[node name="FoodSpawner5" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 238.86, 0, -180)
+
+[node name="FoodSpawner6" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.14, 0, -464)
+
+[node name="FoodSpawner7" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -341.14, 0, -64)
+
+[node name="FoodSpawner8" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 454.86, 0, -48)
 
 [node name="Map Stuff" type="Node3D" parent="."]
 
@@ -544,7 +570,6 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -0.237061, -21.6406, 0)
 
 [node name="SkyBox" parent="." instance=ExtResource("15_f6us1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-visible = false
 
 [node name="paths" type="Node3D" parent="."]
 
@@ -560,6 +585,14 @@ curve = SubResource("Curve3D_15qa1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.992059, 285)
 curve = SubResource("Curve3D_weix4")
 
+[node name="path_med_loop2" type="Path3D" parent="paths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.992059, 285)
+curve = SubResource("Curve3D_k4xnj")
+
+[node name="path_med_loop3" type="Path3D" parent="paths"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0.992, 0)
+curve = SubResource("Curve3D_u3c7e")
+
 [node name="vehicles" type="Node3D" parent="."]
 
 [node name="spawner1" parent="." instance=ExtResource("4_jov3x")]
@@ -570,15 +603,27 @@ vehicle_path = "path_small_loop"
 
 [node name="spawner2" parent="." instance=ExtResource("4_jov3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.4259, 1, 333.795)
-max_vehicles = 5
+max_vehicles = 7
 spawn_time = 10.0
 vehicle_path = "path_big_loop"
 
 [node name="spawner3" parent="." instance=ExtResource("4_jov3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.4259, 1, 63.7951)
-max_vehicles = 5
+max_vehicles = 7
 spawn_time = 10.0
 vehicle_path = "path_med_loop"
+
+[node name="spawner4" parent="." instance=ExtResource("4_jov3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.574, 1, -180.205)
+max_vehicles = 7
+spawn_time = 10.0
+vehicle_path = "path_med_loop2"
+
+[node name="spawner5" parent="." instance=ExtResource("4_jov3x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5741, 1, 287.795)
+max_vehicles = 7
+spawn_time = 10.0
+vehicle_path = "path_med_loop3"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wku6c")
@@ -1119,5 +1164,5 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -21, 0
 [node name="House52" parent="Houses" instance=ExtResource("17_pc0x0")]
 transform = Transform3D(1, 0, -1.74846e-07, 0, 1, 0, 1.74846e-07, 0, 1, -21, 0, 300)
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.234922, 0.972014, 0, -0.972014, 0.234922, -12.5754, 304.713, 43.6779)
+[node name="world_cam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 3.4564, 664.713, -74.5638)

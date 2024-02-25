@@ -13,13 +13,14 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_6433s"]
 size = Vector3(15, 10, 15)
 
-[node name="VehicleSpawner" type="Node3D"]
+[node name="VehicleSpawner" type="Node3D" groups=["spawners"]]
 script = ExtResource("1_lp8o8")
 vehicle_scene = ExtResource("2_2oqq0")
 spawn_time = 5.0
 materials = Array[StandardMaterial3D]([ExtResource("3_bmxc5"), ExtResource("4_jkj8h"), ExtResource("5_d8v6t"), ExtResource("6_h0osm"), ExtResource("7_mt8ta"), ExtResource("8_ocr73")])
 
 [node name="sprite" type="Sprite3D" parent="."]
+visible = false
 billboard = 1
 texture = ExtResource("2_hukb7")
 

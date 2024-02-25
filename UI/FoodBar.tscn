@@ -14,30 +14,31 @@ script = ExtResource("1_b0cf8")
 
 [node name="label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 176.0
-offset_right = 216.0
+offset_left = 40.0
+offset_right = 88.0
 offset_bottom = 23.0
 text = "Food"
+horizontal_alignment = 1
 
 [node name="bar" type="ProgressBar" parent="."]
 visible = false
 layout_mode = 0
 offset_top = 40.0
-offset_right = 384.0
+offset_right = 128.0
 offset_bottom = 67.0
 
 [node name="texture_progress" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 152.0
+offset_left = 16.0
 offset_top = 32.0
-offset_right = 240.0
+offset_right = 104.0
 offset_bottom = 120.0
 
 [node name="percentage" type="Label" parent="."]
 layout_mode = 0
-offset_left = 168.0
+offset_left = 32.0
 offset_top = 48.0
-offset_right = 216.0
+offset_right = 80.0
 offset_bottom = 80.0
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -5,6 +5,15 @@ var current_music:AudioStream:set=_set_current_music
 
 @export var main_music:AudioStream = preload("res://sound/Main_Song.mp3")
 
+@export var sounds:Dictionary = {
+	"eat":preload("res://sound/eat.wav"),
+	"egg":preload("res://sound/egg.wav"),
+	"footstep":preload("res://sound/footstep.wav"),
+	"sell":preload("res://sound/sell.wav"),
+	"buy":preload("res://sound/buy.wav")
+	
+}
+
 signal music_changed
 
 func _physics_process(delta):
@@ -17,7 +26,9 @@ func _set_playing(val:bool):
 func _get_playing():
 	return playing
 	
-
+func play_sound(name:String):
+	$sfx.stream = sounds[name]
+	$sfx.playing = true
 
 func _set_current_music(val:AudioStream):
 	if current_music != val:

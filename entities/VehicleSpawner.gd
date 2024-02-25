@@ -18,6 +18,11 @@ func set_wait_time():
 func _ready():
 	set_wait_time()
 
+func reset():
+	for vehicle in vehicles:
+		if is_instance_valid(vehicle):
+			vehicle.queue_free()
+
 func spawn():
 	var new_vehicle:Vehicle = vehicle_scene.instantiate()
 	new_vehicle.connect("tree_exited", _on_vehicle_tree_exited)

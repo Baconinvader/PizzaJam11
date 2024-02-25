@@ -32,11 +32,16 @@ func _input(ev:InputEvent):
 			get_viewport().warp_mouse(Vector2(0.5, 0.5))
 	
 	if ev.is_action_pressed("back"):
-		var pause_screen:PauseScreen = g.main.get_node("PauseScreen")
-		if not g.screens:
-			pause_screen = preload("res://UI/PauseScreen.tscn").instantiate()
-			screens.add_child(pause_screen)
-		else:
-			if g.screens:
-				g.screens[-1].queue_free()
-	
+		if g.in_game:
+			var pause_screen:PauseScreen = g.main.get_node("PauseScreen")
+			if not g.screens:
+				pause_screen = preload("res://UI/PauseScreen.tscn").instantiate()
+				screens.add_child(pause_screen)
+			else:
+				if g.screens:
+					g.screens[-1].queue_free()
+					
+	if ev.is_action_pressed("win"):
+		var win_screen:WinScreen = preload("res://UI/WinScreen.tscn").instantiate()
+		screens.add_screen(win_screen)
+		

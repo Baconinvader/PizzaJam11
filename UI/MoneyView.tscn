@@ -14,6 +14,22 @@ script = ExtResource("1_fbokl")
 
 [node name="text" type="Label" parent="."]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 128.0
 offset_bottom = 23.0
 text = "[NO MONEY]"
+horizontal_alignment = 1
+
+[node name="increase" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_top = -24.0
+offset_right = 128.0
+offset_bottom = -1.0
+theme_override_colors/font_color = Color(0, 0.752941, 0, 1)
+text = "+[NONE]"
+horizontal_alignment = 1
+
+[node name="increase_timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="increase_timer" to="." method="_on_increase_timer_timeout"]

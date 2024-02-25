@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pdbj06ugo5dg"]
+
+[ext_resource type="Script" path="res://items/Marker.gd" id="1_1sotu"]
+[ext_resource type="Texture2D" uid="uid://bg3ky78vn5643" path="res://materials/marker.png" id="2_quj0g"]
+
+[node name="Marker" type="Node3D"]
+script = ExtResource("1_1sotu")
+min_range = 2.0
+max_range = 100.0
+min_alpha = 0.25
+
+[node name="sprite" type="Sprite3D" parent="."]
+axis = 1
+texture = ExtResource("2_quj0g")

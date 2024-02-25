@@ -6,3 +6,5 @@
 script = ExtResource("1_gircd")
 
 [node name="music" type="AudioStreamPlayer" parent="."]
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]

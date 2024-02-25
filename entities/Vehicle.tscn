@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://ck2r3tlohffni"]
+[gd_scene load_steps=20 format=3 uid="uid://ck2r3tlohffni"]
 
 [ext_resource type="PackedScene" uid="uid://8vmtqkgdrcud" path="res://entities/Obstacle.tscn" id="1_kmope"]
 [ext_resource type="Script" path="res://entities/Vehicle.gd" id="2_hb0yd"]
 [ext_resource type="Material" uid="uid://dmsv4wtbfymv6" path="res://materials/RangeRoverRed.tres" id="3_tea75"]
 [ext_resource type="AudioStream" uid="uid://csq6ucuddtgg4" path="res://sound/Truck_Loop.wav" id="4_30ngp"]
+[ext_resource type="Texture2D" uid="uid://cvmes71faagkq" path="res://materials/Endgame_Screen.png" id="5_oa7ii"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_3w7c1"]
 height = 1.5
@@ -172,7 +173,7 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, -1.89735e-07, 1.44374e-07, -3.55271e-14, -0.605549, -0.795808, 2.38419e-07, 0.795808, -0.605549, 1.30098e-13, 6.30964, -3.57628e-07)
 bones/1/enabled = true
 bones/1/position = Vector3(1.30098e-13, 6.30964, -3.57628e-07)
-bones/1/rotation = Quaternion(-0.380147, -1.1026e-07, -4.53171e-08, 0.924926)
+bones/1/rotation = Quaternion(0.589696, -9.62767e-08, 7.02972e-08, 0.807626)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "Range_Rover_Body"
 bones/2/parent = 0
@@ -186,7 +187,7 @@ bones/3/parent = 2
 bones/3/rest = Transform3D(0.660868, -0.582305, -0.47347, 0.582306, -0.000152111, 0.812969, -0.473469, -0.81297, 0.33898, -5.96046e-08, 12.2633, 2.98023e-08)
 bones/3/enabled = true
 bones/3/position = Vector3(-5.96046e-08, 12.2633, 2.98023e-08)
-bones/3/rotation = Quaternion(-0.628121, -0.0368184, 0.404622, -0.663619)
+bones/3/rotation = Quaternion(-0.788968, -0.0175449, 0.543536, 0.28599)
 bones/3/scale = Vector3(1, 1, 1)
 
 [node name="Range_Rover" type="MeshInstance3D" parent="Range_Rover_Rig/Skeleton3D" index="0"]
@@ -208,7 +209,6 @@ parameters/TimeScale/scale = 1.0
 
 [node name="despawn_check_timer" type="Timer" parent="." index="12"]
 wait_time = 5.0
-autostart = true
 
 [node name="avoidance_area" type="Area3D" parent="." index="13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16.1628)
@@ -228,6 +228,13 @@ aabb = AABB(-4, 0, -10, 8, 10, 20)
 [node name="loop" type="AudioStreamPlayer3D" parent="sound" index="0"]
 stream = ExtResource("4_30ngp")
 volume_db = 10.0
+
+[node name="target" type="Sprite3D" parent="." index="16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+visible = false
+pixel_size = 0.05
+billboard = 1
+texture = ExtResource("5_oa7ii")
 
 [connection signal="timeout" from="despawn_check_timer" to="." method="_on_despawn_check_timer_timeout"]
 [connection signal="timeout" from="avoidance_area/avoidance_check_timer" to="." method="_on_avoidance_check_timer_timeout"]

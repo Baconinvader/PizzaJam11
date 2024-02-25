@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btpg37t03sc4d"]
+[gd_scene load_steps=3 format=3 uid="uid://btpg37t03sc4d"]
 
 [ext_resource type="Script" path="res://UI/PauseScreen.gd" id="1_t7wej"]
+[ext_resource type="Texture2D" uid="uid://cnfy668c2cf2o" path="res://materials/map.png" id="2_232no"]
 
 [node name="PauseScreen" type="Control"]
 layout_mode = 3
@@ -12,18 +13,26 @@ grow_vertical = 2
 script = ExtResource("1_t7wej")
 
 [node name="background_panel" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 offset_right = 640.0
 offset_bottom = 480.0
+
+[node name="map" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 480.0
+texture = ExtResource("2_232no")
 
 [node name="text" type="Label" parent="."]
 layout_mode = 0
 offset_left = 224.0
 offset_top = 160.0
-offset_right = 410.0
+offset_right = 416.0
 offset_bottom = 227.0
 theme_override_font_sizes/font_size = 48
-text = "PAUSED"
+horizontal_alignment = 1
 
 [node name="back_button" type="Button" parent="."]
 layout_mode = 0

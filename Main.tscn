@@ -19,8 +19,6 @@ offset_right = 284.0
 offset_bottom = 136.0
 
 [node name="FoodBar" parent="." instance=ExtResource("2_os1qi")]
-offset_left = -48.0
-offset_right = -47.68
 
 [node name="EggCounter" parent="." instance=ExtResource("3_5xdar")]
 offset_left = 320.0

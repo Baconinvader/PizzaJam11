@@ -12,6 +12,7 @@ func _exit_tree():
 	Sound.current_music = null
 	Sound.playing = true
 	g.player.reset()
+	g.level.reset()
 	
 func _input(ev:InputEvent):
 	if ev.is_action_pressed("jump"):

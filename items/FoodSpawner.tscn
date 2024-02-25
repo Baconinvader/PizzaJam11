@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_vi2cy"]
 [ext_resource type="Texture2D" uid="uid://dxemyucu6uwpq" path="res://materials/FoodBar/FoodBar_100%.png" id="3_76v75"]
 
-[node name="FoodSpawner" type="Node3D"]
+[node name="FoodSpawner" type="Node3D" groups=["spawners"]]
 script = ExtResource("1_8br0i")
 food_scene = ExtResource("2_vi2cy")
 
@@ -13,6 +13,7 @@ food_scene = ExtResource("2_vi2cy")
 [node name="spawn_timer" type="Timer" parent="."]
 
 [node name="icon" type="Sprite3D" parent="."]
+visible = false
 billboard = 2
 texture = ExtResource("3_76v75")
 

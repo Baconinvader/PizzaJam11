@@ -8,6 +8,9 @@ class_name Level
 func _ready():
 	pass # Replace with function body.
 	
+func reset():
+	for spawner in get_tree().get_nodes_in_group("spawners"):
+		spawner.reset()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

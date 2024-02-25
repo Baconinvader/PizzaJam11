@@ -38,7 +38,7 @@ func update_shown():
 	if not $items.get_child_count():
 		visible = false
 	else:
-		visible = false
+		visible = true
 	
 	var i:int = 0
 	var showing_last:bool = false

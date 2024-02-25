@@ -15,3 +15,5 @@ func pickup():
 		if food_icon:
 			food_effect.texture = food_icon
 		food_effect.parent = g.player
+		
+		Sound.play_sound("eat")
