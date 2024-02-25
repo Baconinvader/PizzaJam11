@@ -20,6 +20,7 @@ func reset():
 	$spawn_timer.start()
 	if food:
 		food.queue_free()
+		food = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
