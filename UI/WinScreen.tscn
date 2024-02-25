@@ -1,8 +1,28 @@
-[gd_scene load_steps=2 format=3 uid="uid://diybq4xm5a1qr"]
+[gd_scene load_steps=3 format=3 uid="uid://diybq4xm5a1qr"]
 
 [ext_resource type="PackedScene" uid="uid://btpg37t03sc4d" path="res://UI/PauseScreen.tscn" id="1_3dua6"]
+[ext_resource type="Texture2D" uid="uid://cwhyxtc3oupeo" path="res://materials/Vinyl_Icons/Album_Cover_Icon.png" id="2_vbsrg"]
 
 [node name="WinScreen" instance=ExtResource("1_3dua6")]
 
-[node name="text" parent="." index="1"]
+[node name="album2" type="SubViewportContainer" parent="." index="1"]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 32.0
+offset_right = 568.0
+offset_bottom = 544.0
+
+[node name="album_viewport" type="SubViewport" parent="album2" index="0"]
+transparent_bg = true
+handle_input_locally = false
+render_target_update_mode = 4
+
+[node name="sprite" type="Sprite3D" parent="album2/album_viewport" index="0"]
+pixel_size = 1.0
+texture = ExtResource("2_vbsrg")
+
+[node name="cam" type="Camera3D" parent="album2/album_viewport" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80.1396)
+
+[node name="text" parent="." index="2"]
 text = "YOU WIN"

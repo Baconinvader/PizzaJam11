@@ -1,7 +1,51 @@
-[gd_scene load_steps=2 format=3 uid="uid://ct130lkvnltai"]
+[gd_scene load_steps=5 format=3 uid="uid://cnit3ee8ig20t"]
 
-[ext_resource type="PackedScene" uid="uid://bd06r5hnt8cdf" path="res://Map/Decor/Fence.glb" id="1_cf7vc"]
+[ext_resource type="Material" uid="uid://bxtxvw3nrnv8n" path="res://Map/Decor/Fence.tres" id="1_03kfh"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_qgpcq"]
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.937429, 2, 1e-05, 1.93744),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Fence",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 0, 0, 255, 255, 0, 0, 254, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pyoj8"]
+resource_name = "Fence_Plane"
+_surfaces = [{
+"aabb": AABB(-1, 0, -0.937429, 2, 1e-05, 1.93744),
+"attribute_data": PackedByteArray(255, 255, 243, 228, 255, 255, 218, 18, 0, 0, 243, 228, 0, 0, 218, 18),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": ExtResource("1_03kfh"),
+"name": "Fence",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 84, 213, 255, 255, 0, 0, 254, 255, 84, 213, 0, 0, 0, 0, 0, 0, 84, 213, 255, 255, 0, 0, 0, 0, 84, 213, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170, 170)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_qgpcq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kbbj8"]
+size = Vector3(1, 2, 1)
 
 [node name="Fence" type="Node3D"]
 
-[node name="Fence" parent="." instance=ExtResource("1_cf7vc")]
+[node name="model" type="MeshInstance3D" parent="."]
+transform = Transform3D(0, 6.21917, 0, 4.2979, 0, 0, 0, 0, 6.21917, 0, 4.25916, 0)
+mesh = SubResource("ArrayMesh_pyoj8")
+skeleton = NodePath("")
+
+[node name="body" type="StaticBody3D" parent="."]
+
+[node name="shape" type="CollisionShape3D" parent="body"]
+transform = Transform3D(0.5, 0, 0, 0, 4, 0, 0, 0, 12.7, 0, 4, 0)
+shape = SubResource("BoxShape3D_kbbj8")

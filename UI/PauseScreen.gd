@@ -8,6 +8,9 @@ func _ready():
 	g.screens.append(self)
 	screen_init()
 	
+func _process(delta):
+	$album2/album_viewport/sprite.rotation.y += 1.0*delta
+	
 func screen_init():
 	pass
 

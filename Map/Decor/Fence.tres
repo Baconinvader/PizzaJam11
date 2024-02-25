@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxtxvw3nrnv8n"]
+
+[ext_resource type="Texture2D" uid="uid://deeykwcd6ayc5" path="res://Map/Decor/Fence_Fence-Fence_Alpha.png" id="1_2egbb"]
+
+[resource]
+resource_name = "Fence"
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_2egbb")
+roughness = 0.5
