@@ -7,14 +7,14 @@
 [ext_resource type="PackedScene" uid="uid://dm0m30lct70wl" path="res://entities/VehicleSpawner.tscn" id="4_jov3x"]
 [ext_resource type="PackedScene" uid="uid://c4bxkdlsb286l" path="res://Map/MapFloor.glb" id="5_4q0gs"]
 [ext_resource type="PackedScene" uid="uid://du5su0iys7f7u" path="res://items/FoodSpawner.tscn" id="5_cpy3a"]
-[ext_resource type="PackedScene" uid="uid://dl1hpaetjrvvg" path="res://Map/SkyBox.glb" id="6_6wlmv"]
 [ext_resource type="PackedScene" uid="uid://d07gsognilaal" path="res://Map/Decor/PalmTree_3.glb" id="6_44ib0"]
 [ext_resource type="PackedScene" uid="uid://b17rykmc02tul" path="res://Map/Decor/PalmTree_1.glb" id="6_ifcnv"]
 [ext_resource type="PackedScene" uid="uid://7xgjj5aiu6mv" path="res://Map/Decor/PalmTree_2.glb" id="7_h7ac8"]
-[ext_resource type="PackedScene" path="res://Map/WaterAnimated.tscn" id="7_mc7lk"]
+[ext_resource type="PackedScene" uid="uid://dq2l2f3kubjv0" path="res://Map/WaterAnimated.tscn" id="7_mc7lk"]
 [ext_resource type="PackedScene" uid="uid://cxf10yduww34o" path="res://Map/Decor/Mile0.glb" id="12_7oruf"]
 [ext_resource type="PackedScene" uid="uid://lwl1lqh3nrbg" path="res://Map/Decor/SouthernMostPoint.glb" id="13_n16k5"]
 [ext_resource type="PackedScene" uid="uid://dc061levsgbx3" path="res://Map/Decor/StopSign.glb" id="14_btv0e"]
+[ext_resource type="PackedScene" uid="uid://daet1vqy6abho" path="res://Map/SkyBox.glb" id="15_f6us1"]
 [ext_resource type="PackedScene" uid="uid://ba2eh3ubaq2eu" path="res://Map/Decor/StreetLight.glb" id="16_kiu2x"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_18wbx"]
@@ -107,15 +107,29 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.252, 0, 43.7236)
 [node name="EggStand" parent="Map Stuff" instance=ExtResource("2_v6kao")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97, 0, 22)
 
+[node name="Mile0" parent="Map Stuff" instance=ExtResource("12_7oruf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -83, 0, 358)
+
+[node name="SouthernMostPoint" parent="Map Stuff" instance=ExtResource("13_n16k5")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -101, 0, 386)
+
+[node name="StopSign" parent="Map Stuff" instance=ExtResource("14_btv0e")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 41, 0, 42)
+
+[node name="VinylShop" parent="Map Stuff" instance=ExtResource("3_w1pqu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 0, -364)
+
+[node name="StreetLight2" parent="Map Stuff" instance=ExtResource("16_kiu2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 1, 6)
+
 [node name="MapFloor" parent="." instance=ExtResource("5_4q0gs")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
 
-[node name="SkyBox" parent="." instance=ExtResource("6_6wlmv")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-visible = false
-
 [node name="Water" parent="." instance=ExtResource("7_mc7lk")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -15.139, 0)
+
+[node name="SkyBox" parent="." instance=ExtResource("15_f6us1")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="paths" type="Node3D" parent="."]
 
@@ -153,18 +167,3 @@ vehicle_path = "path_med_loop"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_wku6c")
-
-[node name="Mile0" parent="." instance=ExtResource("12_7oruf")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -83, 0, 358)
-
-[node name="SouthernMostPoint" parent="." instance=ExtResource("13_n16k5")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -101, 0, 386)
-
-[node name="StopSign" parent="." instance=ExtResource("14_btv0e")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 41, 0, 42)
-
-[node name="VinylShop" parent="." instance=ExtResource("3_w1pqu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 161, 0, -364)
-
-[node name="StreetLight2" parent="." instance=ExtResource("16_kiu2x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80, 1, 6)

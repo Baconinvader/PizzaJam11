@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bhqjphadlthhb"]
+
+[ext_resource type="Texture2D" uid="uid://cgiqbun0g6eb" path="res://Map/Decor/Mile0_Mile0-Mile0_Alpha.png" id="1_4vuoq"]
+
+[resource]
+resource_name = "Mile0"
+transparency = 1
+cull_mode = 2
+albedo_texture = ExtResource("1_4vuoq")
+roughness = 0.5
+texture_filter = 2
