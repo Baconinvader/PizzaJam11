@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://1ekd3gcliyvh"]
+
+[ext_resource type="PackedScene" uid="uid://bd06r5hnt8cdf" path="res://Map/Decor/Fence.glb" id="1_cf7vc"]
+
+[node name="Fence" type="Node2D"]
+
+[node name="Fence" parent="." instance=ExtResource("1_cf7vc")]
