@@ -14,8 +14,8 @@ data = PackedVector3Array(2.8787, -0.9434, -9.7071, 3.101, -0.9434, -10.7071, 3.
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_bpltq"]
 points = PackedVector3Array(-1, 0, 0, 1, 0, 0, -1, 1, 0, 1, 1, 0, -1, 0, 1, 1, 0, 1)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_3p2ij"]
-size = Vector3(7, 1, 2.49133)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_3cmpm"]
+points = PackedVector3Array(-1, 0, -1, 1, 0, -1, -1, 0, 1, 1, 0, 1, -1.1, -0.5, -1.1, 1.1, -0.5, -1.1, -1.1, -0.5, 1.1, 1.1, -0.5, 1.1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_urc7t"]
 resource_name = "RecordingStudioSign"
@@ -229,8 +229,8 @@ transform = Transform3D(-2.471e-07, 0, 5.18, 0, 3.713, 0, 5.653, 0, 2.26425e-07,
 shape = SubResource("ConvexPolygonShape3D_bpltq")
 
 [node name="bottom_shape2" type="CollisionShape3D" parent="." index="3"]
-transform = Transform3D(12.0305, 0, 0, 0, 0.3, 0, 0, 0, 16.896, 0, 0.14276, -12.6976)
-shape = SubResource("BoxShape3D_3p2ij")
+transform = Transform3D(40.003, 0, 0, 0, 1.5, 0, 0, 0, 20.275, -0.75, 0.641964, -11.948)
+shape = SubResource("ConvexPolygonShape3D_3cmpm")
 
 [node name="model" parent="." index="4"]
 transform = Transform3D(9, 0, 0, 0, -1.18458e-07, -2, 0, 2.71, -8.74228e-08, 0, 0, 0)
