@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://diybq4xm5a1qr"]
+
+[ext_resource type="PackedScene" uid="uid://btpg37t03sc4d" path="res://UI/PauseScreen.tscn" id="1_3dua6"]
+
+[node name="WinScreen" instance=ExtResource("1_3dua6")]
+
+[node name="text" parent="." index="1"]
+text = "YOU WIN"
