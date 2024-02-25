@@ -314,7 +314,6 @@ transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, -0.237061, -21.6406, 0)
 
 [node name="SkyBox" parent="." instance=ExtResource("15_f6us1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
-visible = false
 
 [node name="paths" type="Node3D" parent="."]
 
