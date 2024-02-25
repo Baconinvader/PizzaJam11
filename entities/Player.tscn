@@ -687,17 +687,17 @@ size = Vector3(0.1, 0.1, 0.1)
 
 [node name="Player" instance=ExtResource("1_jknp5")]
 script = ExtResource("2_lmx8a")
-acceleration = 6.2
-speed = 20.0
+acceleration = 8.0
+speed = 30.0
 rotate_speed = 3.14159
 deceleration = 1.0
-vel_max = 20.0
+vel_max = 30.0
 jump_power = null
 max_food = 10
 max_eggs = 5
 
 [node name="shape" parent="." index="0"]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1.20062, 0)
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 1.20062, 0)
 shape = SubResource("SphereShape3D_v8csd")
 
 [node name="model" parent="." index="1"]
@@ -730,7 +730,7 @@ pitch_min = 5
 pitch_max = 89
 
 [node name="Armature" type="Node3D" parent="." index="4"]
-transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 0.864443, 0.13423)
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 0, 0.864443, 0.13423)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="Armature" index="0"]
 bones/0/name = "Chicken_Master"
@@ -752,7 +752,7 @@ bones/2/parent = 1
 bones/2/rest = Transform3D(1, 2.40625e-08, 1.21738e-09, -2.40625e-08, 0.994894, 0.100926, 1.21736e-09, -0.100926, 0.994894, 0, 0.738245, 2.98023e-08)
 bones/2/enabled = true
 bones/2/position = Vector3(0, 0.738245, 2.98023e-08)
-bones/2/rotation = Quaternion(-0.0577736, 0.0100186, -0.00280986, 0.998275)
+bones/2/rotation = Quaternion(-0.0578071, 0.000966577, 0.00221692, 0.998325)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "Chicken_Head"
 bones/3/parent = 2
@@ -886,10 +886,10 @@ mesh = SubResource("ArrayMesh_t2otg")
 skin = SubResource("Skin_661a5")
 
 [node name="Physical Bone Chicken_Master" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="1"]
-transform = Transform3D(-1, 0, 0, 0, 0.344699, 0.938713, 0, 0.938713, -0.344699, 0, 0.508546, 0.01835)
+transform = Transform3D(-1, 0, 0, 0, 0.344699, 0.938713, 0, 0.938713, -0.344699, 0, 0.508546, 0.0183499)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00103356, 0.445462)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00103357, 0.445462)
 body_offset = Transform3D(-1, 0, 0, 0, 0.344699, 0.938713, 0, 0.938713, -0.344699, 0, -0.418517, 0.15258)
 bone_name = "Chicken_Master"
 joint_constraints/x/linear_limit_enabled = true
@@ -961,11 +961,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_imbnc")
 
 [node name="Physical Bone Chicken_Belly" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="2"]
-transform = Transform3D(1, 2.33844e-07, -5.13635e-10, 1.28268e-07, -0.536588, -0.843787, -2.00954e-07, 0.843787, -0.536588, 7.52082e-09, 0.410546, 0.380901)
+transform = Transform3D(1, 2.33846e-07, -5.02957e-10, 1.28267e-07, -0.536586, -0.843784, -2.00954e-07, 0.843784, -0.536586, 7.50083e-09, 0.410545, 0.3809)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.1307e-09, 2.15622e-06, 0.369116)
-body_offset = Transform3D(1, -4.56222e-09, -9.15286e-10, -3.90799e-13, 4.29153e-06, -0.999952, 1.6712e-11, 0.999952, 4.29153e-06, 8.46856e-09, 0.369098, -3.74019e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11487e-09, 3.05885e-06, 0.369115)
+body_offset = Transform3D(1, -4.55981e-09, -9.04315e-10, -6.96332e-13, 4.23193e-06, -0.999948, 1.7863e-11, 0.999948, 4.47035e-06, 8.44868e-09, 0.369096, -4.70877e-06)
 bone_name = "Chicken_Belly"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1036,11 +1036,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_751rf")
 
 [node name="Physical Bone Chicken_Chest" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="3"]
-transform = Transform3D(1.00435, 0.0214488, -0.00449512, 0.00499956, -0.463926, -0.906438, -0.0202464, 0.949713, -0.438884, 0.0012857, 0.965184, 0.696624)
+transform = Transform3D(1.00437, 0.00176184, 0.00456224, 0.00496428, -0.463911, -0.906413, 0.000552827, 0.949933, -0.438861, -0.00114079, 0.965181, 0.696617)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.15203e-05, 8.18606e-05, 0.268199)
-body_offset = Transform3D(1.00457, -2.44565e-05, -7.89668e-06, 0.000151649, -0.00374907, -1.00711, 1.85184e-05, 1.05718, -0.000156879, 8.40127e-05, 0.270106, -4.44651e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.26004e-05, 8.60238e-05, 0.268201)
+body_offset = Transform3D(1.00438, -2.47182e-05, -7.79192e-06, 0.000151216, -0.00375557, -1.00708, 1.61766e-05, 1.05715, -0.000159502, 8.50544e-05, 0.270099, -4.81606e-05)
 bone_name = "Chicken_Chest"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1111,11 +1111,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_rsv3d")
 
 [node name="Physical Bone Chicken_Shoulder_L" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="4"]
-transform = Transform3D(0.0816916, 0.133085, -0.987741, -0.83542, -0.531294, -0.14069, -0.543498, 0.836662, 0.0677829, 0.338412, 0.77021, 0.555771)
+transform = Transform3D(0.0816914, 0.133085, -0.987739, -0.835418, -0.531302, -0.140691, -0.543497, 0.836663, 0.0677848, 0.338411, 0.770207, 0.55577)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77334e-05, -1.6046e-05, 0.342608)
-body_offset = Transform3D(0.999995, 5.21541e-06, 2.65986e-06, -2.14204e-06, -2.63378e-06, -1.00001, -4.58956e-06, 0.999994, 2.64496e-06, 2.68221e-05, 0.342611, 1.51396e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02018e-05, -1.79688e-05, 0.342607)
+body_offset = Transform3D(0.999993, 1.15633e-05, 2.90573e-06, -2.15322e-06, -3.93391e-06, -1.00001, -4.41074e-06, 0.999999, 5.126e-06, 2.92063e-05, 0.34261, 1.62125e-05)
 bone_name = "Chicken_Shoulder_L"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1186,11 +1186,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_2fwje")
 
 [node name="Physical Bone Chicken_Wing_L" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="5"]
-transform = Transform3D(-0.418068, 0.904584, -0.0816645, -0.706411, -0.267558, 0.654274, 0.569979, 0.331592, 0.750985, 0.702255, 0.6136, 0.297652)
+transform = Transform3D(-0.418065, 0.904575, -0.0816586, -0.706402, -0.267553, 0.654259, 0.569976, 0.331589, 0.750969, 0.702243, 0.613592, 0.297665)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000182642, 4.74576e-05, 0.312903)
-body_offset = Transform3D(0.999337, -6.10948e-05, -2.35736e-05, -2.50041e-05, -4.85182e-05, -0.999361, -0.000110254, 0.999906, 4.39137e-05, 0.0001899, 0.312703, -6.1214e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000200082, 5.04861e-05, 0.312905)
+body_offset = Transform3D(0.999327, -6.26892e-05, -2.56002e-05, -2.82824e-05, -5.01424e-05, -0.999339, -0.000111341, 0.999895, 4.75645e-05, 0.000207961, 0.312698, -6.53863e-05)
 bone_name = "Chicken_Wing_L"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1261,11 +1261,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_bgdc1")
 
 [node name="Physical Bone Chicken_Shoulder_R" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="6"]
-transform = Transform3D(0.0816816, -0.133079, 0.987661, 0.835356, -0.531246, -0.140669, 0.543465, 0.836633, 0.0677737, -0.338393, 0.770205, 0.55577)
+transform = Transform3D(0.0816809, -0.133078, 0.987656, 0.83535, -0.531243, -0.140667, 0.543463, 0.836629, 0.0677738, -0.338392, 0.770203, 0.55577)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82838e-05, -1.25913e-05, 0.342617)
-body_offset = Transform3D(0.999923, 1.92821e-05, 1.30758e-06, 3.78489e-06, -5.17815e-07, -0.999928, 1.20103e-05, 0.999944, -5.87478e-06, -2.87294e-05, 0.342592, 1.46031e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01216e-05, -1.40852e-05, 0.342617)
+body_offset = Transform3D(0.999916, 1.96695e-05, 2.55555e-06, 3.73647e-06, -3.31551e-07, -0.999922, 1.36495e-05, 0.999938, -6.0387e-06, -3.09944e-05, 0.34259, 1.61529e-05)
 bone_name = "Chicken_Shoulder_R"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1336,11 +1336,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_u6ooa")
 
 [node name="Physical Bone Chicken_Wing_R" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="7"]
-transform = Transform3D(-0.418068, -0.904402, 0.0519353, 0.706899, -0.268104, 0.661731, -0.570134, 0.331102, 0.721806, -0.70219, 0.613612, 0.297579)
+transform = Transform3D(-0.418056, -0.904391, 0.051934, 0.706883, -0.268097, 0.661724, -0.570123, 0.331099, 0.721798, -0.702174, 0.6136, 0.297586)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0108069, -0.00472701, 0.319163)
-body_offset = Transform3D(0.99977, -0.000121221, 0.0343723, -0.000178546, 0.000662163, -0.979885, -7.21514e-05, 0.999725, 0.0152655, -0.000166535, 0.312744, -0.000147253)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0107878, -0.00471781, 0.319168)
+body_offset = Transform3D(0.999747, -0.000118986, 0.0343729, -0.000176728, 0.000659198, -0.979874, -7.51019e-05, 0.999713, 0.015266, -0.000186265, 0.312746, -0.00015679)
 bone_name = "Chicken_Wing_R"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1411,11 +1411,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_pens7")
 
 [node name="Physical Bone Chicken_Ass" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="8"]
-transform = Transform3D(1, 0, 0, 0, 0.836033, -0.548572, 0, 0.548572, 0.836033, 0, 0.358196, -0.235567)
+transform = Transform3D(1, 0, 0, 0, 0.836028, -0.548568, 0, 0.548568, 0.836028, 0, 0.358193, -0.235566)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.41396e-06, 0.488852)
-body_offset = Transform3D(1, 0, 0, 0, 8.28505e-06, -0.999941, 0, 0.999941, 8.28505e-06, 0, 0.488823, -8.46386e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.14794e-06, 0.488853)
+body_offset = Transform3D(1, 0, 0, 0, 8.76188e-06, -0.999934, 0, 0.999934, 8.76188e-06, 0, 0.488821, -1.04308e-05)
 bone_name = "Chicken_Ass"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1486,11 +1486,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_egdph")
 
 [node name="Physical Bone Chicken_Tail" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="9"]
-transform = Transform3D(0.999922, 1.94088e-06, -1.78814e-07, 1.65604e-06, 0.874814, -0.484269, -3.14538e-06, 0.484255, 0.87484, -4.96581e-06, 0.764975, -0.862473)
+transform = Transform3D(0.999917, 1.95368e-06, 7.21775e-08, 1.85028e-06, 0.874807, -0.484263, -3.27418e-06, 0.484248, 0.874834, -5.35091e-06, 0.76497, -0.862358)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.04257e-06, -0.0155741, 0.258001)
-body_offset = Transform3D(0.999922, 1.94088e-06, -1.78814e-07, 3.55392e-06, 1.58846e-05, -0.999931, -7.45047e-08, 0.999901, 1.63317e-05, -4.96581e-06, 0.257983, 0.0155683)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.36327e-06, -0.0156264, 0.257899)
+body_offset = Transform3D(0.999917, 1.95368e-06, 7.21775e-08, 3.76068e-06, 1.80602e-05, -0.999923, 3.30604e-08, 0.999891, 1.84476e-05, -5.35091e-06, 0.25788, 0.0156199)
 bone_name = "Chicken_Tail"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1561,11 +1561,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_w6njk")
 
 [node name="Physical Bone Chicken_Hip_L" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="10"]
-transform = Transform3D(0.336769, 0.477783, -0.801073, 0.106526, 0.784936, 0.552963, 0.931393, -0.258998, 0.226296, 0.237337, -0.0587428, 0.105836)
+transform = Transform3D(0.336738, 0.477691, -0.801047, 0.10651, 0.784702, 0.552937, 0.931312, -0.258924, 0.226282, 0.237336, -0.058742, 0.105836)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.82856e-05, 2.91805e-05, 0.296303)
-body_offset = Transform3D(0.996119, 0.00363231, -7.0706e-05, 3.08007e-05, 0.0072095, -0.999348, -0.00034374, 0.954681, -0.000109274, -7.33137e-06, 0.29611, 4.52995e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06955e-05, 3.09971e-05, 0.296313)
+body_offset = Transform3D(0.996031, 0.00364549, -7.78139e-05, 3.29763e-05, 0.00724787, -0.999309, -0.000350118, 0.954422, -0.000113986, -7.62939e-06, 0.296108, 4.20213e-06)
 bone_name = "Chicken_Hip_L"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1636,11 +1636,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_xhiey")
 
 [node name="Physical Bone Chicken_Thigh_L" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="11"]
-transform = Transform3D(-6.14666e-08, 0.997655, -5.14996e-07, -0.0590744, 5.16894e-07, 0.998197, 0.998209, 2.15422e-07, 0.0590712, 0.490597, -0.357367, 0.0307999)
+transform = Transform3D(-3.97939e-08, 0.99765, -3.37319e-07, -0.0590741, 3.33427e-07, 0.998181, 0.998199, 3.69611e-08, 0.059071, 0.490595, -0.357354, 0.0307998)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.51378e-07, -0.0159265, 0.134968)
-body_offset = Transform3D(0.999955, 2.30966e-07, 1.86265e-08, 2.5034e-06, 4.65333e-09, -0.999943, -1.2107e-07, 0.997655, 5.12162e-08, 7.52509e-07, 0.13496, 0.0158891)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15988e-07, -0.0159248, 0.134958)
+body_offset = Transform3D(0.999946, 2.31199e-07, 2.79397e-07, 2.35066e-06, 9.71965e-09, -0.999927, -1.29197e-07, 0.99765, 5.00827e-08, 8.19564e-08, 0.134948, 0.0158873)
 bone_name = "Chicken_Thigh_L"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1711,11 +1711,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_or55a")
 
 [node name="Physical Bone Chicken_Leg_L" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="12"]
-transform = Transform3D(5.07481e-08, 0.997655, -5.60534e-07, -0.0752393, 5.08247e-07, 0.995288, 0.997084, 2.93213e-09, 0.0750758, 0.490683, -0.684461, 0.00832958)
+transform = Transform3D(9.76693e-08, 0.997651, -3.80039e-07, -0.0752407, 3.31308e-07, 0.995224, 0.997084, -1.89463e-07, 0.0750703, 0.490681, -0.684459, 0.00833483)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.15356e-05, -0.0160123, 0.19314)
-body_offset = Transform3D(0.999919, -2.79392e-08, -2.63825e-05, 1.49757e-06, 7.41625e-08, -0.998115, 2.9802e-08, 0.997655, 5.22678e-08, 1.66297e-05, 0.192776, 0.0159747)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.67069e-05, -0.0160106, 0.193149)
+body_offset = Transform3D(0.999919, -4.20106e-08, -2.75001e-05, 2.48849e-06, 7.37627e-08, -0.998051, 4.98246e-08, 0.99765, 5.38004e-08, 2.20165e-05, 0.192773, 0.0159729)
 bone_name = "Chicken_Leg_L"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1786,11 +1786,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_wbl2d")
 
 [node name="Physical Bone Chicken_Hip_R" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="13"]
-transform = Transform3D(0.338208, -0.494095, 0.801484, 0.15915, 0.870021, 0.467713, -0.927476, -0.0305733, 0.372525, -0.23734, -0.0484826, 0.0628107)
+transform = Transform3D(0.338209, -0.494224, 0.80148, 0.15915, 0.870027, 0.467711, -0.927469, -0.0306126, 0.372525, -0.237327, -0.0485012, 0.0628111)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.95787e-06, 8.36129e-06, 0.296133)
-body_offset = Transform3D(0.999962, -0.000289232, 2.05636e-06, 5.39422e-06, 0.000474552, -0.999953, 1.76206e-06, 1.001, -4.10993e-06, 4.35114e-06, 0.296119, -7.15256e-06)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.52315e-06, 3.06813e-05, 0.296132)
+body_offset = Transform3D(0.999956, -0.000295147, 1.37091e-06, 3.33786e-06, 0.000589858, -0.999949, 1.43982e-06, 1.00107, -3.28012e-06, 5.126e-06, 0.296117, -2.97427e-05)
 bone_name = "Chicken_Hip_R"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1861,11 +1861,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_yxbvr")
 
 [node name="Physical Bone Chicken_Thigh_R" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="14"]
-transform = Transform3D(-3.53866e-07, -0.997658, 1.09128e-06, 0.330326, 8.63725e-07, 0.94381, -0.943772, 5.78568e-07, 0.330332, -0.474687, -0.31443, -0.0921105)
+transform = Transform3D(2.6564e-07, -0.997654, 9.70657e-07, 0.330324, 8.91827e-07, 0.943804, -0.943763, 1.10902e-07, 0.330331, -0.474685, -0.314429, -0.0921104)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.33215e-06, 2.15364e-05, 0.135022)
-body_offset = Transform3D(0.99991, -7.93952e-08, 2.08616e-06, -4.61936e-06, 3.36439e-08, -0.999948, 1.1175e-08, 0.997658, 1.13505e-08, -3.61353e-06, 0.135015, -2.14875e-05)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.72085e-06, 2.32689e-05, 0.135022)
+body_offset = Transform3D(0.999901, -8.84119e-08, 1.96695e-06, -5.36442e-06, 3.22112e-08, -0.999942, 1.74597e-08, 0.997654, 1.27633e-08, -3.98606e-06, 0.135014, -2.3216e-05)
 bone_name = "Chicken_Thigh_R"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
@@ -1936,11 +1936,11 @@ transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0, 0, 0)
 shape = SubResource("CapsuleShape3D_s7pok")
 
 [node name="Physical Bone Chicken_Leg_R" type="PhysicalBone3D" parent="Armature/Skeleton3D" index="15"]
-transform = Transform3D(0.00552445, -0.997833, -0.00353696, -0.0788379, -0.00394789, 0.997028, -0.991427, -0.00518557, -0.0788875, -0.474189, -0.634071, -0.121533)
+transform = Transform3D(0.00552413, -0.997827, -0.00353783, -0.0788373, -0.00394785, 0.997021, -0.991159, -0.00518613, -0.0788873, -0.474191, -0.634068, -0.121534)
 collision_layer = 2
 joint_type = 5
-joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1981e-05, -0.000162771, 0.19275)
-body_offset = Transform3D(0.994572, -5.87879e-05, -2.42293e-05, 0.00038784, 7.66484e-06, -1.00015, -1.82074e-06, 0.997854, 9.89085e-06, 1.65766e-05, 0.192779, 0.000160515)
+joint_offset = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16722e-05, -0.000165273, 0.192748)
+body_offset = Transform3D(0.994305, -5.86803e-05, -2.38344e-05, 0.000408411, 7.66874e-06, -1.00014, -2.29245e-06, 0.997849, 1.09333e-05, 1.61901e-05, 0.192776, 0.00016281)
 bone_name = "Chicken_Leg_R"
 joint_constraints/x/linear_limit_enabled = true
 joint_constraints/x/linear_limit_upper = 0.0
