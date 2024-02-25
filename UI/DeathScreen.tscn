@@ -26,8 +26,4 @@ offset_right = 695.0
 text = "YOU DIED!"
 
 [node name="back_button" parent="." index="3"]
-offset_left = 264.0
-offset_top = 368.0
-offset_right = 379.0
-offset_bottom = 400.0
 text = "Respawn"
