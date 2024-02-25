@@ -1,6 +1,9 @@
 extends PauseScreen
 
+
 func screen_init():
+	var fade_tween:Tween = create_tween()
+	fade_tween.tween_property($image, "modulate", Color(1.0, 1.0, 1.0, 0.5), 1.0)
 	Sound.current_music = preload("res://sound/Death_Song.mp3")
 	Sound.playing = true
 

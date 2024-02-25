@@ -6,6 +6,7 @@
 
 [node name="DeathScreen" instance=ExtResource("1_1nxra")]
 script = ExtResource("2_y2de8")
+test = null
 
 [node name="background_panel" parent="." index="0"]
 visible = false
