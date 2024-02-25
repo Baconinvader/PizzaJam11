@@ -576,7 +576,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.7922, 0, -267.567)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79215, 0, -90.5667)
 
 [node name="PalmTree_30" parent="Map Stuff/PalmTrees/PalmTree_25" instance=ExtResource("7_h7ac8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6892, -1.02393, -110.363)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.6892, -1.02393, -114.363)
 
 [node name="PalmTree_1" parent="Map Stuff/PalmTrees/PalmTree_25" instance=ExtResource("6_ifcnv")]
 transform = Transform3D(-0.886806, -0.00280771, -0.462136, -0.00292229, 0.999996, -0.000467816, 0.462135, 0.000935631, -0.886809, 17.1042, 6.51926e-09, -76.5684)
