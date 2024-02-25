@@ -18,6 +18,14 @@ func _ready():
 	update_music()
 	update_shown()
 	
+	var last_key:String = InputMap.action_get_events("mus_last")[0].as_text()
+	var next_key:String = InputMap.action_get_events("mus_next")[0].as_text()
+	var toggle_key:String = InputMap.action_get_events("mus_toggle")[0].as_text()
+	
+	$play_controls/label.text = toggle_key
+	$play_controls/last/label.text = last_key
+	$play_controls/next/label.text = next_key
+	
 func _on_music_changed():
 	if Sound.current_music != music:
 		update_shown()
@@ -27,6 +35,11 @@ func _physics_process(delta):
 	#g.debug_text = "%s (%s)" % [music,music_index]
 	
 func update_shown():
+	if not $items.get_child_count():
+		visible = false
+	else:
+		visible = false
+	
 	var i:int = 0
 	var showing_last:bool = false
 	var showing_next:bool = false

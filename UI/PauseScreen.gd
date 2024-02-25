@@ -9,7 +9,7 @@ func _ready():
 	screen_init()
 	
 func _process(delta):
-	$album2/album_viewport/sprite.rotation.y += 1.0*delta
+	pass
 	
 func screen_init():
 	pass
