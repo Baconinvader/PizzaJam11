@@ -35,6 +35,7 @@ var bones_solid:bool = false:set=_set_bones_solid
 func _set_money(val:int):
 	var money_effect:Effect = preload("res://effects/MoneyEffect.tscn").instantiate()
 	money_effect.parent = self
+	money = val
 
 func _set_bones_solid(val:bool):
 	if bones_solid == val:

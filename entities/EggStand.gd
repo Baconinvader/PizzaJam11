@@ -1,5 +1,7 @@
 extends "res://entities/Interactable.gd"
 
+func _ready():
+	$egg_store/anims.current_animation = "ArmatureAction"
 
 func interact():
 	var money:float = g.player.eggs*10.0

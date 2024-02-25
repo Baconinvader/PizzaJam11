@@ -23,6 +23,11 @@ func _set_items(val:VinylShopItems):
 
 func _ready():
 	g.screens.append(self)
+	items.connect("all_items_bought", _on_all_items_bought)
+
+func _on_all_items_bought():
+	g.main.add_child(preload("res://UI/WinScreen.tscn").instantiate())
+	
 
 func _input(ev:InputEvent):
 	pass
