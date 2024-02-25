@@ -13,24 +13,24 @@ script = ExtResource("1_lxxof")
 
 [node name="background_panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 640.0
+offset_bottom = 480.0
 
 [node name="title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 264.0
-offset_top = 120.0
-offset_right = 890.0
-offset_bottom = 187.0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 634.0
+offset_bottom = 195.0
 theme_override_font_sizes/font_size = 48
 text = "EGG GAME WORKING TITLE"
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 448.0
-offset_top = 384.0
-offset_right = 704.0
-offset_bottom = 424.0
+offset_left = 192.0
+offset_top = 360.0
+offset_right = 448.0
+offset_bottom = 402.0
 theme_override_font_sizes/font_size = 24
 text = "Start"
 
