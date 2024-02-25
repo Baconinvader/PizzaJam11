@@ -25,6 +25,7 @@ Sound="*res://sound/SoundHandler.tscn"
 window/size/viewport_width=640
 window/size/viewport_height=480
 window/size/resizable=false
+window/stretch/mode="viewport"
 
 [dotnet]
 
@@ -34,6 +35,10 @@ project/assembly_name="Pizza Jam 11"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[gui]
+
+theme/custom="res://materials/default_theme.tres"
 
 [input]
 
