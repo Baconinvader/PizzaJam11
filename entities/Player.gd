@@ -27,10 +27,22 @@ var can_control:bool = true
 @onready var camera_base:Marker3D = $head
 @onready var camera:UserCamera = $head/camera
 @onready var master_bone:PhysicalBone3D = $"Armature/Skeleton3D/Physical Bone Chicken_Master"
-@onready var death_particles:GPUParticles3D = $Armature/Skeleton3D/Chicken/death_particles
+@onready var death_particles:GPUParticles3D = $Armature/Skeleton3D/master_attachment/death_particles
+@onready var water_particles:GPUParticles3D = $Armature/Skeleton3D/master_attachment/water_particles
+@onready var water_area:Area3D = $Armature/Skeleton3D/master_attachment/bone_area
 
 var walk_blend_amount:float = 0.0
 var bones_solid:bool = false:set=_set_bones_solid
+
+var in_water:bool = false
+
+var invincibile:bool:get=_get_invincible
+
+func _get_invincible():
+	if not $invincibility_cooldown.is_stopped() and $invincibility_cooldown.time_left:
+		return true
+	else:
+		return false
 
 func _set_money(val:int):
 	var money_effect:Effect = preload("res://effects/MoneyEffect.tscn").instantiate()
@@ -69,6 +81,7 @@ func reset():
 	reset_pos()
 	velocity = Vector3.ZERO
 	alive = true
+	$invincibility_cooldown.start()
 	food = 0
 	eggs = 0
 	$Armature/Skeleton3D.physical_bones_stop_simulation()
@@ -89,6 +102,12 @@ func _process(delta):
 	if not g.in_game:
 		return
 		
+	if in_water:
+		water_particles.emitting = true
+		if not alive:
+			master_bone.apply_central_impulse(Vector3(0,4,0))
+	else:
+		water_particles.emitting = false
 
 	if can_control != g.enable_controls:
 		can_control = g.enable_controls
@@ -126,7 +145,8 @@ func _process(delta):
 		var armature_rotation:Transform3D = $Armature.transform
 		armature_rotation.origin = Vector3.ZERO
 		camera_base.position =  armature_rotation * camera_base_transform.origin
-		death_particles.position = camera_base_transform.origin
+		#death_particles.position = camera_base_transform.origin
+		#water_particles.position = camera_base_transform.origin
 	
 	var do_accel:bool = false
 	

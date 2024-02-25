@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cj4qjsxojxga7"]
+[gd_scene load_steps=10 format=3 uid="uid://cj4qjsxojxga7"]
 
 [ext_resource type="Script" path="res://Main.gd" id="1_jirne"]
 [ext_resource type="PackedScene" uid="uid://boi77g4hvyur5" path="res://UI/FoodBar.tscn" id="2_os1qi"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://64vwyvrpu8b0" path="res://items/VinylShopItems.tscn" id="6_kjf10"]
 [ext_resource type="PackedScene" uid="uid://c1ess2j0sdcyr" path="res://UI/StartScreen.tscn" id="7_nkai7"]
 [ext_resource type="PackedScene" uid="uid://m3pqpb6nk15" path="res://UI/MusicChooser.tscn" id="8_64vwe"]
+[ext_resource type="Texture2D" uid="uid://jnvkdx8vgw2v" path="res://materials/water_animated.tres" id="9_7y1u1"]
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2587, 0, 0)
@@ -35,6 +36,13 @@ offset_top = 584.0
 offset_bottom = 583.848
 
 [node name="shop_items" parent="." instance=ExtResource("6_kjf10")]
+
+[node name="water" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0.643137)
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("9_7y1u1")
 
 [node name="StartScreen" parent="." instance=ExtResource("7_nkai7")]
 
