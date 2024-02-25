@@ -48,8 +48,9 @@ func _get_invincible():
 		return false
 
 func _set_money(val:int):
-	var money_effect:Effect = preload("res://effects/MoneyEffect.tscn").instantiate()
-	money_effect.parent = self
+	if val > money:
+		var money_effect:Effect = preload("res://effects/MoneyEffect.tscn").instantiate()
+		money_effect.parent = self
 	money = val
 
 func _set_bones_solid(val:bool):
@@ -266,6 +267,7 @@ func kill():
 	alive = false
 	eggs = 0
 	food = 0
+	money = max(money-15,0)
 	$Armature/Skeleton3D.physical_bones_start_simulation()
 	var death_screen = preload("res://UI/DeathScreen.tscn").instantiate()
 	$sound/death.playing = true

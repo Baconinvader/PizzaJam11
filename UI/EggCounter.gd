@@ -8,6 +8,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+	$label.text = "Eggs x%s/%s" % [g.player.eggs, g.player.max_eggs]
+	
 	var egg_count = g.player.eggs
 	while (egg_count > icon_count):
 		$eggs.add_child(egg_scene.instantiate())

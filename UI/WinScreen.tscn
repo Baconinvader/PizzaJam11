@@ -1,30 +1,78 @@
-[gd_scene load_steps=4 format=3 uid="uid://diybq4xm5a1qr"]
+[gd_scene load_steps=8 format=3 uid="uid://diybq4xm5a1qr"]
 
 [ext_resource type="PackedScene" uid="uid://btpg37t03sc4d" path="res://UI/PauseScreen.tscn" id="1_3dua6"]
 [ext_resource type="Script" path="res://UI/WinScreen.gd" id="2_ult1s"]
 [ext_resource type="Texture2D" uid="uid://cwhyxtc3oupeo" path="res://materials/Vinyl_Icons/Album_Cover_Icon.png" id="2_vbsrg"]
+[ext_resource type="Texture2D" uid="uid://h5151chfu1r2" path="res://materials/bg2.png" id="4_i3hjj"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n8e5m"]
+
+[sub_resource type="Sky" id="Sky_xvx6v"]
+sky_material = SubResource("ProceduralSkyMaterial_n8e5m")
+
+[sub_resource type="Environment" id="Environment_lnuam"]
+background_mode = 2
+sky = SubResource("Sky_xvx6v")
 
 [node name="WinScreen" instance=ExtResource("1_3dua6")]
 script = ExtResource("2_ult1s")
 
-[node name="album" type="SubViewportContainer" parent="." index="1"]
+[node name="map" parent="." index="1"]
+modulate = Color(1, 1, 1, 1)
+texture = ExtResource("4_i3hjj")
+
+[node name="album" type="SubViewportContainer" parent="." index="2"]
 layout_mode = 0
-offset_left = 56.0
-offset_top = 32.0
-offset_right = 568.0
-offset_bottom = 544.0
+offset_right = 640.0
+offset_bottom = 480.0
 
 [node name="album_viewport" type="SubViewport" parent="album" index="0"]
 transparent_bg = true
 handle_input_locally = false
+size = Vector2i(640, 480)
 render_target_update_mode = 4
 
 [node name="sprite" type="Sprite3D" parent="album/album_viewport" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150, -40)
 pixel_size = 1.0
 texture = ExtResource("2_vbsrg")
 
 [node name="cam" type="Camera3D" parent="album/album_viewport" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 80.1396)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 150, 45.021)
+environment = SubResource("Environment_lnuam")
+current = true
 
-[node name="text" parent="." index="2"]
-text = "YOU WIN"
+[node name="text" parent="." index="3"]
+offset_top = 88.0
+offset_bottom = 155.0
+text = "YOU WIN!"
+
+[node name="text2" type="Label" parent="." index="4"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 200.0
+offset_right = 520.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 24
+text = "You were able to sell enough eggs to purchase all the tracks! Now onto stardom!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="text3" type="Label" parent="." index="5"]
+layout_mode = 0
+offset_top = 432.0
+offset_right = 256.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 16
+text = "Thanks for playing!
+-Baconinvader and FreddyFTA"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="back_button" parent="." index="6"]
+text = "Keep Playing"
+
+[node name="audio_controls" parent="." index="7"]
+visible = false

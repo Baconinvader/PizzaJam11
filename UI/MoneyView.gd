@@ -24,6 +24,7 @@ func show_money_increase(amount:float):
 		$increase.set("theme_override_colors/font_color", Color(1,0,0,1))
 	$increase.position.y = 0
 	$increase.visible = true
+	$increase_timer.start()
 
 
 func _on_increase_timer_timeout():

@@ -3,6 +3,11 @@ extends Node
 var playing:bool = false:set=_set_playing,get=_get_playing
 var current_music:AudioStream:set=_set_current_music
 
+var music_vol:float = 0.35:set=_set_music_vol
+var music_min_db:float = -15
+var music_max_db:float = 20
+
+
 @export var main_music:AudioStream = preload("res://sound/Main_Song.mp3")
 
 @export var sounds:Dictionary = {
@@ -15,6 +20,20 @@ var current_music:AudioStream:set=_set_current_music
 }
 
 signal music_changed
+
+func _set_music_vol(val:float):
+	music_vol = val
+	
+	var db:float
+	if music_vol:
+		db = music_min_db + ((music_max_db-music_min_db)*music_vol)
+	else:
+		db = -80
+		
+	$music.stream_paused = true
+	$music.volume_db = db
+	$music.stream_paused = false
+	$sfx.volume_db = db
 
 func _physics_process(delta):
 	g.debug_text = "%s" % current_music

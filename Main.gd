@@ -43,5 +43,5 @@ func _input(ev:InputEvent):
 					
 	if ev.is_action_pressed("win"):
 		var win_screen:WinScreen = preload("res://UI/WinScreen.tscn").instantiate()
-		screens.add_screen(win_screen)
+		screens.add_child(win_screen)
 		

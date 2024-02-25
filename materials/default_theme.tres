@@ -1,8 +1,16 @@
-[gd_resource type="Theme" load_steps=3 format=3 uid="uid://dvfd6srxu23r4"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://dvfd6srxu23r4"]
 
 [ext_resource type="FontFile" uid="uid://m3wlr2730r8" path="res://level/Biocats.ttf" id="1_rsqfy"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0vmtf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ab8g"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.6, 1, 1, 0.501961)
+corner_detail = 5
 
 [resource]
 Label/colors/font_color = Color(1, 1, 1, 1)
@@ -16,3 +24,4 @@ Label/constants/shadow_outline_size = 1
 Label/font_sizes/font_size = 16
 Label/fonts/font = ExtResource("1_rsqfy")
 Label/styles/normal = SubResource("StyleBoxEmpty_0vmtf")
+Panel/styles/panel = SubResource("StyleBoxFlat_1ab8g")

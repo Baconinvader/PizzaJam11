@@ -18,9 +18,9 @@ func _ready():
 	update_music()
 	update_shown()
 	
-	var last_key:String = InputMap.action_get_events("mus_last")[0].as_text()
-	var next_key:String = InputMap.action_get_events("mus_next")[0].as_text()
-	var toggle_key:String = InputMap.action_get_events("mus_toggle")[0].as_text()
+	var last_key:String = InputMap.action_get_events("mus_last")[0].as_text()[0]
+	var next_key:String = InputMap.action_get_events("mus_next")[0].as_text()[0]
+	var toggle_key:String = InputMap.action_get_events("mus_toggle")[0].as_text()[0]
 	
 	$play_controls/label.text = toggle_key
 	$play_controls/last/label.text = last_key
@@ -44,9 +44,10 @@ func update_shown():
 	var showing_last:bool = false
 	var showing_next:bool = false
 	for child:MusicChoice in $items.get_children():
-		child.visible = true
+		child.visible = false
 		if i == music_index:
 			child.position = $current.position
+			child.visible = true
 		
 		elif i == int(fposmod((music_index+1), $items.get_child_count())):
 			child.position = $next.position
@@ -56,9 +57,6 @@ func update_shown():
 			child.position = $last.position
 			showing_last = true
 			
-		
-		else:
-			child.visible = false
 			
 		if child.visible:
 			child.position.x -= child.size.x/2

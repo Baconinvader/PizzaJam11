@@ -5,17 +5,16 @@
 
 [node name="VinylShopInterface" type="Control"]
 layout_mode = 3
-anchor_right = 0.396
+anchor_right = 0.5
 anchor_bottom = 0.494
-offset_right = -8.19202
-offset_bottom = -0.112
+offset_bottom = -0.240021
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_beeys")
 
 [node name="background_panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 640.0
+offset_right = 256.0
 offset_bottom = 480.0
 
 [node name="scroll" type="ScrollContainer" parent="background_panel"]
@@ -41,5 +40,17 @@ offset_left = 608.0
 offset_right = 640.0
 offset_bottom = 31.0
 text = "X"
+
+[node name="text" type="Label" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 160.0
+offset_right = 552.0
+offset_bottom = 296.0
+theme_override_font_sizes/font_size = 32
+text = "What would you like to buy?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="close" to="." method="_on_close_pressed"]

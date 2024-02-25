@@ -10,22 +10,25 @@
 [node name="MusicChooser" type="Control"]
 custom_minimum_size = Vector2(256, 176)
 layout_mode = 3
-anchor_right = 0.4
-anchor_bottom = 0.367
-offset_bottom = -0.160004
+anchor_right = 0.206
+anchor_bottom = 0.192
+offset_right = -7.68002
+offset_bottom = -8.32001
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f2mou")
 
 [node name="items" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 128.0
+offset_bottom = 256.0
 
 [node name="current" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 128.0
-offset_right = 128.0
+offset_left = 560.0
+offset_top = 328.0
+offset_right = 560.0
+offset_bottom = 328.0
 
 [node name="TextureRect" type="TextureRect" parent="current"]
 visible = false
@@ -38,8 +41,10 @@ texture = ExtResource("2_obd6q")
 
 [node name="last" type="Control" parent="."]
 anchors_preset = 0
-offset_top = 128.0
-offset_bottom = 128.0
+offset_left = 432.0
+offset_top = 416.0
+offset_right = 432.0
+offset_bottom = 416.0
 
 [node name="TextureRect2" type="TextureRect" parent="last"]
 visible = false
@@ -52,10 +57,10 @@ texture = ExtResource("2_obd6q")
 
 [node name="next" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 256.0
-offset_top = 128.0
-offset_right = 256.0
-offset_bottom = 128.0
+offset_left = 688.0
+offset_top = 416.0
+offset_right = 688.0
+offset_bottom = 416.0
 
 [node name="TextureRect3" type="TextureRect" parent="next"]
 visible = false
@@ -68,17 +73,19 @@ texture = ExtResource("2_obd6q")
 
 [node name="music_text" type="Label" parent="."]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 80.0
-offset_right = 175.0
-offset_bottom = 103.0
+offset_left = 520.0
+offset_top = 368.0
+offset_right = 607.0
+offset_bottom = 391.0
 text = "None"
 horizontal_alignment = 1
 
 [node name="play_controls" type="Control" parent="."]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 432.0
+offset_top = 288.0
+offset_right = 472.0
+offset_bottom = 328.0
 
 [node name="play" type="Button" parent="play_controls"]
 layout_mode = 0

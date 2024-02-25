@@ -94,7 +94,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 0, -68)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 216, 0, 60)
 
 [node name="Food5" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 12, 320)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56, 0, 320)
 
 [node name="FoodSpawner" parent="food" instance=ExtResource("5_cpy3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.8601, 0, 44)
@@ -119,6 +119,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -341.14, 0, -64)
 
 [node name="FoodSpawner8" parent="food" instance=ExtResource("5_cpy3a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 454.86, 0, -48)
+
+[node name="FoodSpawner9" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -229.14, 0, -100)
+
+[node name="FoodSpawner10" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 218.86, 0, -340)
 
 [node name="Map Stuff" type="Node3D" parent="."]
 
@@ -609,8 +615,8 @@ vehicle_path = "path_big_loop"
 
 [node name="spawner3" parent="." instance=ExtResource("4_jov3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -99.4259, 1, 63.7951)
-max_vehicles = 7
-spawn_time = 10.0
+max_vehicles = 10
+spawn_time = 12.0
 vehicle_path = "path_med_loop"
 
 [node name="spawner4" parent="." instance=ExtResource("4_jov3x")]
@@ -621,8 +627,8 @@ vehicle_path = "path_med_loop2"
 
 [node name="spawner5" parent="." instance=ExtResource("4_jov3x")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 56.5741, 1, 287.795)
-max_vehicles = 7
-spawn_time = 10.0
+max_vehicles = 10
+spawn_time = 12.0
 vehicle_path = "path_med_loop3"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -5,7 +5,10 @@ class_name PauseScreen
 @export var test:String
 
 func _ready():
+	for child in g.screens:
+		child.queue_free()
 	g.screens.append(self)
+	$audio_controls/slider.value = Sound.music_vol
 	screen_init()
 	
 func _process(delta):
@@ -28,3 +31,8 @@ func _exit_tree():
 		g.level.get_node("world_cam").current = false
 	g.player.camera.current = true
 	
+
+
+func _on_slider_drag_ended(value_changed):
+	if value_changed:
+		Sound.music_vol = $audio_controls/slider.value

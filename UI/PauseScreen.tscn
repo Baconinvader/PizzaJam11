@@ -42,4 +42,30 @@ offset_right = 379.0
 offset_bottom = 400.0
 text = "Back to Game"
 
+[node name="audio_controls" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 480.0
+offset_top = 8.0
+offset_right = 640.0
+offset_bottom = 48.0
+
+[node name="label" type="Label" parent="audio_controls"]
+layout_mode = 0
+offset_left = 56.0
+offset_right = 113.0
+offset_bottom = 16.0
+text = "Volume"
+
+[node name="slider" type="HSlider" parent="audio_controls"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 152.0
+offset_bottom = 40.0
+max_value = 1.0
+step = 0.1
+tick_count = 10
+ticks_on_borders = true
+
 [connection signal="pressed" from="back_button" to="." method="_on_back_button_pressed"]
+[connection signal="drag_ended" from="audio_controls/slider" to="." method="_on_slider_drag_ended"]

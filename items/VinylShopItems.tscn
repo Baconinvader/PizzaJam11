@@ -20,50 +20,43 @@
 script = ExtResource("1_ftig1")
 
 [node name="vinyl1" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 1"
-item_description = "IDK LOL"
+item_name = "Track 1"
 icon = ExtResource("3_5wcx8")
-cost = 5
+cost = 10
 stream = ExtResource("4_p8ygp")
 
 [node name="vinyl2" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 2"
-item_description = "IDK LOL"
+item_name = "Track 2"
 icon = ExtResource("5_0fhyp")
-cost = 5
+cost = 20
 stream = ExtResource("6_ppwad")
 
 [node name="vinyl3" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 3"
-item_description = "IDK LOL"
+item_name = "Track 3"
 icon = ExtResource("7_fasjh")
-cost = 5
+cost = 25
 stream = ExtResource("8_rtkor")
 
 [node name="vinyl4" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 4"
-item_description = "IDK LOL"
+item_name = "Track 4"
 icon = ExtResource("9_ari6f")
-cost = 5
+cost = 25
 stream = ExtResource("9_hn3l7")
 
 [node name="vinyl5" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 5"
-item_description = "IDK LOL"
+item_name = "Track 5"
 icon = ExtResource("11_atkil")
-cost = 5
+cost = 40
 stream = ExtResource("10_ewa3l")
 
 [node name="vinyl6" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 6"
-item_description = "IDK LOL"
+item_name = "Track 6"
 icon = ExtResource("13_3fqsm")
-cost = 5
+cost = 40
 stream = ExtResource("11_2nxig")
 
 [node name="vinyl7" parent="." instance=ExtResource("1_w12an")]
-item_name = "Vinyl 7"
-item_description = "IDK LOL"
+item_name = "Track 7"
 icon = ExtResource("3_5wcx8")
-cost = 5
+cost = 60
 stream = ExtResource("12_vc8a4")
