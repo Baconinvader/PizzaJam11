@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bva7813alns5m"]
+[gd_scene load_steps=23 format=3 uid="uid://bva7813alns5m"]
 
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
-[ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
 [ext_resource type="PackedScene" uid="uid://chdnsi0w38sv8" path="res://entities/EggStand.tscn" id="2_v6kao"]
 [ext_resource type="PackedScene" uid="uid://bjydcx4k17t14" path="res://UI/VinylShop.tscn" id="3_w1pqu"]
 [ext_resource type="PackedScene" uid="uid://dm0m30lct70wl" path="res://entities/VehicleSpawner.tscn" id="4_jov3x"]
@@ -68,32 +67,422 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.0704, 0.475783, 0)
 
 [node name="food" type="Node3D" parent="."]
 
-[node name="Food" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 3.65091)
-
-[node name="Food2" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 3.65091)
-
-[node name="Food3" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 3.65091)
-
-[node name="Food4" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46634, 0, 8.56807)
-
-[node name="Food5" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.57276, 0, 8.56807)
-
-[node name="Food6" parent="food" instance=ExtResource("2_pygua")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.647009, 0, 8.56807)
-
 [node name="FoodSpawner" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -19)
+
+[node name="FoodSpawner129" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 16)
+
+[node name="FoodSpawner130" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 51)
+
+[node name="FoodSpawner131" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 86)
+
+[node name="FoodSpawner132" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 121)
+
+[node name="FoodSpawner133" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 156)
+
+[node name="FoodSpawner134" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 191)
+
+[node name="FoodSpawner135" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 226)
+
+[node name="FoodSpawner136" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 261)
+
+[node name="FoodSpawner137" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 296)
+
+[node name="FoodSpawner138" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 331)
+
+[node name="FoodSpawner139" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, 366)
 
 [node name="FoodSpawner2" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 62.7044)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -136.291, 0, -19)
 
 [node name="FoodSpawner3" parent="food" instance=ExtResource("5_cpy3a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -142.291, 0, 130.232)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -171.291, 0, -19)
+
+[node name="FoodSpawner4" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206.291, 0, -19)
+
+[node name="FoodSpawner5" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -241.291, 0, -19)
+
+[node name="FoodSpawner6" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -276.291, 0, -19)
+
+[node name="FoodSpawner7" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -311.291, 0, -19)
+
+[node name="FoodSpawner8" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -346.291, 0, -54)
+
+[node name="FoodSpawner9" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -346.291, 0, -89)
+
+[node name="FoodSpawner10" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -311.291, 0, -99.6333)
+
+[node name="FoodSpawner11" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -276.291, 0, -99.6333)
+
+[node name="FoodSpawner12" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -241.291, 0, -99.6333)
+
+[node name="FoodSpawner13" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206.291, 0, -99.6333)
+
+[node name="FoodSpawner14" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -206.291, 0, -99.6333)
+
+[node name="FoodSpawner15" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -171.291, 0, -99.6333)
+
+[node name="FoodSpawner16" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -136.291, 0, -99.6333)
+
+[node name="FoodSpawner17" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -99.6333)
+
+[node name="FoodSpawner18" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -99.6333)
+
+[node name="FoodSpawner19" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -134.633)
+
+[node name="FoodSpawner20" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -169.633)
+
+[node name="FoodSpawner21" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -204.633)
+
+[node name="FoodSpawner22" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -239.633)
+
+[node name="FoodSpawner23" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -274.633)
+
+[node name="FoodSpawner24" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -309.633)
+
+[node name="FoodSpawner25" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -344.633)
+
+[node name="FoodSpawner26" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -379.633)
+
+[node name="FoodSpawner27" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -414.633)
+
+[node name="FoodSpawner28" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101.291, 0, -449.633)
+
+[node name="FoodSpawner29" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -66.291, 0, -457.683)
+
+[node name="FoodSpawner30" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.291, 0, -457.683)
+
+[node name="FoodSpawner31" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70898, 0, -457.683)
+
+[node name="FoodSpawner32" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.70898, 0, -457.683)
+
+[node name="FoodSpawner33" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.709, 0, -457.683)
+
+[node name="FoodSpawner34" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -422.683)
+
+[node name="FoodSpawner35" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -387.683)
+
+[node name="FoodSpawner36" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -352.683)
+
+[node name="FoodSpawner37" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -317.683)
+
+[node name="FoodSpawner38" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -282.683)
+
+[node name="FoodSpawner39" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -247.683)
+
+[node name="FoodSpawner40" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -177.683)
+
+[node name="FoodSpawner109" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.4409, 0, -177.683)
+
+[node name="FoodSpawner110" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.441, 0, -177.683)
+
+[node name="FoodSpawner111" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.441, 0, -177.683)
+
+[node name="FoodSpawner112" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.441, 0, -177.683)
+
+[node name="FoodSpawner113" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.441, 0, -177.683)
+
+[node name="FoodSpawner114" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 268.441, 0, -177.683)
+
+[node name="FoodSpawner115" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 303.441, 0, -177.683)
+
+[node name="FoodSpawner116" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.441, 0, -177.683)
+
+[node name="FoodSpawner117" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.441, 0, -177.683)
+
+[node name="FoodSpawner118" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408.441, 0, -177.683)
+
+[node name="FoodSpawner46" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -142.683)
+
+[node name="FoodSpawner47" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -107.683)
+
+[node name="FoodSpawner48" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -72.6831)
+
+[node name="FoodSpawner49" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -37.6831)
+
+[node name="FoodSpawner50" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -2.68314)
+
+[node name="FoodSpawner51" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 32.3169)
+
+[node name="FoodSpawner52" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 61.3988)
+
+[node name="FoodSpawner119" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.4409, 0, 61.3988)
+
+[node name="FoodSpawner120" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.441, 0, 61.3988)
+
+[node name="FoodSpawner121" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.441, 0, 61.3988)
+
+[node name="FoodSpawner122" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.441, 0, 61.3988)
+
+[node name="FoodSpawner123" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.441, 0, 61.3988)
+
+[node name="FoodSpawner124" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 268.441, 0, 61.3988)
+
+[node name="FoodSpawner125" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 303.441, 0, 61.3988)
+
+[node name="FoodSpawner126" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.441, 0, 61.3988)
+
+[node name="FoodSpawner127" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.441, 0, 61.3988)
+
+[node name="FoodSpawner128" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408.441, 0, 61.3988)
+
+[node name="FoodSpawner56" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 102.317)
+
+[node name="FoodSpawner57" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 137.317)
+
+[node name="FoodSpawner58" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 172.317)
+
+[node name="FoodSpawner59" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 207.317)
+
+[node name="FoodSpawner60" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 242.317)
+
+[node name="FoodSpawner61" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 277.317)
+
+[node name="FoodSpawner62" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 312.317)
+
+[node name="FoodSpawner63" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, 340.486)
+
+[node name="FoodSpawner68" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.4409, 0, 340.486)
+
+[node name="FoodSpawner69" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 128.441, 0, 340.486)
+
+[node name="FoodSpawner70" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.441, 0, 340.486)
+
+[node name="FoodSpawner71" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 198.441, 0, 340.486)
+
+[node name="FoodSpawner72" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 233.441, 0, 340.486)
+
+[node name="FoodSpawner73" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 268.441, 0, 340.486)
+
+[node name="FoodSpawner74" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 303.441, 0, 340.486)
+
+[node name="FoodSpawner75" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.441, 0, 340.486)
+
+[node name="FoodSpawner76" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 373.441, 0, 340.486)
+
+[node name="FoodSpawner77" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 408.441, 0, 340.486)
+
+[node name="FoodSpawner78" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 443.441, 0, 340.486)
+
+[node name="FoodSpawner79" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 314.592)
+
+[node name="FoodSpawner80" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 279.592)
+
+[node name="FoodSpawner81" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 244.592)
+
+[node name="FoodSpawner82" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 209.592)
+
+[node name="FoodSpawner83" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 174.592)
+
+[node name="FoodSpawner84" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 139.592)
+
+[node name="FoodSpawner85" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 104.592)
+
+[node name="FoodSpawner86" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 69.5925)
+
+[node name="FoodSpawner87" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, 34.5925)
+
+[node name="FoodSpawner88" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -0.407532)
+
+[node name="FoodSpawner89" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -35.4075)
+
+[node name="FoodSpawner90" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -70.4075)
+
+[node name="FoodSpawner91" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -105.408)
+
+[node name="FoodSpawner92" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -140.408)
+
+[node name="FoodSpawner93" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -175.408)
+
+[node name="FoodSpawner94" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -210.408)
+
+[node name="FoodSpawner95" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 457.706, 0, -245.408)
+
+[node name="FoodSpawner96" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 439.892, 0, -259.463)
+
+[node name="FoodSpawner97" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 404.892, 0, -259.463)
+
+[node name="FoodSpawner98" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 369.892, 0, -259.463)
+
+[node name="FoodSpawner99" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 369.892, 0, -259.463)
+
+[node name="FoodSpawner100" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.922, 0, -279.679)
+
+[node name="FoodSpawner101" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 338.922, 0, -314.679)
+
+[node name="FoodSpawner102" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 313.579, 0, -339.256)
+
+[node name="FoodSpawner103" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 278.579, 0, -339.256)
+
+[node name="FoodSpawner104" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 243.579, 0, -339.256)
+
+[node name="FoodSpawner105" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 208.579, 0, -339.256)
+
+[node name="FoodSpawner106" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 173.579, 0, -339.256)
+
+[node name="FoodSpawner107" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 138.579, 0, -339.256)
+
+[node name="FoodSpawner108" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 103.579, 0, -339.256)
+
+[node name="FoodSpawner64" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4409, 0, 340.486)
+
+[node name="FoodSpawner65" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5591, 0, 340.486)
+
+[node name="FoodSpawner66" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.5591, 0, 340.486)
+
+[node name="FoodSpawner67" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.5591, 0, 340.486)
+
+[node name="FoodSpawner53" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4409, 0, 61.2536)
+
+[node name="FoodSpawner54" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5591, 0, 61.2536)
+
+[node name="FoodSpawner55" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.5591, 0, 61.2536)
+
+[node name="FoodSpawner42" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.4409, 0, -177.683)
+
+[node name="FoodSpawner43" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5591, 0, -177.683)
+
+[node name="FoodSpawner44" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.5591, 0, -177.683)
+
+[node name="FoodSpawner45" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46.5591, 0, -177.683)
+
+[node name="FoodSpawner41" parent="food" instance=ExtResource("5_cpy3a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.4409, 0, -212.683)
 
 [node name="Map Stuff" type="Node3D" parent="."]
 
@@ -692,6 +1081,48 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174, -6, 315)
 
 [node name="PalmTree_119" parent="Map Stuff/PalmTrees" instance=ExtResource("6_ifcnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -298, -8, 229)
+
+[node name="PalmTree_165" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -5, 20)
+
+[node name="PalmTree_166" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -11, 104)
+
+[node name="PalmTree_167" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -356, -11, 155)
+
+[node name="PalmTree_168" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -269, -5, 206)
+
+[node name="PalmTree_169" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -206, -9, 206)
+
+[node name="PalmTree_170" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -206, -11, 149)
+
+[node name="PalmTree_171" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -193, -10, 300)
+
+[node name="PalmTree_172" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -231, -11, 253)
+
+[node name="PalmTree_173" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -11, 197)
+
+[node name="PalmTree_174" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -411, -5, -1)
+
+[node name="PalmTree_175" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -464, -9, -53)
+
+[node name="PalmTree_176" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -312, -8, 86)
+
+[node name="PalmTree_177" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -172, -1, 30)
+
+[node name="PalmTree_178" parent="Map Stuff/PalmTrees" instance=ExtResource("6_44ib0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262, -8, 103)
 
 [node name="Houses" type="Node3D" parent="Map Stuff"]
 
@@ -1898,45 +2329,3 @@ environment = SubResource("Environment_wku6c")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.234922, 0.972014, 0, -0.972014, 0.234922, -12.5754, 304.713, 43.6779)
-
-[node name="PalmTree_3" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -5, 20)
-
-[node name="PalmTree_4" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -11, 104)
-
-[node name="PalmTree_10" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -356, -11, 155)
-
-[node name="PalmTree_11" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -269, -5, 206)
-
-[node name="PalmTree_12" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -206, -9, 206)
-
-[node name="PalmTree_13" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -206, -11, 149)
-
-[node name="PalmTree_14" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -193, -10, 300)
-
-[node name="PalmTree_15" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -231, -11, 253)
-
-[node name="PalmTree_7" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -356, -11, 197)
-
-[node name="PalmTree_8" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -411, -5, -1)
-
-[node name="PalmTree_9" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -464, -9, -53)
-
-[node name="PalmTree_5" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -312, -8, 86)
-
-[node name="PalmTree_16" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -172, -1, 30)
-
-[node name="PalmTree_6" parent="." instance=ExtResource("6_44ib0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -262, -8, 103)
