@@ -51,6 +51,7 @@
 
 [resource]
 frames = 48
+speed_scale = 64.0
 frame_0/texture = ExtResource("1_n2fg4")
 frame_1/texture = ExtResource("2_j8agu")
 frame_1/duration = 1.0

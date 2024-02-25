@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bva7813alns5m"]
+[gd_scene load_steps=23 format=3 uid="uid://bva7813alns5m"]
 
 [ext_resource type="Script" path="res://level/Level.gd" id="1_bjp3p"]
 [ext_resource type="PackedScene" uid="uid://cesj4svb8hyvi" path="res://items/Food.tscn" id="2_pygua"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cmvsci3pm8rlr" path="res://Map/Decor/Mile0.glb" id="12_7oruf"]
 [ext_resource type="PackedScene" uid="uid://lwl1lqh3nrbg" path="res://Map/Decor/SouthernMostPoint.glb" id="13_n16k5"]
 [ext_resource type="PackedScene" uid="uid://dc4bwpr0d8r3a" path="res://Map/Decor/StopSign.glb" id="14_btv0e"]
+[ext_resource type="PackedScene" uid="uid://cudoh10vkltre" path="res://Map/InteractableWater.tscn" id="15_2l5iy"]
 [ext_resource type="PackedScene" uid="uid://daet1vqy6abho" path="res://Map/SkyBox.glb" id="15_f6us1"]
 [ext_resource type="PackedScene" uid="uid://ba2eh3ubaq2eu" path="res://Map/Decor/StreetLight.glb" id="16_kiu2x"]
 
@@ -127,6 +128,10 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -8.88444, 0)
 
 [node name="Water" parent="." instance=ExtResource("7_mc7lk")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -15.139, 0)
+visible = false
+
+[node name="InteractableWater" parent="." instance=ExtResource("15_2l5iy")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -21.598, 0)
 
 [node name="SkyBox" parent="." instance=ExtResource("15_f6us1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
